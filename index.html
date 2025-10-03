@@ -1,23 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Inicio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Blog - Plantilla</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7f7fb;
+      --card:#ffffff;
+      --accent:#6c5ce7; /* morado agradable */
+      --muted:#6b7280;
+      --text:#111827;
+      --maxw:1100px;
+      --radius:12px;
+      --gap:24px;
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:var(--text);}
+
+    /* Layout container */
+    .wrap{max-width:var(--maxw);margin:36px auto;padding:0 18px;}
+
+    header.site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#9b8af0);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    .site-title{font-size:1.125rem;font-weight:700}
+    .site-tag{font-size:0.85rem;color:var(--muted)}
+
+    nav.main-nav{display:flex;gap:12px}
+    nav.main-nav a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:500}
+    nav.main-nav a:hover{background:#efeefe;color:var(--accent)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr;gap:16px;background:linear-gradient(180deg,rgba(108,92,231,0.06),transparent);padding:22px;border-radius:var(--radius)}
+    .hero h1{margin:0;font-size:1.6rem}
+    .hero p{margin:6px 0 0;color:var(--muted)}
+
+    /* Grid: posts + sidebar */
+    .content-grid{display:grid;grid-template-columns:2fr 1fr;gap:var(--gap);margin-top:var(--gap)}
+
+    /* Posts list */
+    .posts{display:grid;gap:18px}
+    .post-card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.04);display:grid;grid-template-columns:140px 1fr;gap:14px;align-items:start}
+    .post-card img{width:140px;height:96px;object-fit:cover;border-radius:10px}
+    .post-meta{font-size:0.85rem;color:var(--muted)}
+    .post-title{margin:4px 0 8px;font-size:1.05rem}
+    .post-excerpt{color:var(--muted);font-size:0.95rem}
+    .read-more{display:inline-block;margin-top:10px;font-weight:600;text-decoration:none;color:var(--accent)}
+
+    /* Sidebar */
+    aside.sidebar{position:relative}
+    .card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.04)}
+    .search input{width:100%;padding:10px;border-radius:10px;border:1px solid #e6e6ee}
+    .list{margin:10px 0 0;padding:0;list-style:none}
+    .list li{padding:8px 0;border-bottom:1px solid #f1f1f5;color:var(--muted)}
+    .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:#f1eeff;color:var(--accent);font-weight:600;font-size:0.8rem;margin:6px 6px 0 0}
+
+    /* Footer */
+    footer.site-footer{margin-top:36px;padding:26px 0;text-align:center;color:var(--muted);font-size:0.95rem}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .content-grid{grid-template-columns:1fr}
+      .post-card{grid-template-columns:1fr;}
+      .post-card img{width:100%;height:180px}
+      nav.main-nav{display:none}
+    }
+
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Bienvenido a la tienda de ropa</h1>
-    <nav>
-      <a href="inicio.html">Inicio</a> |
-      <a href="sobreNosotros.html">Sobre Nosotros</a> |
-      <a href="contacto.html">Contacto</a> |
-      <a href="sitemap.html">Mapa del sitio</a>
-    </nav>
-  </header>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">B</div>
+        <div>
+          <div class="site-title">Mi Blog</div>
+          <div class="site-tag">Historias, ideas y curiosidades</div>
+        </div>
+      </div>
 
-  <main>
-    <p>Web de ropa</p>
-  </main>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#">Inicio</a>
+        <a href="#">Sobre mí</a>
+        <a href="#">Categorías</a>
+        <a href="#">Contacto</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Bienvenido a Mi Blog</h1>
+        <p>Plantilla ligera, responsiva y fácil de personalizar. Aquí encontrarás las últimas entradas destacadas.</p>
+      </div>
+    </section>
+
+    <main class="content-grid">
+      <section class="posts">
+
+        <!-- Post 1 -->
+        <article class="post-card">
+          <img src="https://picsum.photos/seed/p1/600/400" alt="portada post">
+          <div>
+            <div class="post-meta">Publicado el 3 oct, 2025 · <span class="post-category">Curiosidades</span></div>
+            <h2 class="post-title">Título llamativo del post número 1</h2>
+            <p class="post-excerpt">Un resumen corto del artículo para enganchar al lector. Aquí puedes poner una introducción breve que invite a seguir leyendo.</p>
+            <a class="read-more" href="#">Leer más →</a>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="post-card">
+          <img src="https://picsum.photos/seed/p2/600/400" alt="portada post">
+          <div>
+            <div class="post-meta">Publicado el 28 sept, 2025 · <span class="post-category">Tecnología</span></div>
+            <h2 class="post-title">Otra entrada interesante</h2>
+            <p class="post-excerpt">Pequeña sinopsis de la entrada. Este texto es ideal para mostrar el valor principal del post.</p>
+            <a class="read-more" href="#">Leer más →</a>
+          </div>
+        </article>
+
+        <!-- Más posts... -->
+
+      </section>
+
+      <aside class="sidebar">
+        <div class="card search">
+          <label for="q" style="font-weight:600;display:block;margin-bottom:8px">Buscar</label>
+          <input id="q" type="search" placeholder="Buscar en el blog...">
+        </div>
+
+        <div style="height:16px"></div>
+
+        <div class="card">
+          <h3 style="margin:0 0 8px">Categorías</h3>
+          <div>
+            <span class="tag">Curiosidades</span>
+            <span class="tag">Tecnología</span>
+            <span class="tag">Viajes</span>
+            <span class="tag">Opinión</span>
+          </div>
+        </div>
+
+        <div style="height:16px"></div>
+
+        <div class="card">
+          <h3 style="margin:0 0 8px">Entradas recientes</h3>
+          <ul class="list">
+            <li>Cómo aprender cosas nuevas cada día</li>
+            <li>10 gadgets que cambiaron mi vida</li>
+            <li>Rutas cortas para escapar el fin de semana</li>
+          </ul>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      © 2025 Mi Blog · Diseñado con cariño · <a href="#">Política de privacidad</a>
+    </footer>
+  </div>
 </body>
 </html>
-
