@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posts - DIWEB</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1 class="logo">DIWEB</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="post.html">Post</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="search-posts">
+      <input type="text" id="searchInput" placeholder="Buscar por título o tag..." onkeyup="searchPosts()">
+    </section>
+
+    <section id="postsContainer">
+      <article class="post" id="post1" data-tags="diseño,web">
+        <h2>Post 1</h2>
+        <p>Contenido completo del post 1. Aquí puedes escribir toda la información del post, ejemplos, imágenes y más.</p>
+      </article>
+
+      <article class="post" id="post2" data-tags="programación,js">
+        <h2>Post 2</h2>
+        <p>Contenido completo del post 2. Información detallada sobre programación en JavaScript, consejos y tutoriales.</p>
+      </article>
+
+      <!-- Agrega más posts siguiendo el mismo patrón -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pablo Jiménez</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
