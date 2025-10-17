@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog DIWEB - Pablo Jiménez</title>
+  <meta name="description" content="Blog personal de Pablo Jiménez sobre Desarrollo de Interfaces Web (DIWEB). Ejercicios, proyectos y aprendizajes." />
+  <meta name="author" content="Pablo Jiménez" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="assets/images/foto-perfil.jpg" type="image/jpeg" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Blog DIWEB</h1>
+      <p class="subtitle">Aprendizajes, ejercicios y proyectos sobre Desarrollo de Interfaces Web</p>
+      <nav class="nav-bar" aria-label="Menú principal">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="posts.html">Posts</a>
+        <a href="posts/Tema1/">Tema 1</a>
+         <!-- Contenido principal
+        ><a href="posts/Tema2/">Tema 2</a>
+        <a href="posts/Tema3/">Tema 3</a> -->
+        <a href="https://github.com/pjimpin1207" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <aside class="profile" aria-label="Perfil del autor">
+      <img src="assets/images/foto-perfil.jpg" alt="Foto de perfil de Pablo Jiménez" />
+      <h2>Pablo Jiménez</h2>
+      <p>Estudiante de DAW</p>
+    </aside>
+
+    <section class="recent-posts" aria-labelledby="posts-title">
+      <h2 id="posts-title">Publicaciones recientes</h2>
+      <div class="posts-container">
+        <article class="post">
+          <h3>Ejercicio 16</h3>
+          <p>Diseño web con ancho variable mediante CSS.</p>
+          <a href="posts/Tema1/Ejercicio16.html" class="btn">Leer más</a>
+        </article>
+        <article class="post">
+          <h3>Ejercicio 15</h3>
+          <p>Ejemplo práctico de un diseño de ancho fijo con HTML y CSS.</p>
+          <a href="posts/Tema1/Ejercicio15.html" class="btn">Leer más</a>
+        </article>
+        <article class="post">
+          <h3>Ejercicio 14</h3>
+          <p>Estructura básica de una página web con header, nav, main y footer.</p>
+          <a href="posts/Tema1/Ejercicio14.html" class="btn">Leer más</a>
+        </article>
+      </div>
+
+      <div class="all-posts-link">
+        <a href="posts/Tema1/" class="btn-outline">Ver todos los posts</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Pablo Jiménez — <a href="https://github.com/pjimpin1207" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+  </footer>
+</body>
+</html>
