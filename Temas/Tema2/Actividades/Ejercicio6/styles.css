@@ -1,0 +1,26 @@
+/*Selector de Elemento*/
+p {
+  color: blue;
+}
+
+/*Selector de Clase*/
+.importante {
+  background-color: yellow;
+}
+
+/*Selector de ID*/
+#titulo {
+  color: green;
+  font-size: 24px;
+}
+
+/*Selector Universal*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*Selector de Atributo*/
+input[type="text"] {
+  border: 2px solid red;
+}

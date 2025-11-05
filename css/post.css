@@ -293,3 +293,25 @@ footer p {
 .web-table td strong {
   color: var(--primary-color);
 }
+
+/* ===== ESTILO PARA BLOQUES DE CÓDIGO ===== */
+pre {
+  background-color: #1a1a1a;
+  color: #e6e6e6;
+  padding: 1rem;
+  border-radius: var(--radius);
+  overflow-x: auto;
+  border: 1px solid #333;
+  margin: 1rem 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+}
+
+pre code {
+  white-space: pre;
+}
+
+.exercise-button {
+  text-align: center;
+  margin-top: 1.5rem;
+}

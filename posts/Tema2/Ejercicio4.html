@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 4 - Blog DIWEB</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Blog DIWEB</h1>
+      <p class="subtitle">Ejercicio 4 — Estilos internos</p>
+      <nav class="nav-bar">
+        <a href="../../index.html">Inicio</a>
+        <a href="../Tema1/index.html">Tema 1</a>
+        <a href="../Tema2/index.html">Tema 2</a>
+        <a href="../Tema3/index.html">Tema 3</a>
+        <a href="../Tema4/index.html">Tema 4</a>
+        <a href="../Tema5/index.html">Tema 5</a>
+        <a href="../Tema6/index.html">Tema 6</a>
+        <a href="../Tema7/index.html">Tema 7</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-content">
+    <article class="post">
+      <h2>Ejercicio 4 — Estilos internos</h2>
+      <p class="meta">Publicado el <em>04 de noviembre de 2025</em> por <strong>Pablo Jiménez</strong></p>
+
+      <div class="post-body">
+        <p>
+          En este ejercicio se practica el uso de <strong>CSS interno</strong>, definido dentro de la etiqueta
+          <code>&lt;style&gt;</code> en el documento HTML.  
+          Este método permite separar parcialmente el contenido del estilo, aplicar reglas a varios
+          elementos a la vez y mantener un código más ordenado.  
+        </p>
+
+        <h3>Enunciado</h3>
+            <p>Haz una copia del fichero del ejercicio anterior con nombre Ejercicio4.html en el que
+cambiarás la forma de incluir código CSS para hacerlo con las etiquetas style de manera interna.
+¿Qué ventaja encuentras en hacerlo de esta manera? Coméntalo dentro de las etiquetas style utilizando comentarios CSS.</p>
+
+        <h3>Código HTML</h3>
+        <pre><code>&lt;!doctype html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Ejercicio 2.4 - Estilos internos&lt;/title&gt;
+
+  &lt;style&gt;
+    /* Ventajas de usar CSS interno:
+      - Se separa el estilo del contenido (más limpio que el CSS en línea).
+      - Permite aplicar el mismo estilo a varios elementos sin repetir código.
+    */
+    h1 {
+      color: green;
+    }
+
+    p {
+      color: red;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Bienvenido al ejercicio 4&lt;/h1&gt;
+
+  &lt;p&gt;Párrafo de ejemplo dentro del body&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <p>
+          Puedes visualizar el resultado final de este ejercicio con el siguiente enlace:
+        </p>
+
+        <div class="exercise-button">
+          <a href="../../Temas/Tema2/Actividades/Ejercicio4/Ejercicio4.html" target="_blank" class="btn">Ver resultado del ejercicio</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema2/" class="btn">← Volver al Tema 2</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Pablo Jiménez</p>
+  </footer>
+
+</body>
+</html>

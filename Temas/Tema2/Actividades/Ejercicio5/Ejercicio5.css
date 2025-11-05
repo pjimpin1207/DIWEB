@@ -1,0 +1,14 @@
+/* 
+  Ventajas del CSS externo:
+  - Se puede aplicar la misma hoja de estilo a múltiples páginas.
+  - Permite separar completamente la estructura (HTML) del diseño (CSS).
+  - Mejora la velocidad de carga al almacenar en caché la hoja de estilo.
+*/
+
+h1 {
+  color: green;
+}
+
+p {
+  color: red;
+}
