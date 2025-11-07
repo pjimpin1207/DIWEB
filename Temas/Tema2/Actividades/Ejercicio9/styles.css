@@ -1,0 +1,29 @@
+/*Combinador descendiente*/
+.container p {
+  color: rgb(7, 7, 235);
+}
+
+/*Combinador de hijo directo*/
+.container > h2 {
+  color: rgb(247, 8, 8);
+}
+
+/*Hermano adyacente*/
+.container h2 + p {
+  color: rgb(4, 175, 4);
+}
+
+/*Hermano general*/
+.intro ~ p {
+  background-color: rgb(228, 228, 4);
+}
+
+/*Selector múltiple */
+h2, .intro {
+  margin-bottom: 10px;
+}
+
+/*Selector dependiente */
+.container p.intro {
+  background-color: rgb(128, 128, 128);
+}
