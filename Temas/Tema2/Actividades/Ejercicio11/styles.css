@@ -1,0 +1,24 @@
+/*Regla de elemento: todos los h1 en color azul */
+h1 {
+  color: blue;
+}
+
+/*Regla de clase: clase .titulo en color verde */
+.titulo {
+  color: green;
+}
+
+/*Regla de ID: #parrafo en color rojo */
+#parrafo {
+  color: red;
+}
+
+/*Regla con !important: clase .texto dentro de un div */
+div .texto {
+  color: purple !important;
+}
+
+/*Última regla: todos los párrafos en gris */
+p {
+  color: gray;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 11 - Blog DIWEB</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Blog DIWEB</h1>
+      <p class="subtitle">Ejercicio 11 — Estilos en función de la jerarquía</p>
+      <nav class="nav-bar">
+        <a href="../../index.html">Inicio</a>
+        <a href="../Tema1/index.html">Tema 1</a>
+        <a href="../Tema2/index.html">Tema 2</a>
+        <a href="../Tema3/index.html">Tema 3</a>
+        <a href="../Tema4/index.html">Tema 4</a>
+        <a href="../Tema5/index.html">Tema 5</a>
+        <a href="../Tema6/index.html">Tema 6</a>
+        <a href="../Tema7/index.html">Tema 7</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-content">
+    <article class="post">
+      <h2>Ejercicio 11 — Estilos en función de la jerarquía</h2>
+      <p class="meta">Publicado el <em>7 de noviembre de 2025</em> por <strong>Pablo Jiménez</strong></p>
+
+      <div class="post-body">
+        <p>
+          Este ejercicio tiene como objetivo comprender cómo actúan las reglas de <strong>prioridad y jerarquía</strong> en CSS,
+          dependiendo de su tipo (elemento, clase, ID o estilo en línea) y el uso del modificador <code>!important</code>.
+          También se analiza el orden de declaración y cómo afecta al estilo final de los elementos.
+        </p>
+
+        <h3>Enunciado</h3>
+        <p>
+          Crea un archivo HTML llamado <strong>index.html</strong> y un archivo CSS llamado <strong>styles.css</strong>.
+          En el HTML, estructura los elementos con encabezados, párrafos y un div contenedor.  
+          En el CSS, define reglas en este orden:
+        </p>
+
+        <ul>
+          <li>Regla de elemento: color para todos los &lt;h1&gt;.</li>
+          <li>Regla de clase: color para la clase <code>.titulo</code>.</li>
+          <li>Regla de ID: color para el ID <code>#parrafo</code>.</li>
+          <li>Regla con <code>!important</code>: color para <code>.texto</code> dentro de un div.</li>
+          <li>Última regla: color general para todos los párrafos.</li>
+        </ul>
+
+        <p>
+          Finalmente, aplica un estilo en línea al elemento &lt;h1&gt; para observar cómo sobrescribe las demás reglas.
+        </p>
+
+        <h3>Código HTML</h3>
+        <pre><code>&lt;!doctype html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;title&gt;Ejercicio 11 - Jerarquía de estilos&lt;/title&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Estilo en línea con mayor prioridad que cualquier regla externa --&gt;
+  &lt;h1 class="titulo" style="color: orange;"&gt;Título Principal&lt;/h1&gt;
+
+  &lt;p id="parrafo"&gt;Este es un párrafo de para el ejemplo.&lt;/p&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;p class="texto"&gt;Texto dentro de un div&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <h3>Código CSS</h3>
+        <pre><code>/*Regla de elemento: todos los h1 en color azul */
+h1 {
+  color: blue;
+}
+
+/*Regla de clase: clase .titulo en color verde */
+.titulo {
+  color: green;
+}
+
+/*Regla de ID: #parrafo en color rojo */
+#parrafo {
+  color: red;
+}
+
+/*Regla con !important: clase .texto dentro de un div */
+div .texto {
+  color: purple !important;
+}
+
+/*Última regla: todos los párrafos en gris */
+p {
+  color: gray;
+}</code></pre>
+
+        <h3>Respuestas a las preguntas</h3>
+        <ul>
+          <li>
+            <strong>¿Qué color se aplica finalmente al encabezado &lt;h1&gt;?</strong><br>
+            El color final del &lt;h1&gt; es <strong>naranja</strong>, porque el estilo en línea
+            (<code>style="color: orange;"</code>) tiene la <strong>mayor prioridad</strong> en la jerarquía de CSS.
+          </li>
+          <li>
+            <strong>¿Cuál es el color del párrafo con el ID #parrafo?</strong><br>
+            El párrafo con ID <code>#parrafo</code> se muestra en <strong>rojo</strong>,
+            porque las reglas de ID tienen más prioridad que las de clase o las de elemento.
+          </li>
+          <li>
+            <strong>¿Qué color tiene el párrafo con la clase .texto dentro del div?</strong><br>
+            Este párrafo se muestra en <strong>púrpura</strong> (<code>purple</code>),
+            porque la regla contiene <code>!important</code>, lo que hace que <strong>sobrescriba todas las demás reglas</strong>,
+            incluso las de ID o las más específicas.
+          </li>
+        </ul>
+
+        <div class="exercise-button">
+          <a href="../../Temas/Tema2/Actividades/Ejercicio11/Ejercicio11.html" target="_blank" class="btn">Ver resultado del ejercicio</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema2/" class="btn">← Volver al Tema 2</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Pablo Jiménez</p>
+  </footer>
+
+</body>
+</html>
