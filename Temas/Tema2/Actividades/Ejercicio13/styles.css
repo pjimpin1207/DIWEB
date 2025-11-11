@@ -1,0 +1,32 @@
+/* Herencia general */
+
+body {
+    color:rgb(172, 14, 211);
+    font-family: Arial, sans-serif;
+}
+
+/* parrafos dentro de una seccion con una fuente distinta*/
+
+section p {
+    font-family: "Courier New", monospace;
+}
+
+/* clase .higjlight con fondo amarillo y texto en negrita*/
+
+.higthlight {
+    background-color: yellow;
+    font-weight: bold !important;
+}
+
+/* parrafp con el id override que sobrescriba el color general*/
+
+#override {
+    color: rgb(20, 163, 220)
+}
+
+/* titulo principal: heredar color pero como mayor tamaño*/
+
+h1 {
+    font-size: 2em;
+}
+

@@ -1,0 +1,35 @@
+/* Estilo general */
+body {
+  font-family: Arial, sans-serif;
+  color: blue;
+}
+
+.parent {
+  font-family: 'Courier New', monospace;
+  color: red;
+}
+
+.default {
+  font-family: Verdana, sans-serif;
+  color: green;
+}
+
+.inherit {
+  font-family: inherit;
+  color: inherit;
+}
+
+.initial {
+  font-family: initial;
+  color: initial;
+}
+
+.unset {
+  font-family: unset;
+  color: unset;
+}
+
+.revert {
+  font-family: revert;
+  color: revert;
+}

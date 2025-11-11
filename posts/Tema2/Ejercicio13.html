@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 13 - Blog DIWEB</title>
+    <link rel="stylesheet" href="../../css/post.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="header-content">
+            <h1>Blog DIWEB</h1>
+            <p class="subtitle">Ejercicio 13 — Herencia, Especificidad y Cascada</p>
+            <nav class="nav-bar">
+                <a href="../../index.html">Inicio</a>
+                <a href="../Tema1/index.html">Tema 1</a>
+                <a href="../Tema2/index.html">Tema 2</a>
+                <a href="../Tema3/index.html">Tema 3</a>
+                <a href="../Tema4/index.html">Tema 4</a>
+                <a href="../Tema5/index.html">Tema 5</a>
+                <a href="../Tema6/index.html">Tema 6</a>
+                <a href="../Tema7/index.html">Tema 7</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        <article class="post">
+            <h2>Ejercicio 13 — Herencia, Especificidad y Cascada</h2>
+            <p class="meta">Publicado el <em>11 de noviembre de 2025</em> por <strong>Pablo Jiménez</strong></p>
+
+            <div class="post-body">
+                <p>
+                    En este ejercicio se practica cómo las reglas de <strong>herencia</strong>,
+                    <strong>especificidad</strong> y <strong>cascada</strong>
+                    influyen en la aplicación final de los estilos en CSS.
+                    Se analiza cómo las distintas formas de definir reglas (por elemento, clase o ID) interactúan entre
+                    sí,
+                    y cómo el orden y el uso de <code>!important</code> afectan el resultado.
+                </p>
+
+                <h3>Enunciado</h3>
+                <p>
+                    A partir del archivo HTML proporcionado, crea una hoja de estilos que cumpla los siguientes
+                    requisitos:
+                </p>
+                <ul>
+                    <li>Usa herencia para aplicar un color de texto general a todo el documento.</li>
+                    <li>Los párrafos dentro de la sección deben usar una fuente diferente a la predeterminada.</li>
+                    <li>El elemento con la clase <code>highlight</code> debe tener un fondo amarillo y texto en negrita.
+                    </li>
+                    <li>El párrafo con el <code>id="override"</code> debe sobrescribir el color general con uno propio.
+                    </li>
+                    <li>El título principal (&lt;h1&gt;) debe heredar el color general pero tener un tamaño mayor
+                        definido directamente.</li>
+                    <li>Usa al menos una regla con <code>!important</code> para comprobar la prioridad.</li>
+                </ul>
+
+                <h3>Código HTML</h3>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Herencia, Especificidad y Cascada&lt;/title&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="container"&gt;
+    &lt;header id="main-header"&gt;
+      &lt;h1 class="title"&gt;Título Principal&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;section&gt;
+      &lt;p class="highlight"&gt;Este es un párrafo destacado.&lt;/p&gt;
+      &lt;p&gt;Este es un párrafo normal.&lt;/p&gt;
+      &lt;p id="override"&gt;Este es un párrafo que debe sobrescribir los estilos.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;footer&gt;
+      &lt;p&gt;Este es el pie de página.&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+                <h3>Código CSS</h3>
+                <pre><code>/* Herencia general */
+body {
+  color: rgb(172, 14, 211);
+  font-family: Arial, sans-serif;
+}
+
+/* Párrafos dentro de una sección con una fuente distinta */
+section p {
+  font-family: "Courier New", monospace;
+}
+
+/* Clase .highlight con fondo amarillo y texto en negrita */
+.highlight {
+  background-color: yellow;
+  font-weight: bold !important;
+}
+
+/* Párrafo con el id override que sobrescribe el color general */
+#override {
+  color: rgb(20, 163, 220);
+}
+
+/* Título principal: heredar color pero con mayor tamaño */
+h1 {
+  font-size: 2em;
+}
+</code></pre>
+
+                <h3>Respuestas a las preguntas</h3>
+                <ul>
+                    <li>
+                        <strong>¿Qué sucede si cambias el orden de las reglas CSS?</strong><br>
+                        Si dos reglas tienen la misma especificidad, el navegador aplicará la última que encuentre en el
+                        archivo.
+                        Es decir, el orden importa solo cuando las reglas compiten con la misma prioridad.
+                    </li>
+
+                    <li>
+                        <strong>¿Cómo afecta la especificidad a los estilos aplicados en el párrafo
+                            #override?</strong><br>
+                        El selector <code>#override</code> tiene mayor especificidad que una clase o un elemento,
+                        por lo que siempre sobrescribirá el color heredado, sin importar su posición en el CSS.
+                    </li>
+
+                    <li>
+                        <strong>¿Qué sucede si eliminas el !important de alguna regla?</strong><br>
+                        Si se quita <code>!important</code> de <code>.highlight</code>, el texto podría dejar de
+                        mostrarse en negrita
+                        si otra regla posterior establece un valor diferente.
+                        <code>!important</code> garantiza que esa propiedad tenga prioridad sobre cualquier otra regla
+                        normal.
+                    </li>
+
+                    <li>
+                        <strong>¿Qué reglas son heredadas automáticamente y cuáles necesitas especificar
+                            explícitamente?</strong><br>
+                        Las propiedades heredadas por defecto son las relacionadas con el texto, como
+                        <strong>color</strong>, <strong>font-family</strong>, <strong>font-size</strong> y
+                        <strong>line-height</strong>.
+                        Las que no se heredan automáticamente son las de caja o diseño, como
+                        <strong>background</strong>, <strong>border</strong>, <strong>margin</strong> y
+                        <strong>padding</strong>.
+                    </li>
+                </ul>
+
+                <div class="exercise-button">
+                    <a href="../../Temas/Tema2/Actividades/Ejercicio13/Ejercicio13.html" target="_blank" class="btn">Ver
+                        resultado del ejercicio</a>
+                </div>
+        </article>
+
+        <div class="back-link">
+            <a href="../Tema2/" class="btn">← Volver al Tema 2</a>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Pablo Jiménez</p>
+    </footer>
+
+</body>
+
+</html>
