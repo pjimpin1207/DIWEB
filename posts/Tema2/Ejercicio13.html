@@ -121,36 +121,24 @@ h1 {
                 <ul>
                     <li>
                         <strong>¿Qué sucede si cambias el orden de las reglas CSS?</strong><br>
-                        Si dos reglas tienen la misma especificidad, el navegador aplicará la última que encuentre en el
-                        archivo.
-                        Es decir, el orden importa solo cuando las reglas compiten con la misma prioridad.
+                        Si dos reglas tienen igual especificidad, gana la última en el archivo.
                     </li>
 
                     <li>
-                        <strong>¿Cómo afecta la especificidad a los estilos aplicados en el párrafo
-                            #override?</strong><br>
-                        El selector <code>#override</code> tiene mayor especificidad que una clase o un elemento,
-                        por lo que siempre sobrescribirá el color heredado, sin importar su posición en el CSS.
+                        <strong>¿Cómo afecta la especificidad a los estilos aplicados en el párrafo #override?</strong><br>
+                        El selector de ID #override tiene más especificidad que una regla general (body o p), por eso sobrescribe el color heredado, aunque aparezca antes o después en el CSS.
+
                     </li>
 
                     <li>
                         <strong>¿Qué sucede si eliminas el !important de alguna regla?</strong><br>
-                        Si se quita <code>!important</code> de <code>.highlight</code>, el texto podría dejar de
-                        mostrarse en negrita
-                        si otra regla posterior establece un valor diferente.
-                        <code>!important</code> garantiza que esa propiedad tenga prioridad sobre cualquier otra regla
-                        normal.
+                        Si se quita el !important de .highlight, el texto en negrita podría cambiarse por otra regla que se ponga despues.
                     </li>
 
                     <li>
-                        <strong>¿Qué reglas son heredadas automáticamente y cuáles necesitas especificar
-                            explícitamente?</strong><br>
-                        Las propiedades heredadas por defecto son las relacionadas con el texto, como
-                        <strong>color</strong>, <strong>font-family</strong>, <strong>font-size</strong> y
-                        <strong>line-height</strong>.
-                        Las que no se heredan automáticamente son las de caja o diseño, como
-                        <strong>background</strong>, <strong>border</strong>, <strong>margin</strong> y
-                        <strong>padding</strong>.
+                        <strong>¿Qué reglas son heredadas automáticamente y cuáles necesitas especificar explícitamente?</strong><br>
+                       Las heredadas automáticamente son: color, font-family, font-size, line-height.
+                       Las no heredadasson: background, border, margin, padding...
                     </li>
                 </ul>
 
