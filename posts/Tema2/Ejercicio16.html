@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 16 - Blog DIWEB</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Blog DIWEB</h1>
+      <p class="subtitle">Ejercicio 16 — Propiedad background-attachment</p>
+            <nav class="nav-bar">
+                <a href="../../index.html">Inicio</a>
+                <a href="../Tema1/index.html">Tema 1</a>
+                <a href="../Tema2/index.html">Tema 2</a>
+                <a href="../Tema3/index.html">Tema 3</a>
+                <a href="../Tema4/index.html">Tema 4</a>
+                <a href="../Tema5/index.html">Tema 5</a>
+                <a href="../Tema6/index.html">Tema 6</a>
+                <a href="../Tema7/index.html">Tema 7</a>
+            </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-content">
+    <article class="post">
+      <h2>Ejercicio 16 — Propiedad background-attachment</h2>
+      <p class="meta">Publicado el <em>12 de noviembre de 2025</em> por <strong>Pablo Jiménez</strong></p>
+
+      <div class="post-body">
+        <p>
+          En este ejercicio se experimenta con la propiedad <strong>background-attachment</strong>,
+          que define cómo se comporta la imagen de fondo cuando el usuario realiza desplazamiento (scroll).
+          Se usan tres valores diferentes (<code>scroll</code>, <code>fixed</code> y <code>local</code>)
+          para observar cómo cambia el comportamiento visual en cada caso.
+        </p>
+
+        <h3>Código HTML</h3>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Ejercicio 16 background-attachment&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    section {
+      height: 400px;
+      padding: 20px;
+      color: white;
+    }
+
+    .scroll {
+      background-image: url("https://fotografias.antena3.com/clipping/cmsimages01/2017/08/22/13432DF7-4B8B-4D2F-9E15-34B5F2E239D4/default.jpg");
+      background-size: cover;
+      background-attachment: scroll;
+    }
+
+    .fixed {
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfZ7dwdEf1OCYuZ9bUo_i0kPZjpILwmWRhA&s");
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .local {
+      background-image: url("https://pbs.twimg.com/media/D4mY8CKW0AMq-n-.jpg");
+      background-size: cover;
+      background-attachment: local;
+      overflow: auto;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;section class="scroll"&gt;
+    &lt;h2&gt;Sección Scroll&lt;/h2&gt;
+    &lt;p&gt;Texto de ejemplo para observar el comportamiento con background-attachment: scroll.&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;section class="fixed"&gt;
+    &lt;h2&gt;Sección Fixed&lt;/h2&gt;
+    &lt;p&gt;Texto de ejemplo para observar el comportamiento con background-attachment: fixed.&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;section class="local"&gt;
+    &lt;h2&gt;Sección Local&lt;/h2&gt;
+    &lt;p&gt;Texto de ejemplo para observar el comportamiento con background-attachment: local. Más texto... Más texto... Más texto... Más texto... Más texto... Más texto... Más texto... Más texto... Más texto... Más texto...&lt;/p&gt;
+    &lt;p&gt;Más texto... Más texto... Más texto... Más texto... Más texto... Más texto...&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;p&gt;
+    Al probar los tres valores:
+    - Con &lt;b&gt;scroll&lt;/b&gt;, el fondo se mueve junto con la página.&lt;br&gt;
+    - Con &lt;b&gt;fixed&lt;/b&gt;, el fondo se queda fijo mientras el contenido se desplaza.&lt;br&gt;
+    - Con &lt;b&gt;local&lt;/b&gt;, el fondo se mueve solo dentro de su propia sección cuando hay scroll interno.
+  &lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <div class="exercise-button">
+            <a href="../../Temas/Tema2/Actividades/Ejercicio16/Ejercicio16.html" target="_blank" class="btn">Ver resultado del ejercicio</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- SECCIÓN DE REFLEXIÓN -->
+    <article class="post">
+      <h2>Preguntas sobre el ejercicio</h2>
+
+      <div class="post-body">
+        <p>
+          Al aplicar los tres valores de <code>background-attachment</code>, se puede observar lo siguiente:
+        </p>
+
+        <ul>
+          <li>
+            <strong>scroll:</strong> la imagen de fondo se desplaza junto con el contenido de la página,
+            es decir, se mueve al hacer scroll general en la ventana.
+          </li>
+
+          <li>
+            <strong>fixed:</strong> el fondo permanece fijo en la pantalla, creando un efecto visual
+            donde el contenido parece deslizarse sobre la imagen estática.
+          </li>
+
+          <li>
+            <strong>local:</strong> el fondo se mueve solo dentro de su contenedor,
+            y no con toda la página. Esto se nota cuando el propio elemento tiene scroll interno.
+          </li>
+        </ul>
+
+        <p>
+          En resumen, <strong>scroll</strong> se mueve con la página, <strong>fixed</strong> se mantiene fijo al viewport
+          y <strong>local</strong> se mueve dentro del propio elemento.  
+          Esta propiedad es útil para crear efectos visuales como fondos parallax o secciones con scroll independiente.
+        </p>
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema2/" class="btn">← Volver al Tema 2</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Pablo Jiménez</p>
+  </footer>
+
+</body>
+</html>

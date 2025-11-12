@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 16 background-attachment</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    section {
+      height: 400px;
+      padding: 20px;
+      color: white;
+    }
+
+    .scroll {
+      background-image: url("https://fotografias.antena3.com/clipping/cmsimages01/2017/08/22/13432DF7-4B8B-4D2F-9E15-34B5F2E239D4/default.jpg");
+      background-size: cover;
+      background-attachment: scroll;
+    }
+
+    .fixed {
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfZ7dwdEf1OCYuZ9bUo_i0kPZjpILwmWRhA&s");
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .local {
+      background-image: url("https://pbs.twimg.com/media/D4mY8CKW0AMq-n-.jpg");
+      background-size: cover;
+      background-attachment: local;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="scroll">
+    <h2>Sección Scroll</h2>
+    <p>Texto de ejemplo para observar el comportamiento con background-attachment: scroll.</p>
+  </section>
+
+  <section class="fixed">
+    <h2>Sección Fixed</h2>
+    <p>Texto de ejemplo para observar el comportamiento con background-attachment: fixed.</p>
+  </section>
+
+  <section class="local">
+    <h2>Sección Local</h2>
+    <p>Texto de ejemplo para observar el comportamiento con background-attachment: local. Más texto... Más texto... Más texto... Más texto... Más texto... Más texto... Más texto... Más texto... Más texto... Más texto... Más texto... Más texto...</p>
+    <p>Más texto... Más texto... Más texto... Más texto... Más texto... Más texto...</p>
+  </section>
+
+  <p>
+    Al probar los tres valores:
+    - Con <b>scroll</b>, el fondo se mueve junto con la página.<br>
+    - Con <b>fixed</b>, el fondo se queda fijo mientras el contenido se desplaza.<br>
+    - Con <b>local</b>, el fondo se mueve solo dentro de su propia sección cuando hay scroll interno.
+  </p>
+
+</body>
+</html>
