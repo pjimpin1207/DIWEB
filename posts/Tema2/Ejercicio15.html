@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 15 — Propiedades de Fondo en CSS</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Blog DIWEB</h1>
+      <p class="subtitle">Ejercicio 15 — Propiedades de Fondo en CSS</p>
+            <nav class="nav-bar">
+                <a href="../../index.html">Inicio</a>
+                <a href="../Tema1/index.html">Tema 1</a>
+                <a href="../Tema2/index.html">Tema 2</a>
+                <a href="../Tema3/index.html">Tema 3</a>
+                <a href="../Tema4/index.html">Tema 4</a>
+                <a href="../Tema5/index.html">Tema 5</a>
+                <a href="../Tema6/index.html">Tema 6</a>
+                <a href="../Tema7/index.html">Tema 7</a>
+            </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-content">
+    <article class="post">
+      <h2>Ejercicio 15 — Propiedades de Fondo en CSS</h2>
+      <p class="meta">Publicado el <em>12 de noviembre de 2025</em> por <strong>Pablo Jiménez</strong></p>
+
+      <div class="post-body">
+        <p>
+          En este ejercicio se exploran las diferentes formas de aplicar fondos en CSS:
+          colores sólidos, imágenes, gradientes, fondos múltiples y el uso de transparencia con RGBA.
+          Se completa el código base con los valores indicados en los comentarios y se analiza cómo
+          se comportan visualmente los distintos tipos de fondo al redimensionar la ventana.
+        </p>
+
+        <h3>Código HTML y CSS</h3>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Ejercicio de Propiedades de Fondo CSS&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .box {
+            height: 250px;
+            margin-bottom: 30px;
+            border: 1px solid #333;
+            padding: 20px;
+            color: black;
+            font-size: 1.5em;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 1. Color Sólido */
+        .color-box {
+            background-color: #3498db; 
+        }
+
+        /* 2. Imagen de Fondo */
+        .image-box {
+            background-image: url('https://picsum.photos/id/237/200/300');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* 3. Gradiente */
+        .gradient-box {
+            background-image: linear-gradient(to right, #007bff, #28a745);
+        }
+
+        /* 4. Fondo Múltiple */
+        .multiple-box {
+            background-image: 
+                linear-gradient(rgba(66, 207, 22, 0.5), rgba(164, 219, 11, 0.5)),
+                url('https://picsum.photos/id/200/400/200');
+            background-size: cover;
+            color: white;
+        }
+
+        /* 5. Opacidad con RGBA */
+        .text-box {
+            color: #ffc107;
+            background-color: rgba(206, 9, 9, 0.5);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;Propiedades de Fondo en CSS&lt;/h1&gt;
+
+    &lt;div class="box color-box"&gt;
+        1. Color Sólido (background-color)
+    &lt;/div&gt;
+
+    &lt;div class="box image-box"&gt;
+        2. Imagen de Fondo (background-image, -repeat, -size, -position)
+    &lt;/div&gt;
+
+    &lt;div class="box gradient-box"&gt;
+        3. Gradiente (linear-gradient)
+    &lt;/div&gt;
+
+    &lt;div class="box multiple-box"&gt;
+        4. Fondo Múltiple (Gradiente y Imagen)
+    &lt;/div&gt;
+    
+    &lt;div class="box text-box"&gt;
+        5. Opacidad con RGBA (background-color: rgba)
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <div class="exercise-button">
+            <a href="../../Temas/Tema2/Actividades/Ejercicio15/Ejercicio15.html" target="_blank" class="btn">Ver resultado del ejercicio</a>
+        </div>
+      </div>
+    </article>
+
+
+    <div class="back-link">
+      <a href="../Tema2/" class="btn">← Volver al Tema 2</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Pablo Jiménez</p>
+  </footer>
+
+</body>
+</html>

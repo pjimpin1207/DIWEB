@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Propiedades de Fondo CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .box {
+            height: 250px;
+            margin-bottom: 30px;
+            border: 1px solid #333;
+            padding: 20px;
+            color: black;
+            font-size: 1.5em;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 1. Color Sólido: Usa un valor hexadecimal (#RRGGBB) o un nombre de color. */
+        .color-box {
+            background-color: blue; 
+        }
+
+        /* 2. Imagen de Fondo: Usa una URL de imagen de prueba, ajusta la repetición, tamaño y posición. */
+        .image-box {
+            /* URL de imagen de prueba: https://picsum.photos/id/237/200/300 */
+            background-image: url('https://picsum.photos/id/237/200/300'); 
+            background-repeat: no-repeat; /* Por ejemplo: no-repeat, repeat-x, repeat-y */
+            background-size: cover; /* Por ejemplo: cover, contain, 100% */
+            background-position: center; /* Por ejemplo: center, top right, 50% 50% */
+        }
+
+        /* 3. Gradiente: Usa linear-gradient para crear una transición de color. */
+        .gradient-box {
+            /* Crea un gradiente de color de la parte superior (to top) que va de azul (#007bff) a verde (#28a745) */
+            background-image: linear-gradient(#007bff, rgb(13, 204, 188), #28a745);
+        }
+
+        /* 4. Fondo Múltiple: Combina una imagen y un gradiente, separados por una coma. */
+        .multiple-box {
+            /* Capa 1: Un gradiente oscuro, Capa 2: Una imagen. URL de imagen de prueba: https://picsum.photos/id/200/400/200 */
+            background-image: 
+                linear-gradient(rgba(66, 207, 22, 0.5), rgba(164, 219, 11, 0.5)), /* Gradiente (primera capa) */
+                url('https://picsum.photos/id/200/400/200'); /* Imagen (segunda capa) */
+            
+            background-size: cover;
+            color: rgb(255, 255, 255); /* Cambiamos el color del texto para que se vea sobre el fondo oscuro */
+        }
+
+        /* 5. Opacidad con RGBA: Cambia el color del texto y usa rgba() para darle opacidad al fondo. */
+        .text-box {
+            color: ffc107; /* Color del texto, por ejemplo: white, #ffc107 */
+            /* rgba(R, G, B, Alpha). Alpha es la opacidad (0.0 a 1.0) */
+            background-color: rgba(206, 9, 9, 0.5); 
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Propiedades de Fondo en CSS</h1>
+
+    <div class="box color-box">
+        1. Color Sólido (background-color)
+    </div>
+
+    <div class="box image-box">
+        2. Imagen de Fondo (background-image, -repeat, -size, -position)
+    </div>
+
+    <div class="box gradient-box">
+        3. Gradiente (linear-gradient)
+    </div>
+
+    <div class="box multiple-box">
+        4. Fondo Múltiple (Gradiente y Imagen)
+    </div>
+    
+    <div class="box text-box">
+        5. Opacidad con RGBA (background-color: rgba)
+    </div>
+
+</body>
+</html>

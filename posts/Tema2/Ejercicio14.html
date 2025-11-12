@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio — Unidades CSS (vh, vw, %)</title>
+    <link rel="stylesheet" href="../../css/post.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="header-content">
+            <h1>Blog DIWEB</h1>
+            <p class="subtitle">Ejercicio 14 — Unidades CSS (vh, vw, %)</p>
+            <nav class="nav-bar">
+                <a href="../../index.html">Inicio</a>
+                <a href="../Tema1/index.html">Tema 1</a>
+                <a href="../Tema2/index.html">Tema 2</a>
+                <a href="../Tema3/index.html">Tema 3</a>
+                <a href="../Tema4/index.html">Tema 4</a>
+                <a href="../Tema5/index.html">Tema 5</a>
+                <a href="../Tema6/index.html">Tema 6</a>
+                <a href="../Tema7/index.html">Tema 7</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        <article class="post">
+            <h2>Ejercicio 14  — Unidades CSS (vh, vw, %)</h2>
+            <p class="meta">Publicado el <em>12 de noviembre de 2025</em> por <strong>Pablo Jiménez</strong></p>
+
+            <div class="post-body">
+                <p>
+                    En este ejercicio se analizan las unidades relativas <strong>vh</strong>, <strong>vw</strong> y
+                    <strong>%</strong> en CSS,
+                    que permiten crear diseños adaptables al tamaño del navegador o al contenedor que los contiene.
+                    El objetivo es comprender cómo responden los elementos cuando el tamaño de la ventana cambia.
+                </p>
+
+                <h3>Código HTML</h3>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Ejercicio de Unidades CSS (vh, vw, %)&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .box {
+            margin: 20px;
+            padding: 10px;
+            border: 2px solid #333;
+            box-sizing: border-box;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        /* 1. Completar con: ancho de 50vw y alto de 30vh */
+        .vh-box {
+            background-color: #2a9d8f;
+            width: 50vw; 
+            height: 30vh;
+        }
+
+        /* 2. Completar con: ancho de 80% y alto de 200px */
+        .vw-box {
+            background-color: #e9c46a;
+            width: 80%;
+            height: 200px;
+        }
+
+        /* 3. Completar con: ancho de 60%, alto mínimo de 200px y ancho máximo de 500px */
+        .percent-box {
+            background-color: #f4a261;
+            width: 50%;
+            min-height: 200px;
+            max-width: 500px;
+        }
+
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;Unidades de Medida en CSS&lt;/h1&gt;
+
+    &lt;div class="box vh-box"&gt;
+        .vh-box (vw y vh)
+        &lt;br&gt;
+        Depende del tamaño de la ventana (Viewport).
+    &lt;/div&gt;
+
+    &lt;div class="box vw-box"&gt;
+        .vw-box (% y px)
+        &lt;br&gt;
+        Ancho depende del contenedor (Body), Alto es fijo.
+    &lt;/div&gt;
+
+    &lt;div class="box percent-box"&gt;
+        .percent-box (%, min-height y max-width)
+        &lt;br&gt;
+        Ancho depende del contenedor (Body). Max-width lo limita.
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+                <div class="exercise-button">
+                    <a href="../../Temas/Tema2/Actividades/Ejercicio14/Ejercicio14.html" target="_blank" class="btn">Ver resultado del ejercicio</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- SECCIÓN DE RESPUESTAS -->
+        <article class="post">
+            <h2>Reflexión sobre el ejercicio</h2>
+
+
+            <div class="post-body">
+                <ul>
+                    <li>
+                        <strong>¿Cómo afecta cada unidad (vh, vw, %) al diseño cuando se cambia el tamaño de la
+                            ventana?</strong><br>
+                        Las unidades <code>vh</code> y <code>vw</code> cambian su tamaño según el alto y ancho del
+                        navegador.
+                        En cambio, el porcentaje (<code>%</code>) depende del tamaño del contenedor, no directamente del
+                        tamaño de la pantalla.
+                    </li>
+
+                    <li>
+                        <strong>¿Qué diferencias observas entre el comportamiento del .vh-box y el .vw-box?</strong><br>
+                        La caja <code>.vh-box</code> cambia tanto su ancho como su alto al redimensionar la ventana,
+                        porque usa <code>vw</code> y <code>vh</code>.
+                        La <code>.vw-box</code>, en cambio, solo cambia su ancho, ya que su altura está fijada en
+                        píxeles (<strong>200px</strong>).
+                    </li>
+
+                    <li>
+                        <strong>¿Cómo limita el tamaño del bloque .percent-box la propiedad max-width?</strong><br>
+                        El bloque <code>.percent-box</code> tiene un ancho relativo del <strong>50%</strong>, pero
+                        gracias a <code>max-width: 500px</code>
+                        nunca crece más de ese tamaño aunque la ventana sea muy grande.
+                        Esto garantiza que el diseño mantenga proporciones equilibradas en pantallas grandes.
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <div class="back-link">
+            <a href="../Tema2/" class="btn">← Volver al Tema 2</a>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Pablo Jiménez</p>
+    </footer>
+
+</body>
+
+</html>
