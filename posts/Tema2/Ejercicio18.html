@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 18 — Propiedades de Fuente CSS</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Blog DIWEB</h1>
+      <p class="subtitle">Ejercicio 18 — Propiedades de Fuente en CSS</p>
+            <nav class="nav-bar">
+                <a href="../../index.html">Inicio</a>
+                <a href="../Tema1/index.html">Tema 1</a>
+                <a href="../Tema2/index.html">Tema 2</a>
+                <a href="../Tema3/index.html">Tema 3</a>
+                <a href="../Tema4/index.html">Tema 4</a>
+                <a href="../Tema5/index.html">Tema 5</a>
+                <a href="../Tema6/index.html">Tema 6</a>
+                <a href="../Tema7/index.html">Tema 7</a>
+            </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main-content">
+    <article class="post">
+      <h2>Ejercicio 18 — Propiedades de Fuente en CSS</h2>
+      <p class="meta">Publicado el <em>18 de noviembre de 2025</em> por <strong>Pablo Jiménez</strong></p>
+
+      <div class="post-body">
+
+        <p>
+          En esta actividad se experimenta con distintas propiedades relacionadas con las fuentes en CSS:
+          <strong>font-family</strong>, <strong>font-size</strong>, <strong>font-weight</strong>,
+          <strong>letter-spacing</strong>, <strong>line-height</strong> y <strong>text-transform</strong>.
+          La finalidad es entender cómo influye cada propiedad en la legibilidad, jerarquía visual y estilo general del texto.
+        </p>
+
+        <h3>Enunciado</h3>
+        <ul>
+          <li>Asigna fuentes serif, sans-serif y la importada “Roboto”.</li>
+          <li>Experimenta con tamaños como 24px y 16px.</li>
+          <li>Prueba pesos como normal, bold o numéricos.</li>
+          <li>Aplica transformaciones con <code>uppercase</code>, <code>lowercase</code> o <code>capitalize</code>.</li>
+          <li>Modifica el espaciado entre letras.</li>
+          <li>Aumenta el interlineado para mejorar la lectura.</li>
+        </ul>
+
+        <h3>Código HTML</h3>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Práctica de Propiedades de Fuente en CSS&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Estilizando Fuentes con CSS&lt;/h1&gt;
+    &lt;p class="parrafo1"&gt;Este es el primer párrafo...&lt;/p&gt;
+    &lt;p class="parrafo2"&gt;Este segundo párrafo es ideal para experimentar...&lt;/p&gt;
+    &lt;p class="parrafo3"&gt;En este párrafo final, intenta usar una fuente personalizada...&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <h3>Código CSS</h3>
+        <pre><code>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+h1 {
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.parrafo1 {
+    font-family: serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.parrafo2 {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.parrafo3 {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.8;
+    text-transform: none;
+}
+</code></pre>
+
+        <div class="exercise-button">
+            <a href="../../Temas/Tema2/Actividades/Ejercicio18/Ejercicio18.html" target="_blank" class="btn">Ver resultado del ejercicio</a>
+      </div>
+    </article>
+
+    <!-- RESPUESTAS -->
+    <article class="post">
+      <h2>Reflexión sobre el ejercicio</h2>
+      <p class="meta">Respuestas a las preguntas</p>
+
+      <div class="post-body">
+        <ul>
+          <li>
+            <strong>¿Qué diferencias notas en la legibilidad entre las fuentes serif y sans-serif?</strong><br>
+            Las fuentes <strong>sans-serif</strong> suelen verse más limpias y modernas, por eso se usan mucho en pantallas.
+            Las <strong>serif</strong> tienen remates y un estilo más clásico, lo que a veces mejora la lectura en textos largos,
+            pero en pantallas pequeñas pueden verse menos nítidas.
+          </li>
+
+          <li>
+            <strong>¿Cómo afecta el tamaño de la fuente y el interlineado a la comodidad de lectura?</strong><br>
+            Si el texto es grande pero el interlineado es pequeño, todo queda muy junto y cuesta leerlo.  
+            En cambio aunque el tamaño sea normal un interlineado amplio hace que el texto sea mucho más cómodo de seguir.
+          </li>
+
+          <li>
+            <strong>¿Cuál es tu combinación de propiedades favorita para títulos y párrafos?</strong><br>
+            Para los títulos, es la fuente fuente <strong>sans-serif</strong>, grande y en <strong>bold</strong>.  
+            Para párrafos, una fuente más ligera.
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema2/" class="btn">← Volver al Tema 2</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Pablo Jiménez</p>
+  </footer>
+
+</body>
+</html>

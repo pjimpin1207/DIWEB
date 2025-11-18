@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+h1 {
+  color: #333333;
+  font-size: 32px;
+  text-transform: uppercase;
+  text-align: center;
+}
+h2 {
+  color: #555555;
+  font-size: 24px;
+
+  letter-spacing: 2px;
+  text-decoration: underline;
+}
+p {
+  font-size: 16px;
+  color: #666666;
+
+  text-indent: 30px;
+  text-align: justify;
+}
+blockquote {
+  font-style: italic;
+  color: #444444;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border-left: 3px solid #007acc;
+}

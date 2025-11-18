@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 17 — Propiedades de Texto CSS</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Blog DIWEB</h1>
+      <p class="subtitle">Ejercicio 17 — Propiedades de Texto en CSS</p>
+            <nav class="nav-bar">
+                <a href="../../index.html">Inicio</a>
+                <a href="../Tema1/index.html">Tema 1</a>
+                <a href="../Tema2/index.html">Tema 2</a>
+                <a href="../Tema3/index.html">Tema 3</a>
+                <a href="../Tema4/index.html">Tema 4</a>
+                <a href="../Tema5/index.html">Tema 5</a>
+                <a href="../Tema6/index.html">Tema 6</a>
+                <a href="../Tema7/index.html">Tema 7</a>
+            </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main-content">
+    <article class="post">
+      <h2>Ejercicio 17 — Propiedades de Texto en CSS</h2>
+      <p class="meta">Publicado el <em>14 de noviembre de 2025</em> por <strong>Pablo Jiménez</strong></p>
+
+      <div class="post-body">
+
+        <p>
+          En esta actividad se practica cómo las propiedades de texto en CSS afectan directamente a la apariencia,
+          legibilidad y jerarquía visual del contenido. Se han aplicado diferentes valores para <strong>color</strong>,
+          <strong>font-size</strong>, <strong>text-transform</strong>, <strong>text-align</strong>,
+          <strong>letter-spacing</strong>, <strong>text-indent</strong>, <strong>font-style</strong> y
+          <strong>background-color</strong> para personalizar encabezados, párrafos y bloques de cita.
+        </p>
+
+        <h3>Enunciado</h3>
+        <p>
+          A partir del código HTML y CSS proporcionado:
+        </p>
+        <ul>
+          <li>Aplica colores contrastados como <code>#333333</code> o <code>#007acc</code>.</li>
+          <li>Usa tamaños en píxeles (ej. 32px, 24px).</li>
+          <li>Alinea texto con <strong>center</strong> o <strong>justify</strong>.</li>
+          <li>Aplica transformaciones como <strong>uppercase</strong> o <strong>capitalize</strong>.</li>
+          <li>Modifica el espaciado entre letras con <strong>letter-spacing</strong>.</li>
+          <li>Subraya texto con <strong>text-decoration: underline</strong>.</li>
+          <li>Indenta párrafos con <strong>text-indent: 30px</strong>.</li>
+          <li>Aplica <strong>italic</strong> y un fondo suave con <strong>rgba()</strong> al blockquote.</li>
+        </ul>
+
+        <h3>Código HTML</h3>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Práctica de Propiedades de Texto en CSS&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Propiedades de Texto en CSS&lt;/h1&gt;
+    &lt;h2&gt;Subtítulo Ejemplo&lt;/h2&gt;
+    &lt;p&gt;Este es un párrafo de ejemplo en el que aplicarás distintas propiedades de texto...&lt;/p&gt;
+    &lt;blockquote&gt;Este es un bloque de cita...&lt;/blockquote&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <h3>Código CSS</h3>
+        <pre><code>body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+h1 {
+  color: #333333;
+  font-size: 32px;
+  text-transform: uppercase;
+  text-align: center;
+}
+h2 {
+  color: #555555;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-decoration: underline;
+}
+p {
+  font-size: 16px;
+  color: #666666;
+  text-indent: 30px;
+  text-align: justify;
+}
+blockquote {
+  font-style: italic;
+  color: #444444;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border-left: 3px solid #007acc;
+}
+</code></pre>
+
+        <div class="exercise-button">
+            <a href="../../Temas/Tema2/Actividades/Ejercicio17/Ejercicio17.html" target="_blank" class="btn">Ver resultado del ejercicio</a>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- RESPUESTAS -->
+    <article class="post">
+      <h2>Preguntas del ejercicio</h2>
+      <div class="post-body">
+        <ul>
+          <li>
+            <strong>¿Cómo cambia la apariencia del texto cuando aplicas diferentes colores y tamaños?</strong><br>
+            Cambia mucho porque los colores definen el contraste y la legibilidad mientras que los tamaños ayudan
+             a crear una diferecncia visual entre títulos, subtítulos y párrafos.
+          </li>
+
+          <li>
+            <strong>¿Qué combinación de propiedades y colores te parece más profesional o atractiva?</strong><br>
+            Suele usar colores oscuros o neutros para el texto y un color destacado
+            como <code>#007acc</code> para resaltar elementos importantes.  
+            La combinación de título en mayúsculas, subtítulo subrayado y blockquote en <em>italic</em> con fondo suave
+            crea una apariencia clara y fácil de leer.
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema2/" class="btn">← Volver al Tema 2</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Pablo Jiménez</p>
+  </footer>
+
+</body>
+</html>

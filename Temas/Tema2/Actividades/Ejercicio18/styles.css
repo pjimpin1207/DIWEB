@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+h1 {
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.parrafo1 {
+    font-family: serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.parrafo2 {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.parrafo3 {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.8;
+    text-transform: none;
+}
+
+/*1. noto que la sans-serif es mejor para los titulos porque destaca mas.
+
+2. afecta que si la letra es grande pero con el interlineado pequeño se ve todo muy pegado y cuesta leerlo mas que si la letra es pequeña pero el interlineado mas grande
+
+3. para el titulo la fuente sans-serif con un font-size grande y un font-height bold para que destaque
