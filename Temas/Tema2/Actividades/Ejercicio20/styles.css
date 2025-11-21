@@ -1,0 +1,53 @@
+/* 1. Lista ordenada de tareas (ol.tareas) */
+ol.tareas {
+    /* Estilo de la marca: números decimales con un cero inicial (01, 02, etc.) */
+    list-style-type: decimal-leading-zero; 
+
+    /* Posición de la marca: dentro del flujo de texto */
+    list-style-position: inside; 
+}
+
+ol.tareas li {
+    /* Color del texto: azul oscuro */
+    color: #003366; 
+}
+
+/* --- */
+
+/* 2. Lista no ordenada de materiales (ul.materiales) */
+ul.materiales {
+    /* Estilo de la marca: cuadrados sólidos */
+    list-style-type: square; 
+
+    /* Posición de la marca: fuera del flujo de texto (por defecto, pero se incluye para claridad) */
+    list-style-position: outside; 
+}
+
+ul.materiales li {
+    /* Color del texto: verde oscuro */
+    color: #2a7a1f; 
+}
+
+/* --- */
+
+/* 3. Lista personalizada de recursos de estudio (ul.recursos) */
+ul.recursos {
+    /* * Marca personalizada: Usamos list-style-image.
+     * **Nota Importante:** Reemplaza 'ruta/a/icono-libro.png' con la URL 
+     * o ruta real de tu pequeña imagen (ícono de libro o estrella).
+     */
+    list-style-image: url('ruta/a/icono-libro.png'); 
+
+    /* Posición de la marca: dentro del flujo de texto */
+    list-style-position: inside; 
+
+    /* Opcional: Establecemos un tipo de marca por si la imagen no se carga */
+    list-style-type: disc; 
+}
+
+ul.recursos li {
+    /* Color del texto: gris oscuro */
+    list-style-image: url('https://lh5.googleusercontent.com/LM0t4lybG4VsUyKDbDizCDZEA6y2ZeRBIqRw4RMFM8-ggC5cFhphukFT-h24CWqwycbNcvVutbJeGlueYS4zwVmBzJVyiaz-QHbRCufuJJKe8_5SEVROgxGAKk9YlzyGlxBFX-Uyl0CIxObBSXxvow');
+    list-style-position: inside;
+    color: #444444; 
+}

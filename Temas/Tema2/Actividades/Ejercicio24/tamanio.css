@@ -1,0 +1,18 @@
+.seccion1 {
+    width: 200px;
+    height: 150px;
+    background-color: rgb(181, 211, 11);
+}
+
+.seccion2 {
+    width: 50% ;
+    height: 100px;
+    background-color: aquamarine;
+}
+
+.seccion3 {
+    width: 300px;
+    min-height: 100px;
+    max-height: 200px;
+    background-color: antiquewhite;
+}

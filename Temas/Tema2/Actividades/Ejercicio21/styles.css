@@ -1,0 +1,23 @@
+.id1{
+    border-style: dotted;
+    border-width: 3px;
+    border-color: rgb(13, 90, 204);
+    margin: 20px;
+    padding: 10px;
+}
+
+.id2{
+    border-style: solid;
+    border-left-width: 20px;
+    border-right-width: 10px;
+    border-top-width: 5px;
+    border-bottom-width: 15px;
+    border-color: rgb(21, 214, 21);
+}
+
+div button{
+    border-style: double;
+    border-color: rgb(255, 0, 0);
+    border-width: 4px;
+    border-radius: 15px;
+}

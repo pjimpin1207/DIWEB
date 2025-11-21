@@ -1,0 +1,17 @@
+.seccion1{
+    margin: 20px;
+    background-color: rgb(10, 223, 10);
+}
+
+.seccion2{
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    background-color: rgb(12, 65, 209);
+}
+
+.seccion3{
+    margin: auto;
+    margin-top: 50px;
+}
