@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 29 — Iconos con Librerías</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Blog DIWEB</h1>
+      <p class="subtitle">Ejercicio 29 — Iconos con Font Awesome y Material Icons</p>
+      <nav class="nav-bar">
+        <a href="../../index.html">Inicio</a>
+        <a href="../Tema1/index.html">Tema 1</a>
+        <a href="../Tema2/index.html">Tema 2</a>
+        <a href="../Tema3/index.html">Tema 3</a>
+        <a href="../Tema4/index.html">Tema 4</a>
+        <a href="../Tema5/index.html">Tema 5</a>
+        <a href="../Tema6/index.html">Tema 6</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- ARTÍCULO PRINCIPAL -->
+    <article class="post">
+      <h2>Ejercicio 29 — Iconos con Librerías</h2>
+      <p class="meta">Publicado el <em>21 de noviembre de 2025</em> por <strong>pjimpin1207</strong></p>
+
+      <div class="post-body">
+
+        <p>
+          En este ejercicio se utilizan dos librerías diferentes de iconos:
+          <strong>Font Awesome</strong> y <strong>Material Icons</strong>.  
+          Se incorporan varios iconos de cada una y se permite personalizar uno de ellos
+          aplicando un color y tamaño propio mediante CSS.
+        </p>
+
+        <h3>Código HTML</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Ejercicio Contorno&lt;/title&gt;
+
+  &lt;!-- Font Awesome --&gt;
+  &lt;script src="https://kit.fontawesome.com/3a4aaf85b1.js" crossorigin="anonymous"&gt;&lt;/script&gt;
+
+  &lt;!-- Material Icons --&gt;
+  &lt;link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;h1&gt;Font Awesome&lt;/h1&gt;
+  &lt;i class="fa-solid fa-message"&gt;&lt;/i&gt;
+  &lt;i class="fa-brands fa-figma"&gt;&lt;/i&gt;
+  &lt;i class="fa-brands fa-youtube"&gt;&lt;/i&gt;
+  &lt;i class="fa-brands fa-apple"&gt;&lt;/i&gt;
+
+  &lt;h1&gt;Google&lt;/h1&gt;
+  &lt;span class="material-icons"&gt;home&lt;/span&gt;
+  &lt;span class="material-icons"&gt;favorite&lt;/span&gt;
+  &lt;span class="material-icons"&gt;settings&lt;/span&gt;
+  &lt;span class="material-icons"&gt;send&lt;/span&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <p>
+          Para personalizar un icono, puedes añadir un estilo CSS como este:
+        </p>
+
+<pre><code>.fa-message {
+    color: #ff0000;
+    font-size: 40px;
+}
+</code></pre>
+
+        <div class="exercise-button">
+            <a href="../../Temas/Tema2/Actividades/Ejercicio29/Ejercicio29.html"
+               target="_blank"
+               class="btn">Ver resultado del ejercicio</a>
+        </div>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema2/" class="btn">← Volver al Tema 2</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Pablo Jiménez</p>
+  </footer>
+
+</body>
+</html>

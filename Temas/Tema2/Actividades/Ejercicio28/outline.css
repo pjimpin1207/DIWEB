@@ -1,0 +1,17 @@
+.seccion1 {
+    outline-style: solid;
+    outline-color: #007acc;
+}
+
+.seccion2 {
+    outline-style: dashed;
+    outline-color: #1aeb1a;
+    outline-width: 5px;
+}
+
+.seccion3 {
+    outline-offset: 10px;
+    outline-style: dotted;
+    outline-color: rgb(204, 17, 179);
+
+}

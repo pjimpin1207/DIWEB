@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 24 — Tamaños en CSS</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Blog DIWEB</h1>
+      <p class="subtitle">Ejercicio 24 — Tamaños en CSS</p>
+      <nav class="nav-bar">
+        <a href="../../index.html">Inicio</a>
+        <a href="../Tema1/index.html">Tema 1</a>
+        <a href="../Tema2/index.html">Tema 2</a>
+        <a href="../Tema3/index.html">Tema 3</a>
+        <a href="../Tema4/index.html">Tema 4</a>
+        <a href="../Tema5/index.html">Tema 5</a>
+        <a href="../Tema6/index.html">Tema 6</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- ARTÍCULO PRINCIPAL -->
+    <article class="post">
+      <h2>Ejercicio 24 — Tamaños en CSS</h2>
+      <p class="meta">Publicado el <em>21 de noviembre de 2025</em> por <strong>pjimpin1207</strong></p>
+
+      <div class="post-body">
+
+        <p>
+          En este ejercicio se trabaja con diferentes propiedades de tamaño en CSS, como
+          <strong>width</strong>, <strong>height</strong>, <strong>min-height</strong> y <strong>max-height</strong>.
+          Cada sección usa un comportamiento distinto para entender cómo estas propiedades afectan la apariencia
+          y el comportamiento de los elementos dentro de una página web.
+        </p>
+
+        <h3>Enunciado</h3>
+        <ul>
+          <li>Crear tres cuadros con textos distintos.</li>
+          <li>Aplicar tamaño fijo a la primera sección.</li>
+          <li>Aplicar tamaño relativo (porcentaje) a la segunda sección.</li>
+          <li>Aplicar altura mínima y máxima a la tercera sección.</li>
+        </ul>
+
+        <h3>Código HTML</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Ejercicio Tamaño 24&lt;/title&gt;
+    &lt;link rel="stylesheet" href="tamanio.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class="seccion1"&gt;
+    Tamaño Fijo
+&lt;/div&gt;
+
+&lt;div class="seccion2"&gt;
+    Porcentaje de Ancho
+&lt;/div&gt;
+
+&lt;div class="seccion3"&gt;
+    Altura Mínima y Máxima
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <h3>Código CSS</h3>
+<pre><code>.seccion1 {
+    width: 200px;
+    height: 150px;
+    background-color: rgb(181, 211, 11);
+}
+
+.seccion2 {
+    width: 50%;
+    height: 100px;
+    background-color: aquamarine;
+}
+
+.seccion3 {
+    width: 300px;
+    min-height: 100px;
+    max-height: 200px;
+    background-color: antiquewhite;
+}
+</code></pre>
+
+        <div class="exercise-button">
+            <a href="../../Temas/Tema2/Actividades/Ejercicio24/tamanio.html"
+               target="_blank"
+               class="btn">Ver resultado del ejercicio</a>
+        </div>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema2/" class="btn">← Volver al Tema 2</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Pablo Jiménez</p>
+  </footer>
+
+</body>
+</html>

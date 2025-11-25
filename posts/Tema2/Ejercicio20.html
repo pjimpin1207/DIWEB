@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 20 — Estilos de Listas en CSS</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Blog DIWEB</h1>
+      <p class="subtitle">Ejercicio 20 — Estilos de Listas en CSS</p>
+      <nav class="nav-bar">
+        <a href="../../index.html">Inicio</a>
+        <a href="../Tema1/index.html">Tema 1</a>
+        <a href="../Tema2/index.html">Tema 2</a>
+        <a href="../Tema3/index.html">Tema 3</a>
+        <a href="../Tema4/index.html">Tema 4</a>
+        <a href="../Tema5/index.html">Tema 5</a>
+        <a href="../Tema6/index.html">Tema 6</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- ARTÍCULO PRINCIPAL -->
+    <article class="post">
+      <h2>Ejercicio 20 — Estilos de Listas en CSS</h2>
+      <p class="meta">Publicado el <em>21 de noviembre de 2025</em> por <strong>pjimpin1207</strong></p>
+
+      <div class="post-body">
+
+        <p>
+          Este ejercicio consiste en aplicar estilos personalizados a diferentes tipos de listas,
+          utilizando propiedades como <strong>list-style-type</strong>, <strong>list-style-position</strong>,
+          <strong>list-style-image</strong> y colores específicos. El objetivo es aprender a modificar
+          la apariencia de listas ordenadas, no ordenadas y listas con iconos personalizados.
+        </p>
+
+        <h3>Enunciado</h3>
+        <ul>
+          <li>Aplicar estilo decimal-leading-zero a la lista <code>ol.tareas</code>.</li>
+          <li>Personalizar una lista no ordenada usando <code>square</code>.</li>
+          <li>Crear una lista con icono personalizado usando <code>list-style-image</code>.</li>
+          <li>Modificar colores, posición de marca y estilos de texto.</li>
+        </ul>
+
+        <h3>Código HTML</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Ejemplo de Estilos de Lista&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h2&gt;Lista de Tareas (ol.tareas)&lt;/h2&gt;
+    &lt;ol class="tareas"&gt;
+        &lt;li&gt;Revisar el capítulo 1.&lt;/li&gt;
+        &lt;li&gt;Hacer los ejercicios de la página 20.&lt;/li&gt;
+        &lt;li&gt;Preparar el resumen semanal.&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;h2&gt;Materiales Necesarios (ul.materiales)&lt;/h2&gt;
+    &lt;ul class="materiales"&gt;
+        &lt;li&gt;Cuaderno de apuntes.&lt;/li&gt;
+        &lt;li&gt;Bolígrafo azul y rojo.&lt;/li&gt;
+        &lt;li&gt;Libro de texto.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h2&gt;Recursos de Estudio (ul.recursos)&lt;/h2&gt;
+    &lt;ul class="recursos"&gt;
+        &lt;li&gt;Sitio web oficial del curso.&lt;/li&gt;
+        &lt;li&gt;Videos explicativos en YouTube.&lt;/li&gt;
+        &lt;li&gt;Foro de preguntas y respuestas.&lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <h3>Código CSS</h3>
+<pre><code>/* 1. Lista ordenada de tareas (ol.tareas) */
+ol.tareas {
+    list-style-type: decimal-leading-zero;
+    list-style-position: inside;
+}
+ol.tareas li {
+    color: #003366;
+}
+
+/* 2. Lista no ordenada de materiales (ul.materiales) */
+ul.materiales {
+    list-style-type: square;
+    list-style-position: outside;
+}
+ul.materiales li {
+    color: #2a7a1f;
+}
+
+/* 3. Lista personalizada de recursos (ul.recursos) */
+ul.recursos {
+    list-style-image: url('https://lh5.googleusercontent.com/LM0t4lybG4VsUyKDbDizCDZEA6y2ZeRBIqRw4RMFM8-ggC5cFhphukFT-h24CWqwycbNcvVutbJeGlueYS4zwVmBzJVyiaz-QHbRCufuJJKe8_5SEVROgxGAKk9YlzyGlxBFX-Uyl0CIxObBSXxvow');
+    list-style-position: inside;
+    list-style-type: disc;
+}
+ul.recursos li {
+    color: #444444;
+}
+</code></pre>
+
+        <div class="exercise-button">
+            <a href="../../Temas/Tema2/Actividades/Ejercicio20/Ejercicio20.html" 
+               target="_blank" 
+               class="btn">Ver resultado del ejercicio</a>
+        </div>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema2/" class="btn">← Volver al Tema 2</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Pablo Jiménez</p>
+  </footer>
+
+</body>
+</html>

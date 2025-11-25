@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 25 — Modelo de Caja en CSS</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Blog DIWEB</h1>
+      <p class="subtitle">Ejercicio 25 — Modelo de Caja en CSS</p>
+      <nav class="nav-bar">
+        <a href="../../index.html">Inicio</a>
+        <a href="../Tema1/index.html">Tema 1</a>
+        <a href="../Tema2/index.html">Tema 2</a>
+        <a href="../Tema3/index.html">Tema 3</a>
+        <a href="../Tema4/index.html">Tema 4</a>
+        <a href="../Tema5/index.html">Tema 5</a>
+        <a href="../Tema6/index.html">Tema 6</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- ARTÍCULO PRINCIPAL -->
+    <article class="post">
+      <h2>Ejercicio 25 — Modelo de Caja en CSS</h2>
+      <p class="meta">Publicado el <em>21 de noviembre de 2025</em> por <strong>pjimpin1207</strong></p>
+
+      <div class="post-body">
+
+        <p>
+          En este ejercicio se aplica el <strong>modelo de caja (box model)</strong> de CSS a un único
+          elemento <code>&lt;div&gt;</code>, utilizando propiedades fundamentales como fondo, ancho, alto,
+          borde, relleno y margen. El objetivo es comprender cómo se calcula el tamaño total de un elemento.
+        </p>
+
+        <h3>Enunciado</h3>
+        <ul>
+          <li>Crear un div con fondo gris.</li>
+          <li>Aplicar un tamaño de 300×300 píxeles.</li>
+          <li>Añadir un borde sólido verde de 15px.</li>
+          <li>Añadir un relleno interno de 50px.</li>
+          <li>Añadir un margen externo de 20px.</li>
+          <li>Calcular el tamaño total del div.</li>
+        </ul>
+
+        <h3>Código HTML</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Caja con Dimensiones&lt;/title&gt;
+    &lt;link rel="stylesheet" href="Ejercicio25.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="seccion1"&gt; 
+        Este es un texto dentro del div.
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <h3>Código CSS</h3>
+<pre><code>.seccion1 { 
+    background-color: rgb(97, 93, 93);
+    width: 300px;
+    height: 300px;
+    border: 15px solid rgb(21, 212, 21);
+    padding: 50px;
+    margin: 20px;
+}
+</code></pre>
+
+        <h3>Cálculo del tamaño total del div</h3>
+        <p>El tamaño total del div es de 430px × 430px.</strong></p>
+
+        <div class="exercise-button">
+            <a href="../../Temas/Tema2/Actividades/Ejercicio25/Ejercicio25.html"
+               target="_blank"
+               class="btn">Ver resultado del ejercicio</a>
+        </div>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema2/" class="btn">← Volver al Tema 2</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Pablo Jiménez</p>
+  </footer>
+
+</body>
+</html>
