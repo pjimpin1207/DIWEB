@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 30 — Tablas en CSS</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Blog DIWEB</h1>
+      <p class="subtitle">Ejercicio 30 — Tablas en CSS</p>
+      <nav class="nav-bar">
+        <a href="../../index.html">Inicio</a>
+        <a href="../Tema1/index.html">Tema 1</a>
+        <a href="../Tema2/index.html">Tema 2</a>
+        <a href="../Tema3/index.html">Tema 3</a>
+        <a href="../Tema4/index.html">Tema 4</a>
+        <a href="../Tema5/index.html">Tema 5</a>
+        <a href="../Tema6/index.html">Tema 6</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- ARTÍCULO PRINCIPAL -->
+    <article class="post">
+      <h2>Ejercicio 30 — Tablas en CSS</h2>
+      <p class="meta">Publicado el <em>26 de noviembre de 2025</em> por <strong>pjimpin1207</strong></p>
+
+      <div class="post-body">
+
+        <p>
+          En este ejercicio se trabaja con varios aspectos del estilo de tablas en CSS: posición del título,
+          separación entre celdas, visualización de celdas vacías, alternancia de colores y configuración 
+          del diseño interno mediante propiedades como <strong>caption-side</strong>, 
+          <strong>border-collapse</strong>, <strong>border-spacing</strong>,
+          <strong>empty-cells</strong> y <strong>table-layout</strong>.
+        </p>
+
+        <h3>Enunciado</h3>
+        <ul>
+          <li>Crear una tabla que represente un horario semanal.</li>
+          <li>Usar un <code>&lt;caption&gt;</code> como título de la tabla.</li>
+          <li>Configurar bordes, espaciados y diseño interno de la tabla.</li>
+          <li>Personalizar la visualización de celdas vacías.</li>
+          <li>Aplicar estilos llamativos al encabezado.</li>
+        </ul>
+
+        <h3>Código HTML</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Horario Semanal&lt;/title&gt;
+    &lt;link rel="stylesheet" href="tablas.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;table&gt;
+        &lt;caption&gt;Horario Semanal&lt;/caption&gt;
+
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Hora&lt;/th&gt;
+                &lt;th&gt;Lunes&lt;/th&gt;
+                &lt;th&gt;Martes&lt;/th&gt;
+                &lt;th&gt;Miércoles&lt;/th&gt;
+                &lt;th&gt;Jueves&lt;/th&gt;
+                &lt;th&gt;Viernes&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;08:00&lt;/td&gt;
+                &lt;td&gt;Matemáticas&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;Ciencias&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;Lengua&lt;/td&gt;
+            &lt;/tr&gt;
+
+            &lt;tr&gt;
+                &lt;td&gt;09:00&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;Historia&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;Inglés&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+
+            &lt;tr&gt;
+                &lt;td&gt;10:00&lt;/td&gt;
+                &lt;td&gt;Física&lt;/td&gt;
+                &lt;td&gt;Educación Física&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;Plástica&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <h3>Código CSS</h3>
+<pre><code>table {
+    width: 80%;
+    margin: 20px auto;
+
+    /* Bordes */
+    border-collapse: separate;
+    border-spacing: 10px;
+
+    /* Diseño tabla */
+    table-layout: fixed;
+
+    /* Visualizar las vacías */
+    empty-cells: show;
+}
+
+/* Título */
+caption {
+    caption-side: bottom;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 10px;
+    color: #ff18b2;
+}
+
+/* Celdas y encabezados */
+th, td {
+    border: 1px solid #09e614;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Encabezado */
+th {
+    background-color: #2b7bc5;
+    color: white;
+    border: 2px solid #f10707;
+}
+</code></pre>
+
+        <div class="exercise-button">
+            <a href="../../Temas/Tema2/Actividades/Ejercicio30/tablas.html"
+               target="_blank"
+               class="btn">Ver resultado del ejercicio</a>
+        </div>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema2/" class="btn">← Volver al Tema 2</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Pablo Jiménez</p>
+  </footer>
+
+</body>
+</html>

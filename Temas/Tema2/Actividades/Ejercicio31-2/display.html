@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Display</title>
+    <link rel="stylesheet" href="display.css">
+</head>
+<body>
+
+    <h1>Ejercicio Display</h1>
+
+    <p class="explicacion">
+        La propiedad <b>display</b> controla cómo se comportan los elementos (block, inline,
+        inline-block o none). La propiedad <b>visibility</b> controla si un elemento es visible,
+        pero sin afectar el espacio que ocupa.
+    </p>
+
+    <h2>Elementos de prueba</h2>
+
+    <!-- display: block -->
+    <div class="bloque">Soy un div con display: block</div>
+
+    <!-- display: inline -->
+    <span class="inLine">Inline 1</span>
+    <span class="inLine">Inline 2</span>
+    <span class="inLine">Inline 3</span>
+
+    <!-- display: inline-block -->
+    <p class="inLineBlock">Caja 1</p>
+    <p class="inLineBlock">Caja 2</p>
+    <p class="inLineBlock">Caja 3</p>
+
+    <!-- display: none -->
+    <div id="oculto">Soy un elemento oculto (display: none)</div>
+
+    <!-- nuevo elemento para visibility -->
+    <div id="visibilidad">Soy un elemento con visibility</div>
+
+    <button id="mostrar">Mostrar elemento oculto (display)</button>
+    <button id="toggleVisibilidad">Cambiar visibility</button>
+
+    <script>
+        // display
+        document.getElementById("mostrar").onclick = () => {
+            document.getElementById("oculto").style.display = "block";
+        };
+
+        //visibility
+        let visible = true;
+        document.getElementById("toggleVisibilidad").onclick = () => {
+            visible = !visible;
+            document.getElementById("visibilidad").style.visibility =
+                visible ? "visible" : "hidden";
+        };
+    </script>
+
+</body>
+</html>

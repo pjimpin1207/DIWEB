@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Display</title>
+    <link rel="stylesheet" href="display.css">
+</head>
+<body>
+
+    <h1>Ejercicio Display</h1>
+
+    <p class="definicion">
+        La propiedad <b>display</b> sirve para definir cómo se comportan los elementos en la página.
+        Con <b>block</b> un elemento ocupa todo el ancho, con <b>inline</b> se colocan en la misma línea,
+        con <b>inline-block</b> mezclan ambos comportamientos, y con <b>none</b> se ocultan.
+    </p>
+
+    <h2>Elementos de prueba</h2>
+
+    <!-- display: block -->
+    <div class="bloque">div con display: block</div>
+
+    <!-- display: inline -->
+    <span class="inLine">Inline 1</span>
+    <span class="inLine">Inline 2</span>
+    <span class="inLine">Inline 3</span>
+
+    <!-- display: inline-block -->
+    <p class="inlineblock">Caja 1</p>
+    <p class="inlineblock">Caja 2</p>
+    <p class="inlineblock">Caja 3</p>
+
+    <!-- display: none -->
+    <div id="oculto">Elemento oculto</div>
+
+    <button id="mostrar">Mostrar elemento oculto</button>
+
+    <script>
+        document.getElementById("mostrar").onclick = () => {
+            document.getElementById("oculto").style.display = "block";
+        };
+    </script>
+
+</body>
+</html>

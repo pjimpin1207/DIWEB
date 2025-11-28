@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 31 — Propiedad Display en CSS</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Blog DIWEB</h1>
+      <p class="subtitle">Ejercicio 31 — Propiedad Display en CSS</p>
+      <nav class="nav-bar">
+        <a href="../../index.html">Inicio</a>
+        <a href="../Tema1/index.html">Tema 1</a>
+        <a href="../Tema2/index.html">Tema 2</a>
+        <a href="../Tema3/index.html">Tema 3</a>
+        <a href="../Tema4/index.html">Tema 4</a>
+        <a href="../Tema5/index.html">Tema 5</a>
+        <a href="../Tema6/index.html">Tema 6</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- ARTÍCULO PRINCIPAL -->
+    <article class="post">
+      <h2>Ejercicio 31 — Propiedad Display en CSS</h2>
+      <p class="meta">Publicado el <em>28 de noviembre de 2025</em> por <strong>pjimpin1207</strong></p>
+
+      <div class="post-body">
+
+        <p>
+          En este ejercicio se trabaja con la propiedad <strong>display</strong> de CSS, que permite definir 
+          cómo se comportan los elementos dentro del flujo del documento. Se experimenta con los valores 
+          <code>block</code>, <code>inline</code>, <code>inline-block</code> y <code>none</code>, además de 
+          añadir un poco de interactividad mediante JavaScript para mostrar un elemento inicialmente oculto.
+        </p>
+
+        <h3>Enunciado</h3>
+        <ul>
+          <li>Crear una lista de elementos con distintas etiquetas.</li>
+          <li>Aplicar <code>display: block</code> a un elemento.</li>
+          <li>Aplicar <code>display: inline</code> a varios elementos.</li>
+          <li>Usar <code>display: inline-block</code> como combinación de ambos modelos.</li>
+          <li>Ocultar un elemento con <code>display: none</code>.</li>
+          <li>Mostrar el elemento oculto mediante JavaScript.</li>
+        </ul>
+
+        <h3>Código HTML</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Ejercicio Display&lt;/title&gt;
+    &lt;link rel="stylesheet" href="display.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;Ejercicio Display&lt;/h1&gt;
+
+    &lt;p class="definicion"&gt;
+        La propiedad &lt;b&gt;display&lt;/b&gt; sirve para definir cómo se comportan los elementos.
+        Con &lt;b&gt;block&lt;/b&gt; un elemento ocupa todo el ancho, con &lt;b&gt;inline&lt;/b&gt; se colocan
+        en la misma línea, con &lt;b&gt;inline-block&lt;/b&gt; mezclan ambos comportamientos, y con
+        &lt;b&gt;none&lt;/b&gt; se ocultan.
+    &lt;/p&gt;
+
+    &lt;h2&gt;Elementos de prueba&lt;/h2&gt;
+
+    &lt;!-- display: block --&gt;
+    &lt;div class="bloque"&gt;div con display: block&lt;/div&gt;
+
+    &lt;!-- display: inline --&gt;
+    &lt;span class="inLine"&gt;Inline 1&lt;/span&gt;
+    &lt;span class="inLine"&gt;Inline 2&lt;/span&gt;
+    &lt;span class="inLine"&gt;Inline 3&lt;/span&gt;
+
+    &lt;!-- display: inline-block --&gt;
+    &lt;p class="inlineblock"&gt;Caja 1&lt;/p&gt;
+    &lt;p class="inlineblock"&gt;Caja 2&lt;/p&gt;
+    &lt;p class="inlineblock"&gt;Caja 3&lt;/p&gt;
+
+    &lt;!-- display: none --&gt;
+    &lt;div id="oculto"&gt;Elemento oculto&lt;/div&gt;
+
+    &lt;button id="mostrar"&gt;Mostrar elemento oculto&lt;/button&gt;
+
+    &lt;script&gt;
+        document.getElementById("mostrar").onclick = () =&gt; {
+            document.getElementById("oculto").style.display = "block";
+        };
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <h3>Código CSS</h3>
+<pre><code>/* 1. display: block */
+.bloque {
+    display: block;
+    background-color: rgba(0, 248, 21, 0.973);
+}
+
+/* 2. display: inline */
+.inLine {
+    display: inline;
+    background-color: rgb(183, 0, 255);
+}
+
+/* 3. display: inline-block */
+.inlineblock {
+    display: inline-block;
+    background-color: aqua;
+}
+
+/* 4. display: none */
+#oculto {
+    display: none;
+}
+</code></pre>
+
+        <div class="exercise-button">
+            <a href="../../Temas/Tema2/Actividades/Ejercicio31/display.html"
+               target="_blank"
+               class="btn">Ver resultado del ejercicio</a>
+        </div>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema2/" class="btn">← Volver al Tema 2</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Pablo Jiménez</p>
+  </footer>
+
+</body>
+</html>

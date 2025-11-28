@@ -1,0 +1,7 @@
+        .cuadro {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: 2px solid #000;
+            margin: 20px;
+        }

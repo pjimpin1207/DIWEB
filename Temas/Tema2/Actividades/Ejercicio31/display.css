@@ -1,0 +1,25 @@
+/* 1. display: block */
+.bloque {
+    display: block;
+    background-color:rgba(0, 248, 21, 0.973);
+}
+
+/* 2. display: inline */
+.inLine {
+    display: inline;
+    background-color:rgb(183, 0, 255);
+}
+
+/* 3. display: inline-block */
+.inlineblock {
+    display: inline-block;
+    background-color:aqua;
+
+}
+
+/* 4. display: none */
+#oculto {
+    display: none;
+
+}
+
