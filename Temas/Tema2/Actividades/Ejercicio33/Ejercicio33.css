@@ -1,7 +1,29 @@
-        .cuadro {
-            width: 100px;
-            height: 100px;
-            background-color: lightblue;
-            border: 2px solid #000;
-            margin: 20px;
-        }
+.cuadro {
+    width: 120px;
+    height: 120px;
+    position: absolute; /* necesario para usar z-index */
+}
+
+/* Primer cuadrado */
+.rojo {
+    background-color: rgb(255, 142, 142);
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+}
+
+/* Segundo cuadrado */
+.verde {
+    background-color: rgb(0, 255, 0);
+    top: 90px;
+    left: 90px;
+    z-index: 2;
+}
+
+/* Tercer cuadrado */
+.azul {
+    background-color: rgb(0, 183, 255);
+    top: 130px;
+    left: 130px;
+    z-index: 3;
+}

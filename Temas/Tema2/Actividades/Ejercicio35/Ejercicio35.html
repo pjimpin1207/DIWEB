@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Float para Envolver Texto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Ejercicio35.css">
+</head>
+<body>
+
+    <div class="article-container">
+        <h1>El Renacimiento de las Micro-Comunidades Digitales</h1>
+
+        <!-- Imagen a flotar -->
+        <img class="article-image" src="https://placehold.co/250x150/059669/ffffff?text=Imagen+Flotante" alt="Representación de una micro-comunidad digital">
+
+        <p>
+            **Párrafo 1:** La historia de Internet es cíclica. Después de décadas de centralización en grandes plataformas sociales, estamos observando un retorno fascinante a las micro-comunidades. Estas son burbujas digitales más pequeñas, privadas y temáticas, donde la calidad de la interacción supera a la cantidad de audiencia. La necesidad de pertenecer a algo más íntimo y curado está impulsando este movimiento.
+        </p>
+        
+        <p>
+            **Párrafo 2:** Este cambio de paradigma presenta desafíos de diseño únicos. La maquetación de contenido debe ser flexible, permitiendo que elementos visuales, como la imagen de la comunidad que vemos a la derecha, se integren perfectamente con el flujo de lectura sin interrumpirlo. Aquí es donde el uso de técnicas como <code>float</code> sigue siendo invaluable para el diseño editorial.
+        </p>
+
+        <h2>El Problema de la Limpieza (Clearance)</h2>
+
+        <p>
+            El elemento flotante no ocupa espacio vertical en el flujo, por lo que el siguiente contenido intenta llenar ese hueco. Sin embargo, en algunas situaciones, como la siguiente nota de pie, necesitamos garantizar que el elemento comience por debajo de cualquier flotante, incluso si hay espacio a su lado.
+        </p>
+        
+        <div class="footer-note">
+            Nota de pie: Este texto debe empezar **debajo** de la imagen flotante, sin importar cuánto espacio haya a la izquierda.
+        </div>
+
+    </div>
+    
+   
+
+</body>
+</html>

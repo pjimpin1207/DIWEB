@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(187, 218, 204);
+}
+header {
+    background-color: #1e90ff;
+    color: white;
+    border: 1px solid #000000;
+}
+
+.columna {
+    width: 220px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #000000;
+}
+
+.izquierda {
+background-color: #04f74d;
+    float: left;
+}
+
+.central {
+    background-color: #d3f704;
+    float: left;
+}
+
+.derecha {
+    background-color: #b204f7;
+    float: left;
+}
+
+.extra {
+    background-color: #f77904;
+    float: left;
+}
+
+footer {
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+    clear: both;
+    border: 1px solid #000000;
+
+}
