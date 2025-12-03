@@ -1,0 +1,15 @@
+a:link {
+    color: rgb(0, 255, 13);
+}
+a:visited {
+    color: rgb(255, 0, 255);
+}
+a:hover {
+    color: rgb(0, 26, 255);
+}
+
+a {
+    padding: 10px 20px;
+    background-color: #d4d5d6;
+    color: white;
+}

@@ -1,0 +1,31 @@
+.contenedor1 {
+  width: 400px;
+  height: 200px;
+  border: 1px solid #000000;
+  padding: 10px;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  margin: 10%;
+  overflow-x: hidden;
+}
+
+.contenedor2 {
+  width: 400px;
+  height: 200px;
+  border: 1px solid #000000;
+  padding: 10px;
+  background-color: #f0f0f0;
+  overflow:scroll;
+  margin: 10%;
+  overflow-y: scroll;
+}
+
+.contenedor3 {
+  width: 400px;
+  height: 200px;
+  border: 1px solid #000000;
+  padding: 10px;
+  background-color: #f0f0f0;
+  overflow:visible;
+  margin: 10%;
+}

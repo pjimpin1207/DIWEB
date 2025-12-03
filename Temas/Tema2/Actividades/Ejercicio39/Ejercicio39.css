@@ -1,0 +1,7 @@
+ul > li:first-child  {
+    background-color: aqua;
+}
+
+ul > li:last-child {
+    font-style: bold;
+}
