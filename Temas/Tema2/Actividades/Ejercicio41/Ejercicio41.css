@@ -1,0 +1,48 @@
+/* Contenedor de menú */
+.menu {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Configuración básica de cada icono */
+.icon {
+    width: 120px;         /* tamaño aproximado de un botón */
+    height: 50px;
+    background-image: url("/assets/images/Tema2/Ejercicio41/sprite.png"); /* tu sprite */
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/* Botón 1: Inicio → parte izquierda del sprite */
+.inicio {
+  width: 64px;
+  height: 64px;
+  background-image: url("/assets/images/Tema2/Ejercicio41/sprite.png");
+  background-position: -256px -270px;
+}
+
+
+/* Botón 2: Volver segundo botón en el sprite */
+.volver {
+    width: 64px;
+    height: 64px;
+    background-image: url("/assets/images/Tema2/Ejercicio41/sprite.png");
+    background-position: 0px -320px;
+}
+
+
+/* Botón 3: Configuración tercer botón en el sprite */
+.config {
+  width: 64px;
+  height: 64px;
+  background-image: url("/assets/images/Tema2/Ejercicio41/sprite.png");
+  background-position: -128px -256px;
+}
+
+
+/* Efecto hover opcional */
+.icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
