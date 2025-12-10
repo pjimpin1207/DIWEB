@@ -7,9 +7,9 @@
 
 /* Configuración básica de cada icono */
 .icon {
-    width: 120px;         /* tamaño aproximado de un botón */
+    width: 120px;
     height: 50px;
-    background-image: url("/assets/images/Tema2/Ejercicio41/sprite.png"); /* tu sprite */
+    background-image: url("/assets/images/Tema2/Ejercicio41/sprite.png");
     background-repeat: no-repeat;
     cursor: pointer;
 }
@@ -31,7 +31,6 @@
     background-position: 0px -320px;
 }
 
-
 /* Botón 3: Configuración tercer botón en el sprite */
 .config {
   width: 64px;
@@ -39,7 +38,6 @@
   background-image: url("/assets/images/Tema2/Ejercicio41/sprite.png");
   background-position: -128px -256px;
 }
-
 
 /* Efecto hover opcional */
 .icon:hover {

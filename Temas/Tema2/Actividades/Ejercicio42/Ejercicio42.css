@@ -1,0 +1,29 @@
+/* 1.Párrafos*/
+p {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: left; 
+    }
+
+/* 2.Imágenes*/
+img {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    max-width: 200px;
+    }
+
+/* 3.Enlaces*/
+a {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    }
+ 
+ @media screen {
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        }
+ }
