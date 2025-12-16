@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 36 — Centrados y Alineaciones</title>
+  <link rel="stylesheet" href="../../css/post.css">
+</head>
+<body>
+
+<header class="main-header">
+  <div class="header-content">
+    <h1>Blog DIWEB</h1>
+    <p class="subtitle">Ejercicio 36 — Centrados y Alineaciones en CSS</p>
+    <nav class="nav-bar">
+      <a href="../../index.html">Inicio</a>
+      <a href="../Tema2/index.html">Tema 2</a>
+    </nav>
+  </div>
+</header>
+
+<main class="main-content">
+
+<article class="post">
+  <h2>Ejercicio 36 — Técnicas de centrado y alineación</h2>
+  <p class="meta">Publicado el <em>21 de noviembre de 2025</em></p>
+
+  <div class="post-body">
+
+    <p>
+      En este ejercicio se practican distintas técnicas de centrado y alineación
+      utilizando únicamente CSS clásico. Se trabaja el centrado horizontal,
+      centrado de texto, alineación con <code>float</code> y centrado vertical
+      mediante <code>padding</code> y <code>line-height</code>.
+    </p>
+
+    <h3>Enunciado</h3>
+    <ul>
+      <li>Centrar un elemento de bloque horizontalmente.</li>
+      <li>Centrar texto dentro de un contenedor.</li>
+      <li>Centrar una imagen horizontalmente.</li>
+      <li>Alinear elementos a la izquierda y a la derecha usando distintos métodos.</li>
+      <li>Centrar verticalmente un elemento usando padding y line-height.</li>
+    </ul>
+
+    <h3>Centrado de un elemento de bloque</h3>
+    <p>
+      Para centrar un elemento de bloque se utiliza <code>margin: auto</code>.
+      El navegador reparte automáticamente el espacio sobrante a ambos lados.
+    </p>
+
+<pre><code>.block {
+  width: 300px;
+  margin: 20px auto;
+}
+</code></pre>
+
+    <h3>Centrado de texto</h3>
+    <p>
+      El texto se centra usando la propiedad <code>text-align: center</code>,
+      que afecta al contenido inline del contenedor.
+    </p>
+
+    <h3>Centrado de imágenes</h3>
+    <p>
+      Las imágenes se centran convirtiéndolas en elementos de bloque
+      y aplicando <code>margin: auto</code>.
+    </p>
+
+<pre><code>.image-container img {
+  display: block;
+  margin: 0 auto;
+}
+</code></pre>
+
+    <h3>Alineación izquierda y derecha</h3>
+    <p>
+      En este ejercicio se utilizan elementos flotantes con <code>float: left</code>
+      y <code>float: right</code> para colocar contenido a ambos lados del contenedor.
+    </p>
+
+    <h3>Centrado vertical</h3>
+    <p>
+      El centrado vertical se consigue combinando <code>padding</code> y
+      <code>line-height</code>. Esta técnica funciona bien cuando el contenido
+      es de una sola línea.
+    </p>
+
+<pre><code>.vertical-center {
+  height: 100px;
+  padding: 30px 0;
+  line-height: 40px;
+}
+</code></pre>
+
+    <h3>Preguntas del ejercicio</h3>
+
+    <h4>¿Qué sucede si se quita <code>margin: auto</code>?</h4>
+    <p>
+      El elemento deja de centrarse horizontalmente y se coloca alineado a la
+      izquierda, que es el comportamiento por defecto de los elementos de bloque.
+    </p>
+
+    <h4>¿Cómo afecta la altura al centrado vertical con line-height?</h4>
+    <p>
+      El valor de <code>line-height</code> debe estar en proporción con la altura
+      del contenedor. Si no coincide, el texto no se verá correctamente centrado
+      y puede quedar visualmente desajustado.
+    </p>
+
+    <h3>Conclusión</h3>
+    <p>
+      Este ejercicio muestra diferentes formas clásicas de alineación en CSS.
+      Aunque hoy en día se utilizan Flexbox y Grid para estos casos, comprender
+      estas técnicas es fundamental para entender el flujo y el comportamiento
+      de los elementos en CSS.
+    </p>
+
+    <div class="exercise-button">
+      <a href="../../Temas/Tema2/Actividades/Ejercicio36/Ejercicio36.html"
+         target="_blank"
+         class="btn">Ver ejercicio</a>
+    </div>
+
+  </div>
+</article>
+
+<div class="back-link">
+  <a href="../Tema2/" class="btn">← Volver al Tema 2</a>
+</div>
+
+</main>
+
+<footer>
+  <p>© 2025 Pablo Jiménez</p>
+</footer>
+
+</body>
+</html>

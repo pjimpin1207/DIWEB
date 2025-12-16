@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 37 – Propiedad overflow en CSS</title>
+
+    <!-- CSS general del blog -->
+    <link rel="stylesheet" href="../../css/post.css">
+</head>
+<body>
+
+<article class="post">
+
+    <header class="post-header">
+        <h1>Ejercicio 37: Propiedad <code>overflow</code> en CSS</h1>
+        <p class="post-meta">
+            CSS · Maquetación · Control del desbordamiento
+        </p>
+    </header>
+
+    <section class="post-content">
+
+        <h2>Enunciado</h2>
+        <p>
+            En este ejercicio se trabaja con la propiedad <strong>overflow</strong> de CSS para
+            controlar qué ocurre cuando el contenido de un elemento supera el tamaño del contenedor.
+        </p>
+
+        <ul>
+            <li>Crear un contenedor de tamaño fijo con contenido largo.</li>
+            <li>Aplicar diferentes valores a la propiedad <code>overflow</code>.</li>
+            <li>Configurar los ejes <code>overflow-x</code> y <code>overflow-y</code> por separado.</li>
+        </ul>
+
+        <h2>Explicación</h2>
+        <p>
+            La propiedad <code>overflow</code> define cómo se muestra el contenido que se desborda
+            del tamaño asignado a un elemento. Es especialmente útil cuando se trabaja con
+            contenedores de tamaño fijo.
+        </p>
+
+        <p>Los valores utilizados en este ejercicio son:</p>
+
+        <ul>
+            <li><strong>hidden</strong>: el contenido sobrante se recorta y no es visible.</li>
+            <li><strong>scroll</strong>: se muestran barras de desplazamiento.</li>
+            <li><strong>visible</strong>: el contenido se muestra fuera del contenedor.</li>
+        </ul>
+
+        <h2>Estructura HTML</h2>
+        <p>
+            El HTML contiene tres contenedores con el mismo contenido pero con distinto comportamiento
+            visual según la propiedad <code>overflow</code>.
+        </p>
+
+        <pre><code class="language-html">
+&lt;div class="contenedor1"&gt;
+    &lt;p&gt;Contenido largo...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="contenedor2"&gt;
+    &lt;p&gt;Contenido largo...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="contenedor3"&gt;
+    &lt;p&gt;Contenido largo...&lt;/p&gt;
+&lt;/div&gt;
+        </code></pre>
+
+        <h2>Estilos CSS</h2>
+        <p>
+            En el archivo CSS se define el tamaño fijo del contenedor y se prueban diferentes valores
+            de <code>overflow</code>, así como el control independiente del eje horizontal y vertical.
+        </p>
+
+        <pre><code class="language-css">
+.contenedor1 {
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.contenedor2 {
+    width: 400px;
+    height: 200px;
+    overflow: scroll;
+    overflow-y: scroll;
+}
+
+.contenedor3 {
+    width: 400px;
+    height: 200px;
+    overflow: visible;
+}
+        </code></pre>
+
+        <h2>Resultado</h2>
+        <p>
+            Al visualizar la página:
+        </p>
+
+        <ul>
+            <li>El primer contenedor recorta el contenido sobrante.</li>
+            <li>El segundo muestra barras de desplazamiento.</li>
+            <li>El tercero permite que el contenido sobresalga.</li>
+        </ul>
+
+        <p>
+            Este ejercicio permite comprender cómo controlar el desbordamiento del contenido
+            y cuándo es conveniente permitir o limitar el scroll dentro de un elemento.
+        </p>
+
+    </section>
+
+</article>
+
+</body>
+</html>

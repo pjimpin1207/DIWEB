@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 35 — Maquetación con float</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Blog DIWEB</h1>
+      <p class="subtitle">Ejercicio 35 — Maquetación de Artículo con float</p>
+      <nav class="nav-bar">
+        <a href="../../index.html">Inicio</a>
+        <a href="../Tema1/index.html">Tema 1</a>
+        <a href="../Tema2/index.html">Tema 2</a>
+        <a href="../Tema3/index.html">Tema 3</a>
+        <a href="../Tema4/index.html">Tema 4</a>
+        <a href="../Tema5/index.html">Tema 5</a>
+        <a href="../Tema6/index.html">Tema 6</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <article class="post">
+      <h2>Ejercicio 35 — Uso de float para envolver texto</h2>
+      <p class="meta">Publicado el <em>21 de noviembre de 2025</em> por <strong>pjimpin1207</strong></p>
+
+      <div class="post-body">
+
+        <p>
+          En este ejercicio se trabaja una técnica clásica de maquetación en CSS:
+          el uso de la propiedad <strong>float</strong> para permitir que el texto
+          fluya alrededor de una imagen, simulando el diseño típico de artículos
+          editoriales.
+        </p>
+
+        <h3>Enunciado</h3>
+        <ul>
+          <li>Hacer que la imagen del artículo flote a la derecha usando <code>float: right</code>.</li>
+          <li>Observar cómo los párrafos envuelven la imagen flotante.</li>
+          <li>Aplicar <code>clear: both</code> a la nota final para evitar solapamientos.</li>
+          <li>Comprobar cómo la nota de pie se sitúa debajo de la imagen flotante.</li>
+        </ul>
+
+        <h3>Explicación</h3>
+        <p>
+          Al aplicar <code>float: right</code> a la imagen, esta sale del flujo normal
+          del documento y se coloca a la derecha del contenedor. El texto de los
+          párrafos se adapta automáticamente, envolviendo la imagen.
+        </p>
+
+        <p>
+          Sin embargo, los elementos posteriores también intentan colocarse a su lado.
+          Para evitar este comportamiento en la nota de pie, se utiliza
+          <code>clear: both</code>, forzando que dicho elemento empiece debajo
+          de cualquier elemento flotante.
+        </p>
+
+        <h3>Código HTML</h3>
+<pre><code>&lt;div class="article-container"&gt;
+  &lt;h1&gt;El Renacimiento de las Micro-Comunidades Digitales&lt;/h1&gt;
+
+  &lt;img class="article-image" src="imagen.jpg" alt="Imagen del artículo"&gt;
+
+  &lt;p&gt;
+    Párrafo 1: El texto rodea a la imagen flotante gracias al uso de float.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Párrafo 2: El contenido continúa adaptándose al espacio disponible.
+  &lt;/p&gt;
+
+  &lt;div class="footer-note"&gt;
+    Nota de pie: este contenido debe aparecer debajo de la imagen flotante.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+        <h3>Código CSS</h3>
+<pre><code>.article-image {
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    width: 250px;
+}
+
+.footer-note {
+    clear: both;
+    margin-top: 30px;
+}
+</code></pre>
+
+        <h3>Conclusión</h3>
+        <p>
+          Este ejercicio demuestra cómo <code>float</code> permite crear diseños
+          editoriales clásicos y cómo <code>clear</code> es fundamental para evitar
+          problemas de solapamiento. Aunque hoy en día se usan más Flexbox y Grid,
+          estas propiedades siguen siendo importantes para comprender el flujo
+          de los elementos en CSS.
+        </p>
+
+        <div class="exercise-button">
+          <a href="../../Temas/Tema2/Actividades/Ejercicio35/Ejercicio35.html"
+             target="_blank"
+             class="btn">Ver resultado del ejercicio</a>
+        </div>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema2/" class="btn">← Volver al Tema 2</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Pablo Jiménez</p>
+  </footer>
+
+</body>
+</html>

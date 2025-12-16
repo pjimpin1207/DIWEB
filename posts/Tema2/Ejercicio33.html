@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 33 — z-index en CSS</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Blog DIWEB</h1>
+      <p class="subtitle">Ejercicio 33 — z-index en CSS</p>
+      <nav class="nav-bar">
+        <a href="../../index.html">Inicio</a>
+        <a href="../Tema1/index.html">Tema 1</a>
+        <a href="../Tema2/index.html">Tema 2</a>
+        <a href="../Tema3/index.html">Tema 3</a>
+        <a href="../Tema4/index.html">Tema 4</a>
+        <a href="../Tema5/index.html">Tema 5</a>
+        <a href="../Tema6/index.html">Tema 6</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <article class="post">
+      <h2>Ejercicio 33 — Control del orden con z-index</h2>
+      <p class="meta">Publicado el <em>21 de noviembre de 2025</em> por <strong>pjimpin1207</strong></p>
+
+      <div class="post-body">
+
+        <p>
+          En este ejercicio se trabaja la propiedad <strong>z-index</strong>, que permite
+          controlar el orden de apilamiento de los elementos posicionados en CSS.
+          Gracias a esta propiedad, es posible decidir qué elementos se muestran
+          por encima o por debajo de otros cuando se superponen.
+        </p>
+
+        <h3>Enunciado</h3>
+        <ol>
+          <li>Crear una página web con tres cuadrados.</li>
+          <li>Utilizar la propiedad <code>z-index</code> para controlar el orden de apilamiento.</li>
+          <li>Modificar los valores de <code>z-index</code> en el CSS para cambiar qué cuadrado aparece encima.</li>
+        </ol>
+
+        <h3>Explicación</h3>
+        <p>
+          Para que <code>z-index</code> funcione correctamente, los elementos deben tener
+          una propiedad <code>position</code> distinta de <code>static</code>.
+          En este caso, los tres cuadrados están posicionados de forma
+          <code>absolute</code> y se superponen parcialmente.
+        </p>
+
+        <p>
+          El cuadrado azul tiene el valor de <code>z-index</code> más alto, por lo que
+          aparece encima del resto. El verde se sitúa en un nivel intermedio
+          y el rojo queda en la parte inferior.
+        </p>
+
+        <h3>Código HTML</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Ejercicio z-index&lt;/title&gt;
+    &lt;link rel="stylesheet" href="Ejercicio33.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="cuadro rojo"&gt;&lt;/div&gt;
+    &lt;div class="cuadro verde"&gt;&lt;/div&gt;
+    &lt;div class="cuadro azul"&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <h3>Código CSS</h3>
+<pre><code>.cuadro {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+}
+
+/* Primer cuadrado */
+.rojo {
+    background-color: rgb(255, 142, 142);
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+}
+
+/* Segundo cuadrado */
+.verde {
+    background-color: rgb(0, 255, 0);
+    top: 90px;
+    left: 90px;
+    z-index: 2;
+}
+
+/* Tercer cuadrado */
+.azul {
+    background-color: rgb(0, 183, 255);
+    top: 130px;
+    left: 130px;
+    z-index: 3;
+}
+</code></pre>
+
+        <div class="exercise-button">
+          <a href="../../Temas/Tema2/Actividades/Ejercicio33/Ejercicio33.html"
+             target="_blank"
+             class="btn">Ver resultado del ejercicio</a>
+        </div>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema2/" class="btn">← Volver al Tema 2</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Pablo Jiménez</p>
+  </footer>
+
+</body>
+</html>
