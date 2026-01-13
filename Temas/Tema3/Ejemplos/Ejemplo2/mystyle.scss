@@ -1,0 +1,10 @@
+$myColor: rgb(25, 123, 235);
+
+h1 {
+  $myColor: rgb(180, 226, 13);
+  color: $myColor;
+}
+
+p {
+  color: $myColor;
+}

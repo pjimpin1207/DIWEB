@@ -1,0 +1,10 @@
+$myColor: red;
+
+h1 {
+  $myColor: rgb(83, 196, 83) !global;
+  color: $myColor;
+}
+
+p {
+  color: $myColor;
+}
