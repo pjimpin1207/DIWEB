@@ -1,108 +1,15 @@
-/*
+@mixin texto($color, $alineacion) {
+  color: $color;
+  text-align: $alineacion;
+}
+
 .menu {
-  background: #333;
-  padding: 10px;
+  @include texto(rgb(68, 231, 28), center);
 
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      display: inline;
-      margin-right: 15px;
-
-      a {
-        color: white;
-        text-decoration: none;
-
-        &:hover {
-          color: #2ecc71;
-        }
-      }
-    }
-  }
 }
 
 .content {
-  padding: 20px;
-
   h2 {
-    color: #3498db;
-  }
-
-  p {
-    color: #555;
-  }
-}
-*/
-
-/*`Parte 2*/
-
-.menu {
-  background: #333;
-
-  padding: {
-    top: 10px;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-  }
-
-  text: {
-    align: center;
-    color: white;
-  }
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      display: inline;
-      margin-right: 15px;
-
-      a {
-        text: {
-          decoration: none;
-          transform: uppercase;
-        }
-
-        font-size: 14px;
-
-        color: white;
-
-        &:hover {
-          color: #2ecc71;
-        }
-      }
-    }
-  }
-}
-
-.content {
-  padding: 20px;
-
-  margin: {
-    top: 20px;
-    bottom: 20px;
-  }
-
-  text: {
-    align: left;
-  }
-
-  h2 {
-    color: #3498db;
-
-    font: {
-      size: 24px;
-      weight: bold;
-    }
-  }
-
-  p {
-    color: #555;
+    @include texto(#3498db, right);
   }
 }

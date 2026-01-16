@@ -1,81 +1,9 @@
-/*
 .menu {
-  background: #333;
-  padding: 10px;
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      display: inline;
-      margin-right: 15px;
-
-      a {
-        color: white;
-        text-decoration: none;
-
-        &:hover {
-          color: #2ecc71;
-        }
-      }
-    }
-  }
-}
-
-.content {
-  padding: 20px;
-
-  h2 {
-    color: #3498db;
-  }
-
-  p {
-    color: #555;
-  }
-}
-*/
-/*`Parte 2*/
-.menu {
-  background: #333;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+  color: rgb(68, 231, 28);
   text-align: center;
-  text-color: white;
-}
-.menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.menu ul li {
-  display: inline;
-  margin-right: 15px;
-}
-.menu ul li a {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
-  color: white;
-}
-.menu ul li a:hover {
-  color: #2ecc71;
 }
 
-.content {
-  padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: left;
-}
 .content h2 {
   color: #3498db;
-  font-size: 24px;
-  font-weight: bold;
-}
-.content p {
-  color: #555;
+  text-align: right;
 }/*# sourceMappingURL=estilos.css.map */
