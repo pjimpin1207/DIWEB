@@ -1,0 +1,31 @@
+.card {
+  width: 300px;
+  border: 1px solid #e9d415;
+  padding: 20px;
+  color: #333;
+}
+.card .card-image {
+  height: 150px;
+  background-color: #e9d415;
+  margin-bottom: 20px;
+}
+.card .card-content .card-title {
+  margin-bottom: 20px / 2;
+}
+.card .card-content .card-price {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #e9d415;
+}
+.card .card-content .card-btn {
+  background-color: #e9d415;
+  color: white;
+  padding: 20px / 2;
+  border: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .card-content .card-btn:hover {
+  background-color: #e9d415;
+}

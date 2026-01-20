@@ -1,0 +1,50 @@
+// Variables
+@primary-color: #e9d415;
+@text-color: #333;
+@spacing: 20px;
+@base-font-size: 16px;
+
+// Mixins
+.flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Anidamiento 
+.card {
+  width: 300px;
+  border: 1px solid @primary-color;
+  padding: @spacing;
+  color: @text-color;
+
+  .card-image {
+    height: 150px;
+    background-color:@primary-color;
+    margin-bottom: @spacing;
+  }
+
+  .card-content {
+    .card-title {
+      margin-bottom: @spacing / 2;
+    }
+
+    .card-price {
+      font-size: @base-font-size * 2;
+      margin-bottom: @spacing;
+      color: @primary-color;
+    }
+
+    .card-btn {
+      background-color: @primary-color;
+      color: white;
+      padding: @spacing / 2;
+      border: 0px;
+      // hover
+      .flex-center();
+      &:hover {
+        background-color: @primary-color;
+      }
+    }
+  }
+}
