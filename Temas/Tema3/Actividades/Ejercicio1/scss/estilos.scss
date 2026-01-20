@@ -1,108 +1,32 @@
-/*
-.menu {
-  background: #333;
-  padding: 10px;
+$color-principal: #3498db;
+$color-secundario: #2ecc71;
+$color-texto: #333;
+$fuente-principal: Arial, sans-serif;
+$padding-base: 10px;
 
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      display: inline;
-      margin-right: 15px;
-
-      a {
-        color: white;
-        text-decoration: none;
-
-        &:hover {
-          color: #2ecc71;
-        }
-      }
-    }
-  }
+body {
+  font-family: $fuente-principal;
+  color: $color-texto;
+  margin: 0;
+}
+.header {
+  background-color: $color-principal;
+  color: white;
+  padding: $padding-base;
+}
+.card {
+  border: 2px solid $color-principal;
+  padding: $padding-base;
+  margin-bottom: $padding-base;
+  background-color: white;
+}
+.button {
+  background-color: $color-secundario;
+  color: white;
+  padding: $padding-base;
+  border: none;
 }
 
-.content {
-  padding: 20px;
+/* ¿Qué cambiarías si el color principal de la web pasara a ser rojo?
 
-  h2 {
-    color: #3498db;
-  }
-
-  p {
-    color: #555;
-  }
-}
-*/
-
-/*`Parte 2*/
-
-.menu {
-  background: #333;
-
-  padding: {
-    top: 10px;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-  }
-
-  text: {
-    align: center;
-    color: white;
-  }
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      display: inline;
-      margin-right: 15px;
-
-      a {
-        text: {
-          decoration: none;
-          transform: uppercase;
-        }
-
-        font-size: 14px;
-
-        color: white;
-
-        &:hover {
-          color: #2ecc71;
-        }
-      }
-    }
-  }
-}
-
-.content {
-  padding: 20px;
-
-  margin: {
-    top: 20px;
-    bottom: 20px;
-  }
-
-  text: {
-    align: left;
-  }
-
-  h2 {
-    color: #3498db;
-
-    font: {
-      size: 24px;
-      weight: bold;
-    }
-  }
-
-  p {
-    color: #555;
-  }
-}
+$color-principal: red;

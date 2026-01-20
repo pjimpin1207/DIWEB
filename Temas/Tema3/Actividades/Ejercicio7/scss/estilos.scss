@@ -1,0 +1,44 @@
+// Variables
+$base: 10px;
+$ancho-total: 1200px;
+$ancho-caja: 360px;
+$modo-compacto: true;
+
+
+// Operadores aritmeticos
+.caja {
+  padding: $base * 2;
+  margin-bottom: $base + 5px;
+  width: ($ancho-caja / $ancho-total) * 100%;
+  height: $base * 6;
+}
+
+
+// Operadores de comparacion
+.texto {
+  font-size: 14px;
+
+  @if 14px >= 16px {
+    font-weight: bold;
+  } @else {
+    font-weight: normal;
+  }
+}
+
+// Operadores logicos
+body {
+  @if $modo-compacto == true and $base < 15px {
+    background: #f4f4f4;
+    color: #333;
+  }
+}
+
+// Operadores con strings
+.#{"margen-top"} {
+  margin-top: $base * 2;
+}
+
+/* ¿Qué ventaja tiene que Sass haga los cálculos antes de que el navegador reciba el CSS?
+
+La ventaja es que realice los calculos antes de que el navegador reciba el css.
+*/

@@ -1,0 +1,19 @@
+.boton-base, .boton-alerta, .boton-secundario, .boton-primario {
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.boton-primario {
+  background-color: #3498db;
+}
+
+.boton-secundario {
+  background-color: #2ecc71;
+}
+
+.boton-alerta {
+  background-color: #e74c3c;
+}/*# sourceMappingURL=estilos.css.map */

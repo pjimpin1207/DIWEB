@@ -1,0 +1,74 @@
+// Variables
+$colores: (
+  primario: #3498db,
+  secundario: #2ecc71,
+  alerta: #e74c3c
+);
+
+$tipos-fuente: ("Arial", "Verdana", "Helvetica");
+
+
+// Strings fuction
+.titulo::before {
+  content: to-upper-case(unquote("Mi título"));
+}
+
+
+//Numeric fuctions
+.caja {
+  width: percentage(ceil(480px / 1200px));
+}
+
+
+// list fuctions
+.fuentes {
+  font-family: nth($tipos-fuente, 2);
+}
+@debug length($tipos-fuente);
+
+
+// map fuctions
+.boton-primario {
+  background-color: map-get($colores, primario);
+  color: white;
+}
+
+// Verificar si existe la clave alerta
+.boton-primario::after {
+  content: map-has-key($colores, alerta);
+}
+
+
+// selector fuctions
+#{selector-append(".boton1", ":hover")} {
+  background-color: map-get($colores, secundario);
+}
+#{selector-append(".boton2", ":hover")} {
+  background-color: map-get($colores, primario);
+}
+
+
+// Introspection fuction
+.info {
+  @debug type-of($colores);
+  @debug type-of($tipos-fuente);
+}
+
+
+// color fuctions
+.alerta {
+  background-color: lighten(map-get($colores, alerta), 15%);
+  color: white;
+}
+
+/* ¿Qué ventaja tiene usar map-get() frente a definir variables individuales para cada color?
+
+Usar map-get() permite agrupar todos los colores de una sola estructura para que el codigo sea mas ordenado.
+
+¿Por qué es útil selector-append() en proyectos grandes?
+
+Es util porque permite crear selectores dinamicamente sin tener que repetir el codigo.
+
+¿Qué problemas evita type-of() antes de aplicar operaciones con variables?
+
+Permite comprobar el tipo de dato de la variable antes de usarla.

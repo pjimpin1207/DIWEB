@@ -24,3 +24,7 @@
 .boton-alerta {
   @include boton($color-fondo: #e74c3c, $padding: 15px);
 }
+
+/* ¿Qué pasaría si necesitaras cambiar el estilo de todos los botones?
+
+Solo habría que modificar el mixin boton y todos los botones se actualizan. */

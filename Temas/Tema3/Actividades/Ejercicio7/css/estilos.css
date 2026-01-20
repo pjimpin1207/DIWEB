@@ -1,0 +1,20 @@
+.caja {
+  padding: 20px;
+  margin-bottom: 15px;
+  width: 30%;
+  height: 60px;
+}
+
+.texto {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+body {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.margen-top {
+  margin-top: 20px;
+}/*# sourceMappingURL=estilos.css.map */
