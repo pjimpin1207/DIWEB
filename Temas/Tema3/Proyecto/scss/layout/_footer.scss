@@ -1,0 +1,21 @@
+// scss/layout/_footer.scss
+@use '../base/variables';
+@use '../utils/mixins';
+// No hace falta @use aquí porque main.scss ya carga todo
+
+.main-footer {
+    background-color: #aae073; // Mismo verde que la barra de título
+    padding: $spacing-lg;      // <--- Sin 'v.'
+    @include flex-center;      // <--- Sin 'm.'
+    margin-top: auto; 
+
+    p {
+        font-weight: bold;
+        font-size: px-to-rem(18); // <--- ¡AQUÍ ESTABA EL ERROR! (Sin 'v.')
+        
+        &::before {
+            content: '© ';
+            margin-right: 5px;
+        }
+    }
+}

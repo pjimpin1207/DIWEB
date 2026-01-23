@@ -1,0 +1,26 @@
+@charset "UTF-8";
+.caja {
+  padding: 20px;
+  margin-bottom: 15px;
+  width: 30%;
+  height: 60px;
+}
+
+.texto {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+body {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.margen-top {
+  margin-top: 20px;
+}
+
+/* ¿Qué ventaja tiene que Sass haga los cálculos antes de que el navegador reciba el CSS?
+
+La ventaja es que realice los calculos antes de que el navegador reciba el css.
+*//*# sourceMappingURL=estilos.css.map */

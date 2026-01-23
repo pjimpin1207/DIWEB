@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - La 10 Store</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="img/Logo.png" alt="Logo La 10" class="logo-img">
+            <a href="index.html"></a>
+            <h1>La 10 Store</h1>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html" style="color: inherit; text-decoration: none;">Catalogo</a></li>
+            <li>Cesta Compra</li>
+            <li>Destacados</li>
+            <li>Mi Perfil</li>
+        </ul>
+    </nav>
+
+    <main class="profile-main">
+        <div class="profile-grid">
+            
+            <section class="profile-left">
+                
+                <article class="info-card">
+                    <div class="card-header">
+                        <h3>Historial Pedido</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="order-item">
+                            <img src="img/HistorialPedidos1.png" alt="Pedido anterior">
+                            <div class="order-text">
+                                <p>Pedido 31/01/2025</p>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <img src="img/HistorialPedidos2.png" alt="Pedido anterior">
+                            <div class="order-text">
+                                <p>Pedido 05/03/2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="info-card">
+                    <div class="card-header">
+                        <h3>Seguimiento Pedido</h3>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/SeguimientoPedido.png" alt="Linea de tiempo envío" class="tracking-img">
+                    </div>
+                </article>
+
+            </section>
+
+            <section class="profile-right">
+                <article class="info-card profile-card-big">
+                    <div class="card-header">
+                        <h3>Mi Perfil</h3>
+                    </div>
+                    <div class="card-body profile-details">
+                        <h2 class="username">tabatadzeika</h2>
+
+                        <div class="profile-pic-wrapper">
+                            <img src="img/FotoPerfil.png" alt="Foto de perfil" class="profile-pic">
+                        </div>
+
+                        <form class="user-data-form">
+    
+    <div class="data-row">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" value="Iuri Tabatadze">
+    </div>
+
+    <div class="data-row">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" value="iuritabata@gmail.com">
+    </div>
+
+    <div class="data-row">
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" value="password123">
+    </div>
+
+    <button type="button" class="btn-save">Guardar Cambios</button>
+</form>
+                    </div>
+                </article>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>La 10 Store - Derechos Reservados</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+// scss/base/_reset.scss
+@use '../base/variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    // Usamos la variable de fuente que definimos antes
+    font-family: 'Montserrat', sans-serif;
+    // Un verde muy clarito de fondo según la imagen
+    background-color: #dfffc9; 
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}

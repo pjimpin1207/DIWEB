@@ -1,0 +1,188 @@
+// Ubicación: scss/pages/_cart.scss
+
+.cart-main {
+    padding: $spacing-lg;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cart-grid {
+    display: grid;
+    // La columna izquierda es más estrecha (1fr) que la derecha (2fr) visualmente en tu imagen
+    grid-template-columns: 1fr 2fr; 
+    gap: $spacing-lg * 2; // Doble de espacio para separar bien las zonas
+
+    @include mobile {
+        grid-template-columns: 1fr; // Una columna en móvil
+        gap: $spacing-lg;
+    }
+}
+
+// --- ESTILOS IZQUIERDA (TABLA) ---
+.cart-items-section {
+    // Título verde oscuro arriba "Mi Pedido"
+    .section-header {
+        background-color: darken($color-primary, 10%); // Un poco más oscuro
+        padding: $spacing-sm;
+        text-align: center;
+        border: 1px solid black; // Borde negro fino
+        border-bottom: none; // Para unirlo con la tabla
+
+        h3 {
+            margin: 0;
+            font-size: px-to-rem(20);
+            color: black;
+        }
+    }
+
+    .cart-table {
+        width: 100%;
+        border-collapse: collapse; // Para que los bordes se toquen
+        background-color: $color-primary; // Fondo verde base
+        border: 1px solid black;
+
+        th {
+            border-bottom: 1px solid black;
+            border-right: 1px solid black;
+            padding: $spacing-sm;
+            text-align: center;
+            font-weight: bold;
+            
+            &:last-child {
+                border-right: none;
+            }
+        }
+
+        td {
+            padding: $spacing-sm;
+            text-align: center;
+            border-bottom: 1px solid black; // Línea separadora
+            
+            // Línea vertical central
+            &:first-child {
+                border-right: 1px solid black;
+            }
+
+            img {
+                width: 80px; // Tamaño de las camisetas
+                height: auto;
+                margin: 0 auto;
+                border: 1px solid #ccc;
+            }
+
+            &.price {
+                font-family: monospace; // Fuente tipo ticket
+                font-size: px-to-rem(18);
+            }
+        }
+
+        // Fila de Total abajo del todo
+        tfoot {
+            font-weight: bold;
+            background-color: darken($color-primary, 5%);
+            
+            td {
+                border-bottom: none; 
+                padding: $spacing-md;
+                
+                &.total-label {
+                    text-align: right;
+                    padding-right: $spacing-md;
+                }
+
+                &.total-price {
+                    font-size: px-to-rem(20);
+                    font-style: italic; // Como en la imagen
+                }
+            }
+        }
+    }
+}
+
+// --- ESTILOS DERECHA (RESUMEN) ---
+.cart-summary-section {
+    display: flex;
+    flex-direction: column;
+    
+    .cart-title {
+        text-align: center;
+        font-size: px-to-rem(36);
+        margin-bottom: $spacing-lg;
+        font-weight: 400;
+        
+        // Espacio para el icono
+        i {
+            margin-left: 10px;
+        }
+    }
+
+    // Caja Grande "Pago Pedido"
+    .payment-box {
+        background-color: darken($color-primary, 5%); // Verde un poco más intenso
+        margin-bottom: $spacing-lg;
+
+        .payment-header {
+            background-color: darken($color-primary, 15%); // Cabecera más oscura
+            padding: $spacing-sm;
+            text-align: center;
+            
+            h3 {
+                margin: 0;
+                font-size: px-to-rem(22);
+            }
+        }
+
+        .payment-body {
+            padding: $spacing-lg $spacing-lg * 2; // Mucho padding lateral para centrar visualmente
+
+            .payment-row {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: $spacing-md;
+                font-size: px-to-rem(18);
+
+                &.total-row {
+                    font-weight: bold;
+                    margin-top: $spacing-lg;
+                    font-size: px-to-rem(20);
+                }
+            }
+        }
+    }
+
+    // Botones de abajo
+    .cart-actions {
+        display: flex;
+        gap: $spacing-md;
+        justify-content: center;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        .btn-cart {
+            padding: $spacing-md $spacing-lg;
+            border: none;
+            font-weight: bold;
+            font-size: px-to-rem(16);
+            cursor: pointer;
+            min-width: 150px;
+            transition: opacity 0.3s;
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            // Variantes de color
+            &.secondary {
+                background-color: darken($color-primary, 15%); // Verde oliva oscuro
+                color: #333;
+            }
+
+            &.primary {
+                background-color: darken($color-primary, 15%); // En la foto son iguales, usa el mismo
+                color: #333;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+// 1. BASE
+@import 'base/variables';
+@import 'base/functions';
+@import 'base/reset';
+
+// 2. UTILS
+@import 'utils/mixins';
+
+// 3. LAYOUT
+@import 'layout/header';
+@import 'layout/grid';
+@import 'layout/footer';
+
+// 4. COMPONENTS
+@import 'components/titles';
+
+// ... tus otros imports ...
+@import 'layout/footer';
+
+// 4. COMPONENTS
+@import 'components/titles';
+
+// 5. PAGES
+@import 'pages/profile';
+@import 'pages/carrito';
