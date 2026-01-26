@@ -1,37 +1,49 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ejercicio 16 - Blog DIWEB</title>
+  <title>Ejercicio 16 — Propiedad background-attachment - PJP</title>
   <link rel="stylesheet" href="../../css/post.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="main-header">
-    <div class="header-content">
-      <h1>Blog DIWEB</h1>
-      <p class="subtitle">Ejercicio 16 — Propiedad background-attachment</p>
-            <nav class="nav-bar">
-                <a href="../../index.html">Inicio</a>
-                <a href="../Tema1/index.html">Tema 1</a>
-                <a href="../Tema2/index.html">Tema 2</a>
-                <a href="../Tema3/index.html">Tema 3</a>
-                <a href="../Tema4/index.html">Tema 4</a>
-                <a href="../Tema5/index.html">Tema 5</a>
-                <a href="../Tema6/index.html">Tema 6</a>
-            </nav>
-    </div>
-  </header>
+  <!-- READING PROGRESS BAR -->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
 
-  <!-- CONTENIDO PRINCIPAL -->
-  <main class="main-content">
-    <article class="post">
-      <h2>Ejercicio 16 — Propiedad background-attachment</h2>
-      <p class="meta">Publicado el <em>12 de noviembre de 2025</em> por <strong>Pablo Jiménez</strong></p>
+  <div class="bg-gradient"></div>
+
+  <!-- TOPIC NAVIGATION -->
+  <nav class="topic-nav" style="position: sticky; top: 1rem; z-index: 100; max-width: 900px; margin: 1rem auto;">
+    <a href="../../index.html" class="nav-home">
+       <span>🏠</span> <span class="pjp-brand">PJP</span>
+    </a>
+        <div class="nav-menu">
+      <a href="../../index.html">Inicio</a>
+      <a href="../Tema1/index.html" >Tema 1</a>
+      <a href="../Tema2/index.html" class="active">Tema 2</a>
+      <a href="../Tema3/index.html" >Tema 3</a>
+    </div>
+  </nav>
+
+  <div class="post-wrapper">
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">Ejercicio 16 — Propiedad background-attachment</h1>
+        <div class="post-meta">
+          <span>📅 12 de noviembre de 2025</span>
+          <span>✍️ <strong>Pablo Jiménez</strong></span>
+          <span>📚 Tema 2</span>
+        </div>
+      </header>
 
       <div class="post-body">
+        
         <p>
           En este ejercicio se experimenta con la propiedad <strong>background-attachment</strong>,
           que define cómo se comporta la imagen de fondo cuando el usuario realiza desplazamiento (scroll).
@@ -108,54 +120,42 @@
 </code></pre>
 
         <div class="exercise-button">
-            <a href="../../Temas/Tema2/Actividades/Ejercicio16/Ejercicio16.html" target="_blank" class="btn">Ver resultado del ejercicio</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- SECCIÓN DE REFLEXIÓN -->
-    <article class="post">
-      <h2>Preguntas sobre el ejercicio</h2>
-
-      <div class="post-body">
-        <p>
-          Al aplicar los tres valores de <code>background-attachment</code>, se puede observar lo siguiente:
-        </p>
-
-        <ul>
-          <li>
-            <strong>scroll:</strong> la imagen de fondo se desplaza junto con el contenido de la página,
-            es decir, se mueve al hacer scroll general en la ventana.
-          </li>
-
-          <li>
-            <strong>fixed:</strong> el fondo permanece fijo en la pantalla, creando un efecto visual
-            donde el contenido parece deslizarse sobre la imagen estática.
-          </li>
-
-          <li>
-            <strong>local:</strong> el fondo se mueve solo dentro de su contenedor,
-            y no con toda la página. Esto se nota cuando el propio elemento tiene scroll interno.
-          </li>
-        </ul>
-
-        <p>
-          En resumen, <strong>scroll</strong> se mueve con la página, <strong>fixed</strong> se mantiene fijo al viewport
-          y <strong>local</strong> se mueve dentro del propio elemento.  
-          Esta propiedad es útil para crear efectos visuales como fondos parallax o secciones con scroll independiente.
-        </p>
+            <a href="../../Temas/Tema2/Actividades/Ejercicio16/Ejercicio16.html" target="_blank" class="btn-exercise">🚀 Ver resultado del ejercicio</a>
+        
       </div>
     </article>
 
     <div class="back-link">
-      <a href="../Tema2/" class="btn">← Volver al Tema 2</a>
+      <a href="../Tema2/index.html" class="btn-link" style="display: inline-block;">← Volver al tema</a>
     </div>
-  </main>
+  </div> 
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Pablo Jiménez</p>
+  <!-- MULTI-COLUMN FOOTER COPIED -->
+    <!-- SIMPLIFIED FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-simple-container">
+      <div class="footer-branding">
+        <h3 class="brand-name">Pablo Jiménez</h3>
+        <p class="brand-sub">Diseño de Interfaces Web (DIWEB)</p>
+        <p class="copyright">© 2025 Pablo Jiménez</p>
+      </div>
+      <div class="footer-actions">
+        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub ↗</a>
+        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog Programación ↗</a>
+      </div>
+    </div>
   </footer>
 
+  <script>
+    // Progress Bar Script
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
 </body>
 </html>
+

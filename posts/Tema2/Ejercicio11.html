@@ -1,37 +1,49 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ejercicio 11 - Blog DIWEB</title>
+  <title>Ejercicio 11 — Estilos en función de la jerarquía - PJP</title>
   <link rel="stylesheet" href="../../css/post.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="main-header">
-    <div class="header-content">
-      <h1>Blog DIWEB</h1>
-      <p class="subtitle">Ejercicio 11 — Estilos en función de la jerarquía</p>
-      <nav class="nav-bar">
-        <a href="../../index.html">Inicio</a>
-        <a href="../Tema1/index.html">Tema 1</a>
-        <a href="../Tema2/index.html">Tema 2</a>
-        <a href="../Tema3/index.html">Tema 3</a>
-        <a href="../Tema4/index.html">Tema 4</a>
-        <a href="../Tema5/index.html">Tema 5</a>
-        <a href="../Tema6/index.html">Tema 6</a>
-      </nav>
-    </div>
-  </header>
+  <!-- READING PROGRESS BAR -->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
 
-  <!-- CONTENIDO PRINCIPAL -->
-  <main class="main-content">
-    <article class="post">
-      <h2>Ejercicio 11 — Estilos en función de la jerarquía</h2>
-      <p class="meta">Publicado el <em>7 de noviembre de 2025</em> por <strong>Pablo Jiménez</strong></p>
+  <div class="bg-gradient"></div>
+
+  <!-- TOPIC NAVIGATION -->
+  <nav class="topic-nav" style="position: sticky; top: 1rem; z-index: 100; max-width: 900px; margin: 1rem auto;">
+    <a href="../../index.html" class="nav-home">
+       <span>🏠</span> <span class="pjp-brand">PJP</span>
+    </a>
+        <div class="nav-menu">
+      <a href="../../index.html">Inicio</a>
+      <a href="../Tema1/index.html" >Tema 1</a>
+      <a href="../Tema2/index.html" class="active">Tema 2</a>
+      <a href="../Tema3/index.html" >Tema 3</a>
+    </div>
+  </nav>
+
+  <div class="post-wrapper">
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">Ejercicio 11 — Estilos en función de la jerarquía</h1>
+        <div class="post-meta">
+          <span>📅 7 de noviembre de 2025</span>
+          <span>✍️ <strong>Pablo Jiménez</strong></span>
+          <span>📚 Tema 2</span>
+        </div>
+      </header>
 
       <div class="post-body">
+        
         <p>
           Este ejercicio tiene como objetivo comprender cómo actúan las reglas de <strong>prioridad y jerarquía</strong> en CSS,
           dependiendo de su tipo (elemento, clase, ID o estilo en línea) y el uso del modificador <code>!important</code>.
@@ -124,20 +136,42 @@ p {
         </ul>
 
         <div class="exercise-button">
-          <a href="../../Temas/Tema2/Actividades/Ejercicio11/Ejercicio11.html" target="_blank" class="btn">Ver resultado del ejercicio</a>
-        </div>
+          <a href="../../Temas/Tema2/Actividades/Ejercicio11/Ejercicio11.html" target="_blank" class="btn-exercise">🚀 Ver resultado del ejercicio</a>
+        
       </div>
     </article>
 
     <div class="back-link">
-      <a href="../Tema2/" class="btn">← Volver al Tema 2</a>
+      <a href="../Tema2/index.html" class="btn-link" style="display: inline-block;">← Volver al tema</a>
     </div>
-  </main>
+  </div> 
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Pablo Jiménez</p>
+  <!-- MULTI-COLUMN FOOTER COPIED -->
+    <!-- SIMPLIFIED FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-simple-container">
+      <div class="footer-branding">
+        <h3 class="brand-name">Pablo Jiménez</h3>
+        <p class="brand-sub">Diseño de Interfaces Web (DIWEB)</p>
+        <p class="copyright">© 2025 Pablo Jiménez</p>
+      </div>
+      <div class="footer-actions">
+        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub ↗</a>
+        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog Programación ↗</a>
+      </div>
+    </div>
   </footer>
 
+  <script>
+    // Progress Bar Script
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
 </body>
 </html>
+

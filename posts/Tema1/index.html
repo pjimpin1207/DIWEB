@@ -1,42 +1,65 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tema 1 - Blog DIWEB</title>
+  <title>Tema 1 - PJP</title>
   <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header class="main-header">
-    <div class="header-content">
-      <h1>Tema 1</h1>
-      <p class="subtitle">Ejercicios y contenidos del Tema 1 de DIWEB</p>
-      <nav class="nav-bar">
-        <a href="../../index.html">Inicio</a>
-        <a href="../Tema1/index.html">Tema 1</a>
-        <a href="../Tema2/index.html">Tema 2</a>
-        <a href="../Tema3/index.html">Tema 3</a>
-        <a href="../Tema4/index.html">Tema 4</a>
-        <a href="../Tema5/index.html">Tema 5</a>
-        <a href="../Tema6/index.html">Tema 6</a>
-      </nav>
+  <div class="bg-gradient"></div>
+
+  <div class="bg-gradient"></div>
+
+  <!-- TOPIC NAVIGATION -->
+  <nav class="topic-nav" style="max-width: 1200px; margin: 1rem auto;">
+    <a href="../../index.html" class="nav-home">
+      <span>🏠</span> <span class="pjp-brand">PJP</span>
+    </a>
+        <div class="nav-menu">
+      <a href="../../index.html">Inicio</a>
+      <a href="../Tema1/index.html" class="active">Tema 1</a>
+      <a href="../Tema2/index.html" >Tema 2</a>
+      <a href="../Tema3/index.html" >Tema 3</a>
+    </div>
+  </nav>
+
+  <!-- HEADER TEMA -->
+  <header style="max-width: 1200px; margin: 0 auto 3rem auto; text-align: center; padding-top: 1rem;">
+    <!-- Eliminado botón volver antiguo -->
+
+    <div class="brand-box" style="background: none; border: none; min-height: auto; display: block;">
+      <h1 class="anime-title" style="font-size: 4rem;">TEMA 1</h1>
+      <p class="subtitle" style="color: #fff; font-size: 1.2rem;">Diseño y Experiencia de Usuario</p>
     </div>
   </header>
 
-  <main class="main-content tema-page">
+  <main class="main-content">
     <section class="recent-posts">
-      <h2>Ejercicios del Tema 1</h2>
 
       <!-- CONTENEDOR EN CUADRÍCULA -->
-      <div class="posts-grid-container">
+      <!-- SECCIÓN PROYECTO -->
+      <h2 class="section-title">Proyecto</h2>
+      <div class="posts-grid-container" style="margin-bottom: 4rem;">
 
         <article class="post-card">
           <h3>Proyecto La 10 Store</h3>
           <p>Diseño de una tienda online de camisetas de fútbol.</p>
           <a href="proyectoTema1.html" class="btn-outline">Leer más</a>
         </article>
+      </div>
 
-        <article class="post-card">
+
+      <!-- SECCIÓN EJERCICIOS -->
+      <h2 class="section-title">Ejercicios</h2>
+      <div class="posts-grid-container">
+
+                <article class="post-card">
           <h3>Características del diseño actual</h3>
           <p>Principales rasgos del diseño web moderno y adaptable.</p>
           <a href="CaracteristicasDiseño-Actual.html" class="btn-outline">Leer más</a>
@@ -62,7 +85,8 @@
 
         <article class="post-card">
           <h3>Leyes del diseño</h3>
-          <p>En el diseño de interfaces, las leyes de la percepción visual ayudan a crear estructuras comprensibles, equilibradas y usables.</p>
+          <p>En el diseño de interfaces, las leyes de la percepción visual ayudan a crear estructuras comprensibles,
+            equilibradas y usables.</p>
           <a href="LeyesDeDiseño.html" class="btn-outline">Leer más</a>
         </article>
 
@@ -87,8 +111,22 @@
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Pablo Jiménez</p>
+  <!-- MULTI-COLUMN FOOTER -->
+    <!-- SIMPLIFIED FOOTER -->
+    <!-- SIMPLIFIED FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-simple-container">
+      <div class="footer-branding">
+        <h3 class="brand-name">Pablo Jiménez</h3>
+        <p class="brand-sub">Diseño de Interfaces Web (DIWEB)</p>
+        <p class="copyright">© 2025 Pablo Jiménez</p>
+      </div>
+      <div class="footer-actions">
+        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub ↗</a>
+        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog Programación ↗</a>
+      </div>
+    </div>
   </footer>
 </body>
+
 </html>

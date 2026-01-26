@@ -1,48 +1,87 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog DIWEB</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <div class="bg-gradient"></div>
+  <div class="bento-wrapper">
 
-  <!-- HEADER -->
-  <header class="main-header">
-    <div class="header-content">
-      <h1>Blog DIWEB</h1>
-      <p class="subtitle">Descubre mis proyectos, posts y aprendizajes sobre Desarrollo de Interfaces Web</p>
-      <nav class="nav-bar">
-        <a href="index.html" class="active">Inicio</a>
-        <a href="posts/Tema1/">Tema 1</a>
-        <a href="posts/Tema2/">Tema 2</a>
-      </nav>
-    </div>
-  </header>
+    <!-- GRID ITEM 1: BRANDING (Giant Text) -->
+    <header class="bento-item brand-box js-tilt">
+      <h1 class="anime-title">BLOG<br>DIWEB</h1>
+      <p class="subtitle">Pablo Jiménez</p>
+    </header>
 
-  <!-- PERFIL -->
-  <section class="about">
-    <img src="assets/images/foto-perfil.jpg" alt="Foto de Pablo" class="profile-img" />
-    <div class="about-text">
-      <h2>¡Hola! Soy Pablo 👋</h2>
-      <p>
-        Soy estudiante de <strong>Desarrollo de Aplicaciones Web (DAW)</strong>,
-        con especial interés en el diseño front-end, la programación y la creación
-        de aplicaciones modernas, accesibles y funcionales. En este blog comparto
-        mis aprendizajes, proyectos y recursos sobre desarrollo web.
-      </p>
-      <a href="https://github.com/pjimpin1207" target="_blank" class="btn-outline">💻 Visita mi GitHub</a>
-    </div>
-  </section>
+    <!-- GRID ITEM 2: MERGED PROFILE & LINKS -->
+    <section class="bento-item profile-box js-tilt">
+      <div class="profile-content">
+        <img src="assets/images/foto-perfil.jpg" alt="Foto de Pablo" class="profile-img-lg" />
+        <div class="profile-info">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <h2><span id="typewriter-text"></span><span class="cursor">|</span></h2>
+
+            <!-- STATS BADGE -->
+            <div class="stats-badge">
+              <span id="postCount">0</span>
+              <span class="label">Posts</span>
+            </div>
+          </div>
+
+          <p class="bio-text">Explorando el desarrollo web, diseño de interfaces y experiencias de usuario únicas.</p>
+
+          <div class="profile-links">
+            <a href="https://github.com/pjimpin1207" target="_blank" class="btn-link github">
+              <span>GitHub</span> ↗
+            </a>
+            <a href="https://pjimpin1207.github.io/Programacion2526/" class="btn-link blog-dev">
+              <span>Blog Programación</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRID ITEM 4: TOPICS -->
+    <section class="bento-item topics-box">
+      <h3>Temas</h3>
+      <div class="topics-grid">
+        <a href="posts/Tema1/" class="topic-chip t-1">
+          <span class="emoji">🎨</span> Tema 1 - Planificación de Interfaces Gráficas
+        </a>
+        <a href="posts/Tema2/" class="topic-chip t-2">
+          <span class="emoji">💻</span> Tema 2 - Hojas de estilo CSS
+        </a>
+        <a href="posts/Tema3/" class="topic-chip t-3">
+          <span class="emoji">🚀</span> Tema 3 - Preprocesadores SASS y Less
+        </a>
+      </div>
+    </section>
+
+  </div>
 
   <!-- PUBLICACIONES -->
   <main class="main-content">
-    <h2 class="section-title">Todas las publicaciones</h2>
+    <div class="content-header">
+      <h2 class="section-title">Últimas publicaciones</h2>
+
+      <!-- SEARCH BAR MOVED HERE -->
+      <div class="search-container-inline">
+        <input type="text" id="searchInput" placeholder="🔍 Buscar artículo..." />
+      </div>
+    </div>
 
     <div class="posts-grid-container">
 
-      
+
       <article class="post-card">
         <h3>Ejercicio 31 - Tema 2</h3>
         <p>Propiedad Display en CSS</p>
@@ -157,13 +196,13 @@
         <a href="posts/Tema2/Ejercicio11.html" class="btn-outline">Leer más</a>
       </article>
 
-       <article class="post-card">
+      <article class="post-card">
         <h3>Ejercicio 10 - Tema 2</h3>
         <p>Selectores Combinadores</p>
         <a href="posts/Tema2/Ejercicio10.html" class="btn-outline">Leer más</a>
       </article>
 
-       <article class="post-card">
+      <article class="post-card">
         <h3>Ejercicio 9 - Tema 2</h3>
         <p>Selectores Combinadores</p>
         <a href="posts/Tema2/Ejercicio9.html" class="btn-outline">Leer más</a>
@@ -207,7 +246,8 @@
 
       <article class="post-card">
         <h3>Ejercicio 2 - Tema 2</h3>
-        <p>Este ejercicio tiene como objetivo practicar el uso de diferentes tipos de selectores CSS para aplicar estilos específicos a distintos elementos de una página web</p>
+        <p>Este ejercicio tiene como objetivo practicar el uso de diferentes tipos de selectores CSS para aplicar
+          estilos específicos a distintos elementos de una página web</p>
         <a href="posts/Tema2/Ejercicio2.html" class="btn-outline">Leer más</a>
       </article>
 
@@ -216,7 +256,7 @@
         <p>Diseño de una tienda online de camisetas de fútbol.</p>
         <a href="posts/Tema1/proyectoTema1.html" class="btn-outline">Leer más</a>
       </article>
-      
+
       <article class="post-card">
         <h3>Características del diseño actual - Tema 1</h3>
         <p>Principales rasgos del diseño web moderno y adaptable.</p>
@@ -247,19 +287,19 @@
         <a href="posts/Tema1/LeyesDeDiseño.html" class="btn-outline">Leer más</a>
       </article>
 
-        <article class="post-card">
+      <article class="post-card">
         <h3>Ejercicio 14 - Tema 1</h3>
         <p>Post que abre el ejercicio 14.</p>
         <a href="posts/Tema1/Ejercicio14.html" class="btn-outline">Leer más</a>
       </article>
 
-        <article class="post-card">
+      <article class="post-card">
         <h3>Ejercicio 15 - Tema 1</h3>
         <p>Post que abre el ejercicio 15.</p>
         <a href="posts/Tema1/Ejercicio15.html" class="btn-outline">Leer más</a>
       </article>
 
-        <article class="post-card">
+      <article class="post-card">
         <h3>Ejercicio 16 - Tema 1</h3>
         <p>Post que abre el ejercicio 16.</p>
         <a href="posts/Tema1/Ejercicio16.html" class="btn-outline">Leer más</a>
@@ -267,10 +307,110 @@
     </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Pablo Jiménez — Blog DIWEB</p>
+  <!-- MULTI-COLUMN FOOTER -->
+  <!-- SIMPLIFIED FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-simple-container">
+      <div class="footer-branding">
+        <h3 class="brand-name">Pablo Jiménez</h3>
+        <p class="brand-sub">Diseño de Interfaces Web (DIWEB)</p>
+        <p class="copyright">© 2025 Pablo Jiménez</p>
+      </div>
+      <div class="footer-actions">
+        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub ↗</a>
+        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog Programación ↗</a>
+      </div>
+    </div>
   </footer>
 
 </body>
+<script>
+  // BUSCADOR EN TIEMPO REAL
+  const searchInput = document.getElementById('searchInput');
+  const postCards = document.querySelectorAll('.post-card');
+
+  searchInput.addEventListener('keyup', (e) => {
+    const term = e.target.value.toLowerCase();
+
+    postCards.forEach(card => {
+      const title = card.querySelector('h3').textContent.toLowerCase();
+      const desc = card.querySelector('p').textContent.toLowerCase();
+
+      if (title.includes(term) || desc.includes(term)) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+
+  // EFECTO TYPEWRITER
+  const textToType = "¡Hola! Soy Pablo 👋";
+  const typeWriterElement = document.getElementById('typewriter-text');
+  let i = 0;
+
+  function typeWriter() {
+    if (i < textToType.length) {
+      typeWriterElement.innerHTML += textToType.charAt(i);
+      i++;
+      setTimeout(typeWriter, 100); // Velocidad de escritura
+    }
+  }
+
+  // Iniciar cuando cargue la página
+  window.addEventListener('load', typeWriter);
+
+  // --- NUEVAS ANIMACIONES AVANZADAS ---
+
+  // 1. CONTADOR DE POSTS
+  const postCountElement = document.getElementById('postCount');
+  const totalPosts = document.querySelectorAll('.post-card').length;
+  let count = 0;
+  const duration = 2000; // 2 segundos
+  const intervalTime = Math.abs(Math.floor(duration / totalPosts));
+
+  // Animación del contador al cargar
+  const timer = setInterval(() => {
+    count++;
+    postCountElement.textContent = count;
+    if (count == totalPosts) {
+      clearInterval(timer);
+    }
+  }, 50); // Velocidad fija para efecto visual fluido
+
+  // 2. EFECTO SPOTLIGHT (Foco)
+  const bentoWrapper = document.querySelector('.bento-wrapper');
+  bentoWrapper.addEventListener('mousemove', (e) => {
+    const rect = bentoWrapper.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    bentoWrapper.style.setProperty('--mouse-x', `${x}px`);
+    bentoWrapper.style.setProperty('--mouse-y', `${y}px`);
+  });
+
+  // 3. EFECTO 3D TILT (Inclinación)
+  const tiltItems = document.querySelectorAll('.js-tilt');
+
+  tiltItems.forEach(item => {
+    item.addEventListener('mousemove', (e) => {
+      const rect = item.getBoundingClientRect();
+      const x = e.clientX - rect.left; // Pos X dentro del elemento
+      const y = e.clientY - rect.top;  // Pos Y dentro del elemento
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateX = ((y - centerY) / centerY) * -5; // Max 5 grados
+      const rotateY = ((x - centerX) / centerX) * 5;
+
+      item.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    });
+
+    item.addEventListener('mouseleave', () => {
+      item.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+    });
+  });
+
+</script>
+
 </html>

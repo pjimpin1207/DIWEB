@@ -1,93 +1,83 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Mi Página de Ejemplo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #f0f0f0;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #333;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 14px 20px;
-            display: block;
-        }
-
-        nav ul li a:hover {
-            background-color: #555;
-        }
-
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-
-        main img {
-            max-width: 80%;
-            height: auto;
-            margin-top: 15px;
-        }
-
-        footer {
-            background-color: #f0f0f0;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Mi Página - PJP</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Cabecera -->
-    <header>
-        <h1>Bienvenidos a Mi Página</h1>
-    </header>
 
-    <!-- Navegación -->
-    <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Acerca de</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
+  <!-- READING PROGRESS BAR -->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
 
-    <!-- Cuerpo principal -->
-    <main>
-        <h2>Sobre Mi Página</h2>
-        <p>Esta es una página de ejemplo.</p>
-            <img src="/assets/images/mbappe.jpg" alt="Imagen de Mbappe">
-    </main>
+  <div class="bg-gradient"></div>
 
-    <!-- Pie de página -->
-    <footer>
-        <p>Pablo</p>
-    </footer>
+  <!-- TOPIC NAVIGATION -->
+  <nav class="topic-nav" style="position: sticky; top: 1rem; z-index: 100; max-width: 900px; margin: 1rem auto;">
+    <a href="../../index.html" class="nav-home">
+       <span>🏠</span> <span class="pjp-brand">PJP</span>
+    </a>
+        <div class="nav-menu">
+      <a href="../../index.html">Inicio</a>
+      <a href="../Tema1/index.html" class="active">Tema 1</a>
+      <a href="../Tema2/index.html" >Tema 2</a>
+      <a href="../Tema3/index.html" >Tema 3</a>
+    </div>
+  </nav>
+
+  <div class="post-wrapper">
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">Sobre Mi Página</h1>
+        <div class="post-meta">
+          <span>📅 Fecha desconocida</span>
+          <span>✍️ <strong>Pablo Jiménez</strong></span>
+          <span>📚 Tema 1</span>
+        </div>
+      </header>
+
+      <div class="post-body">
+        
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema1/index.html" class="btn-link" style="display: inline-block;">← Volver al tema</a>
+    </div>
+  </div> 
+
+  <!-- MULTI-COLUMN FOOTER COPIED -->
+    <!-- SIMPLIFIED FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-simple-container">
+      <div class="footer-branding">
+        <h3 class="brand-name">Pablo Jiménez</h3>
+        <p class="brand-sub">Diseño de Interfaces Web (DIWEB)</p>
+        <p class="copyright">© 2025 Pablo Jiménez</p>
+      </div>
+      <div class="footer-actions">
+        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub ↗</a>
+        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog Programación ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Progress Bar Script
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
 </body>
 </html>
+
