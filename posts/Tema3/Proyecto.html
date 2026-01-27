@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto Tema 3 – Preprocesadores SASS y Less</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- READING PROGRESS BAR -->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <div class="bg-gradient"></div>
+
+  <!-- TOPIC NAVIGATION -->
+  <nav class="topic-nav" style="position: sticky; top: 1rem; z-index: 100; max-width: 900px; margin: 1rem auto;">
+    <a href="../../index.html" class="nav-home">
+       <span>🏠</span> <span class="pjp-brand">PJP</span>
+    </a>
+        <div class="nav-menu">
+      <a href="../../index.html">Inicio</a>
+      <a href="../Tema1/index.html">Tema 1</a>
+      <a href="../Tema2/index.html">Tema 2</a>
+      <a href="../Tema3/index.html" class="active">Tema 3</a>
+    </div>
+  </nav>
+
+  <div class="post-wrapper">
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">Proyecto Tema 3: Preprocesadores SASS y Less</h1>
+        <div class="post-meta">
+          <span>📅 27 de enero de 2026</span>
+          <span>✍️ <strong>Pablo Jiménez</strong></span>
+          <span>📚 Tema 3</span>
+        </div>
+      </header>
+
+      <div class="post-body">
+
+        <h2>Descripción de la actividad</h2>
+        <p>
+          En este proyecto se ha llevado a cabo la <strong>refactorización completa</strong>
+          de la web desarrollada en la unidad anterior, sustituyendo el CSS tradicional
+          por el uso de <strong>SASS (SCSS)</strong> como preprocesador.
+        </p>
+
+        <p>
+          El objetivo principal es mejorar la calidad del código, haciéndolo
+          más <strong>mantenible</strong>, <strong>escalable</strong> y
+          <strong>profesional</strong>, siguiendo buenas prácticas de desarrollo frontend.
+        </p>
+
+        <h3>Objetivos del proyecto</h3>
+        <ul>
+          <li>Trabajo en grupo de 2–3 personas.</li>
+          <li>Reutilizar el HTML del proyecto del Tema 1.</li>
+          <li>Crear al menos una página por alumno.</li>
+          <li>No reutilizar directamente el CSS anterior.</li>
+        </ul>
+
+        <h3>Conceptos trabajados</h3>
+        <p>
+          El proyecto permite demostrar el dominio de SASS como preprocesador,
+          aplicando correctamente los siguientes conceptos:
+        </p>
+
+        <ul>
+          <li>Uso de SASS (SCSS).</li>
+          <li>Aplicación del principio <strong>DRY</strong>.</li>
+          <li>Organización del código en <strong>partials</strong>.</li>
+          <li>Variables.</li>
+          <li>Anidamiento y uso correcto de <code>&</code>.</li>
+          <li><code>@import</code> y <code>@use</code>.</li>
+          <li>Mixins reutilizables.</li>
+          <li><code>@extend</code> con uso justificado.</li>
+          <li>Funciones y operadores de SASS.</li>
+          <li>Compilación correcta de SCSS a CSS.</li>
+        </ul>
+
+        <h3>Estructura del proyecto</h3>
+        <pre><code>proyecto-sass/     
+├─ index.html
+├─ carrito.html
+├─ paginaUsuario.html
+│
+├─ scss/
+│   ├─ base/
+│   │   ├─ _reset.scss
+│   │   ├─ _variables.scss
+│   │   └─ _tipografia.scss
+│   │
+│   ├─ layout/
+│   │   ├─ _header.scss
+│   │   ├─ _footer.scss
+│   │   └─ _grid.scss
+│   │
+│   ├─ components/
+│   │   ├─ _buttons.scss
+│   │   ├─ _cards.scss
+│   │   └─ _forms.scss
+│   │
+│   ├─ pages/
+│   │   ├─ index.scss
+│   │   └─ carrito.scss
+│   │
+│   └─ main.scss
+│
+├─ css/
+│   ├─ main.css
+│   └─ carrito.css
+│
+└─ README.md
+</code></pre>
+
+        <h3>Requisitos técnicos</h3>
+        <ul>
+          <li>Variables para colores, tipografías, espaciados y breakpoints.</li>
+          <li>Anidamiento en navegación y componentes.</li>
+          <li>Mixins para botones, media queries y reglas reutilizables.</li>
+          <li>Uso correcto de <code>@extend</code>.</li>
+          <li>Uso de funciones y operadores aritméticos.</li>
+          <li>Archivo principal <code>main.scss</code> con imports ordenados.</li>
+          <li>CSS generado sin errores.</li>
+        </ul>
+
+        <h3>README del proyecto</h3>
+        <p>
+          El proyecto incluye un archivo <strong>README.md</strong> donde se especifica:
+        </p>
+        <ul>
+          <li>Integrantes del grupo.</li>
+          <li>Estructura del proyecto.</li>
+          <li>Cambios respecto a usar CSS.</li>
+          <li>Ventajas del uso de SASS.</li>
+        </ul>
+
+        <h3>Restricciones aplicadas</h3>
+        <ul>
+          <li>No se han utilizado frameworks CSS.</li>
+          <li>No se ha escrito CSS manualmente en <code>main.css</code>.</li>
+          <li>No se han duplicado reglas sin usar mixins o extend.</li>
+        </ul>
+
+        <h3>Valor añadido</h3>
+        <ul>
+          <li>Mejor organización del código.</li>
+          <li>Base preparada para futuras ampliaciones.</li>
+          <li>Uso de <code>@use</code> en lugar de <code>@import</code>.</li>
+          <li>Preparación para sistema de temas o dark mode.</li>
+        </ul>
+
+        <div class="exercise-button">
+          <a href="/Temas/Tema3/Proyecto/index.html" class="btn-exercise" target="_blank">
+            🔍 Ver resultado del proyecto
+          </a>
+        </div>
+        
+        <div style="text-align: center; margin-top: 1rem;">
+             <a href="https://github.com/pjimpin1207/DIWEB/tree/master/Temas/Tema3/Proyecto"
+             class="btn-exercise" style="background: #333;"
+             target="_blank">
+            💻 Ver repositorio en GitHub
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema3/index.html" class="btn-link" style="color: white; text-decoration: none;">← Volver al tema</a>
+    </div>
+  </div> 
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-simple-container">
+      <div class="footer-branding">
+        <h3 class="brand-name">Pablo Jiménez</h3>
+        <p class="brand-sub">Diseño de Interfaces Web (DIWEB)</p>
+        <p class="copyright">© 2026 Pablo Jiménez</p>
+      </div>
+      <div class="footer-actions">
+        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub ↗</a>
+        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog Programación ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Progress Bar Script
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
+</body>
+</html>
