@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 4 – Mixins SCSS - Blog DIWEB</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- READING PROGRESS BAR -->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <div class="bg-gradient"></div>
+
+  <!-- TOPIC NAVIGATION -->
+  <nav class="topic-nav" style="position: sticky; top: 1rem; z-index: 100; max-width: 900px; margin: 1rem auto;">
+    <a href="../../index.html" class="nav-home">
+       <span>🏠</span> <span class="pjp-brand">PJP</span>
+    </a>
+    <div class="nav-menu">
+      <a href="../../index.html">Inicio</a>
+      <a href="../Tema1/index.html">Tema 1</a>
+      <a href="../Tema2/index.html">Tema 2</a>
+      <a href="../Tema3/index.html" class="active">Tema 3</a>
+      <a href="../Tema4/index.html">Tema 4</a>
+    </div>
+  </nav>
+
+  <div class="post-wrapper">
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">Ejercicio 4 – Uso de Mixins en SCSS</h1>
+        <div class="post-meta">
+          <span>📅 30 de enero de 2026</span>
+          <span>✍️ <strong>Pablo Jiménez</strong></span>
+          <span>📚 Tema 3</span>
+        </div>
+      </header>
+
+      <div class="post-body">
+
+        <section>
+          <h2>📄 Enunciado del ejercicio</h2>
+          <p>
+            En este ejercicio se trabaja el uso de <strong>mixins en SCSS</strong>, una
+            de las herramientas más potentes de los preprocesadores CSS. El objetivo
+            es crear un mixin reutilizable para estilos de botones y aplicarlo a
+            distintos tipos de botones con pequeñas variaciones.
+          </p>
+
+          <p>
+            El mixin debe llamarse <code>boton</code> y aceptar varios parámetros con
+            valores por defecto:
+          </p>
+
+          <ul>
+            <li>Color de fondo</li>
+            <li>Color del texto</li>
+            <li>Padding</li>
+            <li>Radio de borde</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>🛠️ Creación del mixin</h2>
+          <p>
+            El mixin centraliza todas las propiedades comunes de los botones, como el
+            color del texto, el padding, el borde redondeado y el comportamiento del
+            cursor. Gracias a los valores por defecto, no es necesario indicar todos
+            los parámetros cada vez que se utiliza.
+          </p>
+
+          <p>
+            Esto permite aplicar el principio <strong>DRY (Don’t Repeat Yourself)</strong>,
+            evitando duplicar código y facilitando el mantenimiento del proyecto.
+          </p>
+        </section>
+
+        <section>
+          <h2>🚀 Uso del mixin con @include</h2>
+          <p>
+            A partir del mixin se crean tres botones distintos utilizando
+            <code>@include</code>:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Botón primario:</strong> utiliza todos los valores por defecto del mixin.
+            </li>
+            <li>
+              <strong>Botón secundario:</strong> modifica únicamente el color de fondo.
+            </li>
+            <li>
+              <strong>Botón de alerta:</strong> cambia el color de fondo y el padding
+              para destacar visualmente su función.
+            </li>
+          </ul>
+
+          <p>
+            De esta forma, todos los botones mantienen una coherencia visual, pero
+            pueden diferenciarse fácilmente según su función.
+          </p>
+        </section>
+
+        <section>
+          <h2>✨ Ventajas del uso de mixins</h2>
+          <p>
+            El uso de mixins aporta múltiples beneficios al desarrollo de estilos:
+          </p>
+
+          <ul>
+            <li>Mayor reutilización de código.</li>
+            <li>Estilos más limpios y organizados.</li>
+            <li>Facilidad para realizar cambios globales.</li>
+            <li>Mejor escalabilidad del proyecto.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>🤔 Pregunta de reflexión</h2>
+          <p>
+            <strong>¿Qué pasaría si necesitara cambiar el estilo de todos los botones?</strong>
+          </p>
+
+          <p>
+            Gracias al uso del mixin, solo sería necesario modificar el mixin
+            <code>boton</code>. Automáticamente, todos los botones que lo utilicen
+            heredarían los cambios sin tener que modificar cada clase de forma
+            individual.
+          </p>
+        </section>
+
+        <section>
+          <h2>📝 Conclusión</h2>
+          <p>
+            Este ejercicio demuestra cómo los mixins convierten SCSS en una herramienta
+            mucho más potente que CSS tradicional. Permiten escribir código más
+            mantenible, profesional y preparado para proyectos de mayor tamaño.
+          </p>
+        </section>
+
+        <section class="post-buttons" style="margin-top: 3rem; text-align: center;">
+          <a href="../../Temas/Tema3/Actividades/Ejercicio4/index.html" class="btn-exercise" target="_blank">
+            🔍 Ver resultado
+          </a>
+        </section>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema3/index.html" class="btn-link" style="color: white; text-decoration: none;">← Volver al tema</a>
+    </div>
+  </div> 
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-simple-container">
+      <div class="footer-branding">
+        <h3 class="brand-name">Pablo Jiménez</h3>
+        <p class="brand-sub">Diseño de Interfaces Web (DIWEB)</p>
+        <p class="copyright">© 2026 Pablo Jiménez</p>
+      </div>
+      <div class="footer-actions">
+        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub ↗</a>
+        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog Programación ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Progress Bar Script
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
+</body>
+</html>

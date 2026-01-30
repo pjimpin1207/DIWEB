@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 5 – Extend SCSS - Blog DIWEB</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- READING PROGRESS BAR -->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <div class="bg-gradient"></div>
+
+  <!-- TOPIC NAVIGATION -->
+  <nav class="topic-nav" style="position: sticky; top: 1rem; z-index: 100; max-width: 900px; margin: 1rem auto;">
+    <a href="../../index.html" class="nav-home">
+       <span>🏠</span> <span class="pjp-brand">PJP</span>
+    </a>
+    <div class="nav-menu">
+      <a href="../../index.html">Inicio</a>
+      <a href="../Tema1/index.html">Tema 1</a>
+      <a href="../Tema2/index.html">Tema 2</a>
+      <a href="../Tema3/index.html" class="active">Tema 3</a>
+      <a href="../Tema4/index.html">Tema 4</a>
+    </div>
+  </nav>
+
+  <div class="post-wrapper">
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">Ejercicio 5 – Uso de @extend en SCSS</h1>
+        <div class="post-meta">
+          <span>📅 30 de enero de 2026</span>
+          <span>✍️ <strong>Pablo Jiménez</strong></span>
+          <span>📚 Tema 3</span>
+        </div>
+      </header>
+
+      <div class="post-body">
+
+        <section>
+          <h2>📄 Enunciado del ejercicio</h2>
+          <p>
+            En este ejercicio se trabaja el uso de <strong>@extend</strong> en SCSS, una
+            funcionalidad que permite heredar estilos de un selector base para evitar
+            duplicar código.
+          </p>
+
+          <p>
+            El objetivo es crear una clase base que defina el estilo común de los
+            botones y, a partir de ella, generar distintos tipos de botones cambiando
+            únicamente el color de fondo.
+          </p>
+        </section>
+
+        <section>
+          <h2>🛠️ Creación del selector base</h2>
+          <p>
+            Se define un selector llamado <code>.boton-base</code> que contiene todas
+            las propiedades comunes a los botones:
+          </p>
+
+          <ul>
+            <li>Padding uniforme</li>
+            <li>Esquinas redondeadas</li>
+            <li>Color de texto blanco</li>
+            <li>Eliminación del borde</li>
+            <li>Cambio del cursor al pasar el ratón</li>
+          </ul>
+
+          <p>
+            Este selector <strong>no se utiliza directamente en el HTML</strong>, sino
+            que sirve como base para que otros selectores hereden sus estilos.
+          </p>
+        </section>
+
+        <section>
+          <h2>🚀 Extensión del selector con @extend</h2>
+          <p>
+            A partir de <code>.boton-base</code> se crean tres botones distintos usando
+            <code>@extend</code>:
+          </p>
+
+          <ul>
+            <li><strong>.boton-primario</strong> con fondo azul.</li>
+            <li><strong>.boton-secundario</strong> con fondo verde.</li>
+            <li><strong>.boton-alerta</strong> con fondo rojo.</li>
+          </ul>
+
+          <p>
+            Cada uno de estos selectores hereda automáticamente todas las propiedades
+            del selector base y solo define su color de fondo específico.
+          </p>
+        </section>
+
+        <section>
+          <h2>✨ Ventajas de usar @extend</h2>
+          <p>
+            El uso de <code>@extend</code> aporta varias ventajas importantes:
+          </p>
+
+          <ul>
+            <li>Evita repetir reglas CSS.</li>
+            <li>Reduce el tamaño del CSS generado.</li>
+            <li>Mantiene una estructura clara y coherente.</li>
+            <li>Facilita el mantenimiento del código.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>🤔 Pregunta de reflexión</h2>
+          <p>
+            <strong>
+              ¿Qué diferencia hay entre usar @extend y usar un @mixin con @include para
+              estos botones? ¿Cuál genera menos código?
+            </strong>
+          </p>
+
+          <p>
+            La principal diferencia es que <code>@extend</code> combina los selectores
+            que comparten estilos en una misma regla CSS, mientras que los
+            <code>@mixin</code> copian las propiedades cada vez que se incluyen.
+          </p>
+
+          <p>
+            Por ello, <strong>@extend suele generar menos código CSS</strong>, ya que no
+            repite las mismas reglas varias veces. Sin embargo, los mixins son más
+            flexibles cuando se necesitan variaciones en los valores.
+          </p>
+        </section>
+
+        <section>
+          <h2>📝 Conclusión</h2>
+          <p>
+            Este ejercicio demuestra cómo <code>@extend</code> es una excelente opción
+            para crear estilos base compartidos. Usado correctamente, permite escribir
+            un código más limpio, optimizado y fácil de mantener, especialmente cuando
+            varios elementos comparten la misma estructura visual.
+          </p>
+        </section>
+
+        <section class="post-buttons" style="margin-top: 3rem; text-align: center;">
+          <a href="../../Temas/Tema3/Actividades/Ejercicio5/index.html" class="btn-exercise" target="_blank">
+            🔍 Ver resultado
+          </a>
+        </section>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema3/index.html" class="btn-link" style="color: white; text-decoration: none;">← Volver al tema</a>
+    </div>
+  </div> 
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-simple-container">
+      <div class="footer-branding">
+        <h3 class="brand-name">Pablo Jiménez</h3>
+        <p class="brand-sub">Diseño de Interfaces Web (DIWEB)</p>
+        <p class="copyright">© 2026 Pablo Jiménez</p>
+      </div>
+      <div class="footer-actions">
+        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub ↗</a>
+        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog Programación ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Progress Bar Script
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
+</body>
+</html>
