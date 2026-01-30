@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 0 – Selectores CSS - Blog DIWEB</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- READING PROGRESS BAR -->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <div class="bg-gradient"></div>
+
+  <!-- TOPIC NAVIGATION -->
+  <nav class="topic-nav" style="position: sticky; top: 1rem; z-index: 100; max-width: 900px; margin: 1rem auto;">
+    <a href="../../index.html" class="nav-home">
+       <span>🏠</span> <span class="pjp-brand">PJP</span>
+    </a>
+    <div class="nav-menu">
+      <a href="../../index.html">Inicio</a>
+      <a href="../Tema1/index.html">Tema 1</a>
+      <a href="../Tema2/index.html">Tema 2</a>
+      <a href="../Tema3/index.html">Tema 3</a>
+      <a href="../Tema4/index.html" class="active">Tema 4</a>
+    </div>
+  </nav>
+
+  <div class="post-wrapper">
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">Ejercicio 0 – Práctica de selectores CSS</h1>
+        <div class="post-meta">
+          <span>📅 30 de enero de 2026</span>
+          <span>✍️ <strong>Pablo Jiménez</strong></span>
+          <span>📚 Tema 4</span>
+        </div>
+      </header>
+
+      <div class="post-body">
+
+        <section>
+          <h2>📄 Enunciado</h2>
+          <p>
+            En este ejercicio se trabajan distintos <strong>selectores CSS</strong> para aplicar estilos
+            de forma precisa a elementos HTML según su tipo, clase, ID o jerarquía en el documento.
+            Incluye el uso de selectores universales, descendientes, de clase y de elementos específicos.
+          </p>
+        </section>
+
+        <section>
+          <h2>💻 Referencia HTML</h2>
+          <p>A continuación se muestra el código HTML utilizado para el ejercicio:</p>
+
+          <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Repaso CSS&lt;/title&gt;
+    &lt;link rel="stylesheet" href="estilos.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;header class="cabecera"&gt;
+        &lt;h1&gt;Mi sitio web&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;a href="#"&gt;Inicio&lt;/a&gt;
+            &lt;a href="#"&gt;Servicios&lt;/a&gt;
+            &lt;a href="#"&gt;Contacto&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;section class="contenedor"&gt;
+            &lt;div class="caja"&gt;Caja 1&lt;/div&gt;
+            &lt;div class="caja"&gt;Caja 2&lt;/div&gt;
+            &lt;div class="caja especial"&gt;Caja 3&lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;© 2026 - Repaso de CSS&lt;/p&gt;
+    &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+          </code></pre>
+        <section>
+          <h2>🎨 Solución CSS</h2>
+          <p>A continuación se detalla el código CSS utilizado para dar estilo a la estructura anterior, aplicando selectores y propiedades de posicionamiento:</p>
+
+          <pre><code class="language-css">
+/* Selectores y herencia */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+/* Cabecera y menú */
+.cabecera {
+    background-color: #eaeaea;
+    padding: 15px;
+}
+
+/* Selector descendente para enlaces del nav */
+.cabecera nav a {
+    color: #0066cc;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+/* Hover en enlaces del menú */
+.cabecera nav a:hover {
+    color: red;
+}
+
+/* Posicionamiento básico */
+.contenedor {
+    position: relative;
+    margin: 30px;
+}
+
+/* Modelo de caja */
+.caja {
+    width: 150px;
+    height: 100px; 
+    border: 2px solid black;
+    padding: 10px;
+    /* Margin y padding */
+    margin: 20px;
+    /* Display */
+    display: inline-block;
+    /* Centrado sin flexbox */
+    text-align: center;
+    line-height: 100px;
+}
+
+/* Caja especial */
+.especial {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ffeb3b;
+    color: darkred;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    text-align: center;
+}
+          </code></pre>
+        </section>
+
+        </section>
+
+        <section class="post-buttons" style="margin-top: 3rem; text-align: center;">
+          <!-- Corrected link to the activity file -->
+          <a href="../../Temas/Tema4/Actividades/Ejercicio0/Ejercicio0.html" class="btn-exercise" target="_blank">
+            🔍 Ver resultado
+          </a>
+        </section>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema4/index.html" class="btn-link" style="color: white; text-decoration: none;">← Volver al tema</a>
+    </div>
+  </div> 
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-simple-container">
+      <div class="footer-branding">
+        <h3 class="brand-name">Pablo Jiménez</h3>
+        <p class="brand-sub">Diseño de Interfaces Web (DIWEB)</p>
+        <p class="copyright">© 2026 Pablo Jiménez</p>
+      </div>
+      <div class="footer-actions">
+        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub ↗</a>
+        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog Programación ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Progress Bar Script
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
+</body>
+</html>

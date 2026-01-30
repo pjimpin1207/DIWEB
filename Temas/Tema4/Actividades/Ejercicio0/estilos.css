@@ -1,0 +1,67 @@
+/*Selectores y herencia*/
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+/*Cabecera y menú*/
+
+.cabecera {
+    background-color: #eaeaea;
+    padding: 15px;
+}
+
+/* Selector descendente para enlaces del nav */
+.cabecera nav a {
+    color: #0066cc;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+/* Hover en enlaces del menú */
+.cabecera nav a:hover {
+    color: red;
+}
+
+/*Posicionamiento básico*/
+
+.contenedor {
+    position: relative;
+    margin: 30px;
+}
+
+/*Modelo de caja*/
+
+.caja {
+    width: 150px;
+    height: 100px; 
+    border: 2px solid black;
+    padding: 10px;
+
+    /*Margin y padding*/
+    margin: 20px;
+
+    /*Display*/
+    display: inline-block;
+
+    /*Centrado sin flexbox*/
+    text-align: center;
+    line-height: 100px;
+}
+
+/*Caja especial*/
+.especial {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ffeb3b;
+    color: darkred;
+}
+
+/*Footer*/
+footer {
+    margin-top: 40px;
+    text-align: center;
+}
