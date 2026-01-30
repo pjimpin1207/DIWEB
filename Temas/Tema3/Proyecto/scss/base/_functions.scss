@@ -1,6 +1,5 @@
-// scss/base/_functions.scss
 @use '../base/variables';
-@use 'sass:math'; // <--- Importante: Esto carga las matemáticas de SASS
+@use 'sass:math';
 
 @function px-to-rem($pixels) {
   // En lugar de ($pixels / 16), usamos math.div

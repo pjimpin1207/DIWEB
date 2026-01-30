@@ -1,54 +1,43 @@
-// Ubicación: scss/pages/_profile.scss
 @use '../base/variables';
 @use '../utils/mixins';
 
-// 1. Configuración del contenedor principal
 .profile-main {
     padding: $spacing-lg;
     max-width: 1200px;
-    margin: 0 auto; // Centrado horizontal
+    margin: 0 auto;
 }
 
-// 2. GRID LAYOUT
 .profile-grid {
     display: grid;
-    // Dos columnas: La izquierda (1 parte) y la derecha (1.5 partes)
     grid-template-columns: 1fr 1.5fr; 
     gap: $spacing-lg;
 
-    // Responsive: En móvil (tablets y tlf) se pone en 1 columna
     @include mobile {
         grid-template-columns: 1fr;
     }
 }
 
-// 3. ESTILOS DE TARJETA (DRY - Reutilizable)
-// Usamos un placeholder (%) para definir el estilo común de todas las cajas verdes
 %card-style {
-    background-color: #aae073; // Verde medio (según imagen)
-    border-radius: 10px; // Bordes redondeados
-    overflow: hidden; // Para que el header no se salga
+    background-color: #aae073;
+    border-radius: 10px;
+    overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     margin-bottom: $spacing-md;
 }
 
-// Header de las tarjetas (La barra verde más oscura donde dice "Historial", etc)
 %card-header {
-    background-color: darken(#aae073, 10%); // Función SASS: Oscurece el color base un 10%
+    background-color: darken(#aae073, 10%);
     padding: $spacing-md;
     text-align: center;
     
     h3 {
         margin: 0;
-        font-size: px-to-rem(20); // Función tuya
+        font-size: px-to-rem(20);
         font-weight: 700;
         color: black;
     }
 }
 
-// 4. IMPLEMENTACIÓN
-
-// Estilos generales de tarjeta
 .info-card {
     @extend %card-style;
 
@@ -61,15 +50,13 @@
     }
 }
 
-// --- Columna Izquierda ---
 .profile-left {
-    // Historial de pedidos
     .order-item {
         display: flex;
         align-items: center;
         gap: $spacing-md;
         margin-bottom: $spacing-md;
-        background-color: rgba(255,255,255, 0.15); // Un fondo sutil para cada pedido
+        background-color: rgba(255,255,255, 0.15);
         padding: $spacing-sm;
         border-radius: 5px;
 
@@ -84,8 +71,6 @@
             font-weight: 500;
         }
     }
-
-    // Imagen de seguimiento
     .tracking-img {
         width: 100%;
         height: auto;
@@ -95,12 +80,9 @@
     }
 }
 
-// --- Columna Derecha (Perfil Grande) ---
 .profile-right {
     .profile-card-big {
-        height: 100%; // Que ocupe todo el alto disponible
-        
-        // Ajustes específicos del cuerpo del perfil
+        height: 100%;
         .profile-details {
             display: flex;
             flex-direction: column;
@@ -110,17 +92,16 @@
             .username {
                 font-size: px-to-rem(32);
                 margin-bottom: $spacing-lg;
-                font-weight: 400; // Letra más fina como en la foto
+                font-weight: 400;
             }
 
-            // El círculo de la foto
             .profile-pic-wrapper {
                 width: 200px;
                 height: 200px;
-                border-radius: 50%; // Círculo
+                border-radius: 50%;
                 overflow: hidden;
                 margin-bottom: $spacing-lg;
-                border: 5px solid rgba(255,255,255,0.3); // Borde transparente decorativo
+                border: 5px solid rgba(255,255,255,0.3);
 
                 .profile-pic {
                     width: 100%;
@@ -129,19 +110,18 @@
                 }
             }
 
-            // Lista de datos (Usuario, Email...)
             .user-data {
-                width: 100%; // Ocupa todo el ancho
+                width: 100%;
                 padding: 0 $spacing-md;
 
                 .data-row {
                     display: flex;
-                    justify-content: space-between; // Texto a los extremos
+                    justify-content: space-between;
                     margin-bottom: $spacing-md;
                     font-size: px-to-rem(16);
 
                     .label {
-                        font-weight: 800; // Negrita fuerte
+                        font-weight: 800;
                     }
                     
                     .value {
@@ -153,54 +133,49 @@
     }
 }
 
-// Dentro de .profile-details (en _profile.scss)
-
 .user-data-form {
     width: 100%;
     padding: 0 $spacing-md;
 
     .data-row {
         display: flex;
-        justify-content: space-between; // Etiqueta a izq, input a der
-        align-items: center; // Centrados verticalmente
+        justify-content: space-between;
+        align-items: center;
         margin-bottom: $spacing-md;
 
         label {
-            font-weight: 800; // Negrita fuerte
+            font-weight: 800;
             font-size: px-to-rem(16);
-            cursor: pointer; // Mejor UX
+            cursor: pointer;
         }
 
         input {
-            width: 65%; // Ancho del campo
+            width: 65%;
             padding: 8px 12px;
             border: none;
             border-radius: 5px;
-            // Fondo blanco semi-transparente para que parezca editable pero sutil
             background-color: rgba(255, 255, 255, 0.4); 
-            text-align: right; // Texto alineado a la derecha como en tu foto
-            font-family: inherit; // Mantiene la fuente Montserrat
+            text-align: right;
+            font-family: inherit;
             font-size: px-to-rem(16);
             color: #333;
             transition: all 0.3s ease;
 
-            // Efecto al hacer clic dentro
             &:focus {
                 outline: none;
-                background-color: rgba(255, 255, 255, 0.9); // Se pone blanco
-                box-shadow: 0 0 0 2px black; // Borde negro al escribir
+                background-color: rgba(255, 255, 255, 0.9);
+                box-shadow: 0 0 0 2px black;
             }
         }
     }
 
-    // Botón de Guardar
     .btn-save {
         display: block;
         width: 100%;
         margin-top: $spacing-lg;
         padding: $spacing-md;
-        background-color: black; // Negro como el menú
-        color: $color-primary; // Texto verde neón
+        background-color: black;
+        color: $color-primary;
         border: none;
         border-radius: 5px;
         font-weight: bold;
@@ -209,7 +184,7 @@
         transition: transform 0.2s ease;
 
         &:hover {
-            transform: scale(1.02); // Efecto pulsación
+            transform: scale(1.02);
             background-color: #333;
         }
     }

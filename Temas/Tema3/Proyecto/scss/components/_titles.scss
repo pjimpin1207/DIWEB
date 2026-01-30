@@ -1,12 +1,11 @@
-// scss/components/_titles.scss
 @use '../base/variables';
 
 .section-title {
-    background-color: #aae073; // Un verde un poco más oscuro que el fondo pero más claro que el header
+    background-color: #aae073;
     text-align: center;
     padding: $spacing-sm;
-    margin: $spacing-lg 0; // Margen arriba y abajo
-    border-radius: 4px; // Un poco de borde redondeado (opcional)
+    margin: $spacing-lg 0;
+    border-radius: 4px;
 
     h2 {
         color: $color-secondary;

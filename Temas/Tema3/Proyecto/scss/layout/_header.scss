@@ -1,14 +1,10 @@
-// scss/layout/_header.scss
 @use '../base/variables';
 @use '../utils/mixins';
 
-// NOTA: No necesitamos @use aquí si ya importas variables y mixins en main.scss antes que este archivo.
-
-// 1. La parte superior VERDE con el título grande
 .main-header {
-    background-color: $color-primary; // Variable directa
-    padding: $spacing-md;             // Variable directa
-    @include flex-center;             // Mixin directo (sin m.)
+    background-color: $color-primary;
+    padding: $spacing-md;
+    @include flex-center;
 
     .logo-container {
         display: flex;
@@ -16,7 +12,6 @@
         gap: $spacing-sm;
 
         h1 {
-            // Función directa (asegúrate de que _functions.scss está importado en main.scss)
             font-size: px-to-rem(48); 
             color: $color-secondary;
             font-weight: 700;
@@ -28,35 +23,30 @@
     }
 }
 
-// 2. La barra de navegación NEGRA
+// barra de navegación NEGRA
 .main-nav {
     background-color: black; 
-    // Usamos la variable directamente
     color: $color-primary; 
 
     ul {
-        @include flex-center; // Mixin directo
+        @include flex-center;
         list-style: none;
         
-        // Mobile: Mixin responsive directo
         @include mobile {
             flex-direction: column;
         }
 
         li {
-            // Variables directas para el padding
             padding: $spacing-md $spacing-lg;
             cursor: pointer;
             text-transform: capitalize;
-            font-size: px-to-rem(14); // Función directa
+            font-size: px-to-rem(14);
             color: $color-primary; 
             
-            // Requisito: Anidamiento y selector padre &
             &:hover {
                 color: white; 
             }
 
-            // El triangulito hacia abajo
             &::after {
                 content: ' ▼';
                 font-size: 0.7em;
