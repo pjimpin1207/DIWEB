@@ -1,0 +1,31 @@
+.dashboard {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header header header"
+        "menu contenido extra"
+        "footer footer footer";
+    height: 100vh;
+}
+.header {
+    grid-area: header;
+    background-color: aqua;
+
+}
+.menu {
+    grid-area: menu;
+    background-color: rgb(66, 207, 23);
+}
+.contenido {
+    grid-area: contenido;
+    background-color: rgb(212, 209, 26);
+}
+.extra {
+    grid-area: extra;
+    background-color: rgb(196, 22, 167);
+}
+.footer {
+    grid-area: footer;
+    background-color: rgb(228, 15, 15);
+}

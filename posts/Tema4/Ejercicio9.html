@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 9 – Maquetación Grid y Flexbox - Blog DIWEB</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <div class="bg-gradient"></div>
+
+  <nav class="topic-nav" style="position: sticky; top: 1rem; z-index: 100; max-width: 900px; margin: 1rem auto;">
+    <a href="../../index.html" class="nav-home">
+        <span>🏠</span> <span class="pjp-brand">PJP</span>
+    </a>
+        <div class="nav-menu">
+      <a href="../../index.html">Inicio</a>
+      <a href="../Tema1/index.html">Tema 1</a>
+      <a href="../Tema2/index.html">Tema 2</a>
+      <a href="../Tema3/index.html">Tema 3</a>
+      <a href="../Tema4/index.html" class="active">Tema 4</a>
+    </div>
+  </nav>
+
+  <div class="post-wrapper">
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">Ejercicio 9 – Maquetación Grid y Flexbox</h1>
+        <div class="post-meta">
+          <span>📅 10 de febrero de 2026</span>
+          <span>✍️ <strong>Pablo Jiménez</strong></span>
+          <span>📚 Tema 4</span>
+        </div>
+      </header>
+
+      <div class="post-body">
+
+        <section>
+          <h2>📄 Objetivo</h2>
+          <p>
+            Maquetar una página web combinando lo mejor de ambos mundos: <strong>CSS Grid</strong> para definir la estructura general de la página (filas principales) y <strong>Flexbox</strong> para la alineación y distribución de los elementos internos (menú, cards, footer)[cite: 235, 402].
+          </p>
+        </section>
+
+        <section>
+          <h2>💻 Estructura base</h2>
+          <p>La estructura general utiliza tres bloques principales dentro del body.</p>
+          <pre><code class="language-html">
+&lt;body&gt;
+    &lt;header&gt; Logo y Menú &lt;/header&gt;
+    &lt;main&gt; 
+        &lt;div class="card"&gt;...&lt;/div&gt;
+        &lt;div class="card"&gt;...&lt;/div&gt; 
+        &lt;div class="card"&gt;...&lt;/div&gt;
+    &lt;/main&gt;
+    &lt;footer&gt; Textos separados &lt;/footer&gt;
+&lt;/body&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>🎯 Requisitos CSS</h2>
+          <ul>
+            <li>La estructura general (Header, Main, Footer) debe definirse con <strong>Grid</strong>.</li>
+            <li>La página debe ocupar al menos el 100% de la altura de la pantalla (<code>min-height: 100vh</code>)[cite: 409].</li>
+            <li><strong>Header:</strong> Usar Flexbox para separar el logo y la navegación[cite: 427].</li>
+            <li><strong>Main:</strong> Usar Flexbox para centrar y alinear las cards[cite: 392].</li>
+            <li><strong>Footer:</strong> Usar Flexbox para distribuir el contenido a los extremos.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>✅ Solución (CSS)</h2>
+          <p>
+            A continuación se muestra el código CSS aplicado, donde se combinan las propiedades de Grid para el layout macro y Flexbox para los componentes micro, con los colores solicitados:
+          </p>
+          <pre><code class="language-css">
+body {
+    margin: 0;
+    display: grid;
+    /* Grid define 3 filas: Auto, 1 fracción (flexible), Auto */
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c05c5c;
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #21ce21;
+    padding: 20px;
+}
+
+.card {
+    background-color: rgb(19, 83, 202);
+    padding: 20px;
+    border: 1px solid #ffffff;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4747ce;
+    padding: 1rem;
+}
+          </code></pre>
+        </section>
+
+        <section class="post-buttons" style="margin-top: 3rem; text-align: center;">
+          <a href="/Temas/Tema4/Actividades/Ejercicio9/Ejercicio9.html" class="btn-exercise" target="_blank">
+            🔎 Ver resultado
+          </a>
+        </section>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema4/index.html" class="btn-link" style="color: white; text-decoration: none;">← Volver al tema</a>
+    </div>
+  </div> 
+
+  <footer class="main-footer">
+    <div class="footer-simple-container">
+      <div class="footer-branding">
+        <h3 class="brand-name">Pablo Jiménez</h3>
+        <p class="brand-sub">Diseño de Interfaces Web (DIWEB)</p>
+        <p class="copyright">© 2026 Pablo Jiménez</p>
+      </div>
+      <div class="footer-actions">
+        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub ↗</a>
+        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog Programación ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Progress Bar Script
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
+</body>
+</html>

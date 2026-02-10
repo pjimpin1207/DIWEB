@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 8 – Página con estructura tipo dashboard - Blog DIWEB</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <div class="bg-gradient"></div>
+
+  <nav class="topic-nav" style="position: sticky; top: 1rem; z-index: 100; max-width: 900px; margin: 1rem auto;">
+    <a href="../../index.html" class="nav-home">
+        <span>🏠</span> <span class="pjp-brand">PJP</span>
+    </a>
+        <div class="nav-menu">
+      <a href="../../index.html">Inicio</a>
+      <a href="../Tema1/index.html">Tema 1</a>
+      <a href="../Tema2/index.html">Tema 2</a>
+      <a href="../Tema3/index.html">Tema 3</a>
+      <a href="../Tema4/index.html" class="active">Tema 4</a>
+    </div>
+  </nav>
+
+  <div class="post-wrapper">
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">Ejercicio 8 – Página con estructura tipo dashboard</h1>
+        <div class="post-meta">
+          <span>📅 10 de febrero de 2026</span>
+          <span>✍️ <strong>Pablo Jiménez</strong></span>
+          <span>📚 Tema 4</span>
+        </div>
+      </header>
+
+      <div class="post-body">
+
+        <section>
+          <h2>📄 Objetivo</h2>
+          <p>
+            Aplicar <strong>CSS Grid</strong> para crear una estructura de diseño más compleja, similar a la que encontramos en aplicaciones web reales (tipo panel de control o dashboard).
+          </p>
+        </section>
+
+        <section>
+          <h2>💻 HTML base</h2>
+          <pre><code class="language-html">
+&lt;div class="dashboard"&gt;
+    &lt;header class="header"&gt;Header&lt;/header&gt;
+    &lt;nav class="menu"&gt;Menu&lt;/nav&gt;
+    &lt;section class="contenido"&gt;Contenido&lt;/section&gt;
+    &lt;aside class="extra"&gt;Extra&lt;/aside&gt;
+    &lt;footer class="footer"&gt;Footer&lt;/footer&gt;
+&lt;/div&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>🎯 Requisitos CSS</h2>
+          <ul>
+            <li>Definir una cuadrícula con filas y columnas explícitas.</li>
+            <li>El menú debe ocupar toda la altura lateral disponible.</li>
+            <li>El contenido principal debe ser flexible y ocupar la mayor parte del espacio.</li>
+            <li>El footer debe ocupar todo el ancho inferior.</li>
+            <li>Asignar colores de fondo para diferenciar las áreas visualmente.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>✅ Solución (CSS)</h2>
+          <p>
+            Usamos <code>grid-template-areas</code> para "dibujar" el layout y asignamos colores específicos a cada sección:
+          </p>
+          <pre><code class="language-css">
+.dashboard {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header header header"
+        "menu contenido extra"
+        "footer footer footer";
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: aqua;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: rgb(66, 207, 23);
+}
+
+.contenido {
+    grid-area: contenido;
+    background-color: rgb(212, 209, 26);
+}
+
+.extra {
+    grid-area: extra;
+    background-color: rgb(196, 22, 167);
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(228, 15, 15);
+}
+          </code></pre>
+        </section>
+
+        <section class="post-buttons" style="margin-top: 3rem; text-align: center;">
+          <a href="/Temas/Tema4/Actividades/Ejercicio8/Ejercicio8.html" class="btn-exercise" target="_blank">
+            🔎 Ver resultado
+          </a>
+        </section>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema4/index.html" class="btn-link" style="color: white; text-decoration: none;">← Volver al tema</a>
+    </div>
+  </div> 
+
+  <footer class="main-footer">
+    <div class="footer-simple-container">
+      <div class="footer-branding">
+        <h3 class="brand-name">Pablo Jiménez</h3>
+        <p class="brand-sub">Diseño de Interfaces Web (DIWEB)</p>
+        <p class="copyright">© 2026 Pablo Jiménez</p>
+      </div>
+      <div class="footer-actions">
+        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub ↗</a>
+        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog Programación ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Progress Bar Script
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
+</body>
+</html>

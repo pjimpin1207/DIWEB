@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 5 – Maquetación completa con Flexbox - Blog DIWEB</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <div class="bg-gradient"></div>
+
+  <nav class="topic-nav" style="position: sticky; top: 1rem; z-index: 100; max-width: 900px; margin: 1rem auto;">
+    <a href="../../index.html" class="nav-home">
+        <span>🏠</span> <span class="pjp-brand">PJP</span>
+    </a>
+        <div class="nav-menu">
+      <a href="../../index.html">Inicio</a>
+      <a href="../Tema1/index.html">Tema 1</a>
+      <a href="../Tema2/index.html">Tema 2</a>
+      <a href="../Tema3/index.html">Tema 3</a>
+      <a href="../Tema4/index.html" class="active">Tema 4</a>
+    </div>
+  </nav>
+
+  <div class="post-wrapper">
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">Ejercicio 5 – Maquetación completa con Flexbox</h1>
+        <div class="post-meta">
+          <span>📅 10 de febrero de 2026</span>
+          <span>✍️ <strong>Pablo Jiménez</strong></span>
+          <span>📚 Tema 4</span>
+        </div>
+      </header>
+
+      <div class="post-body">
+
+        <section>
+          <h2>📄 Objetivo</h2>
+          <p>
+            Maquetar una página web sencilla de una empresa ficticia utilizando <strong>exclusivamente Flexbox</strong> para la distribución de los elementos. 
+          </p>
+          <p>
+            El reto consiste en no utilizar CSS Grid, ni <code>float</code>, ni posicionamiento absoluto para la estructura. Debemos dominar los conceptos de ejes, alineación, distribución y la propiedad <code>flex</code> compuesta.
+          </p>
+        </section>
+
+        <section>
+          <h2>💻 Estructura HTML</h2>
+          <p>La estructura es semántica, dividiendo la página en Header, Main (con Sidebar y Sección de contenidos) y Footer.</p>
+          <pre><code class="language-html">
+&lt;body&gt;
+    &lt;header class="header"&gt;
+        &lt;div class="logo"&gt;LOGO&lt;/div&gt;
+        &lt;nav class="menu"&gt;...&lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main class="main"&gt;
+        &lt;aside class="sidebar"&gt;...&lt;/aside&gt;
+        &lt;section class="contenido"&gt;
+            &lt;h2&gt;Artículos&lt;/h2&gt;
+            &lt;div class="cards"&gt;
+                &lt;article class="card"&gt;Artículo 1&lt;/article&gt;
+                &lt;article class="card"&gt;Artículo 2&lt;/article&gt;
+                &lt;article class="card"&gt;Artículo 3&lt;/article&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer class="footer"&gt;...&lt;/footer&gt;
+&lt;/body&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>🎯 Claves de la solución</h2>
+          <ul>
+            <li>
+              <strong>Sticky Footer:</strong> Usamos <code>min-height: 100vh</code> en el body y <code>flex-direction: column</code>. Al dar <code>flex: 1</code> al elemento <code>main</code>, este ocupa todo el espacio sobrante empujando el footer abajo.
+            </li>
+            <li>
+              <strong>Sidebar Fija:</strong> Usamos <code>flex: 0 0 250px</code> para que la barra lateral no crezca ni encoja, manteniendo siempre sus 250px.
+            </li>
+            <li>
+              <strong>Cards Flexibles:</strong> Al dar <code>flex: 1</code> a las cards, todas se reparten el ancho disponible equitativamente.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>✅ Código CSS Completo</h2>
+          <pre><code class="language-css">
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+}
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.menu {
+    display: flex;
+    gap: 20px;
+}
+.menu a {
+    color: #fff;
+    text-decoration: none;
+}
+.main {
+    flex: 1; 
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+.sidebar {
+    flex: 0 0 250px; 
+    background-color: #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+.contenido {
+    flex: 1;
+}
+.sidebar ul {
+    list-style: none;
+    margin-top: 10px;
+}
+.sidebar li {
+    margin-bottom: 5px;
+}
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+.card {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+.footer {
+    background-color: #222;
+    color: #aaa;
+    padding: 20px;
+    border-top: 5px solid #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+          </code></pre>
+        </section>
+
+        <section class="post-buttons" style="margin-top: 3rem; text-align: center;">
+          <a href="/Temas/Tema4/Actividades/Ejercicio5/Ejercicio5.html" class="btn-exercise" target="_blank">
+            🔎 Ver resultado
+          </a>
+        </section>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema4/index.html" class="btn-link" style="color: white; text-decoration: none;">← Volver al tema</a>
+    </div>
+  </div> 
+
+  <footer class="main-footer">
+    <div class="footer-simple-container">
+      <div class="footer-branding">
+        <h3 class="brand-name">Pablo Jiménez</h3>
+        <p class="brand-sub">Diseño de Interfaces Web (DIWEB)</p>
+        <p class="copyright">© 2026 Pablo Jiménez</p>
+      </div>
+      <div class="footer-actions">
+        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub ↗</a>
+        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog Programación ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Progress Bar Script
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
+</body>
+</html>

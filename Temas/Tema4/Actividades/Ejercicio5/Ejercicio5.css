@@ -1,84 +1,50 @@
-/*Estilos generales*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column; 
 }
-
-/* --- 1. HEADER (Logo y Menú) --- */
 .header {
     background-color: #333;
     color: #fff;
     padding: 20px;
-
-    /* ACTIVACIÓN FLEXBOX */
     display: flex;
-
-    /* EJE PRINCIPAL (Horizontal): Separa extremos */
     justify-content: space-between;
-
-    /* EJE SECUNDARIO (Vertical): Centra verticalmente */
     align-items: center;
 }
-
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
 }
-
 .menu {
-    /* Convertimos el menú en flex para usar GAP */
     display: flex;
-    
-    /* Separación uniforme entre enlaces (reemplaza márgenes) */
     gap: 20px;
 }
-
 .menu a {
     color: #fff;
     text-decoration: none;
 }
-
-/* --- 2. LAYOUT PRINCIPAL (Sidebar + Contenido) --- */
 .main {
-    /* Permite que el main crezca para ocupar el espacio vacío vertical */
     flex: 1; 
-
-    /* ACTIVACIÓN FLEXBOX */
     display: flex;
-
-    /* Gap separa el Sidebar del Contenido */
     gap: 20px;
     padding: 20px;
     background-color: #f4f4f4;
 }
-
 .sidebar {
-    /* FLEXIBILIDAD DEL SIDEBAR */
-    /* flex: grow shrink basis */
-    /* 0: No crecer, 0: No encoger, 250px: Ancho base fijo */
     flex: 0 0 250px; 
-    
     background-color: #ddd;
     padding: 15px;
     border-radius: 5px;
 }
-
 .contenido {
-    /* FLEXIBILIDAD DEL CONTENIDO */
-    /* flex: 1 es el atajo de flex: 1 1 0% */
-    /* Significa: Ocupa todo el espacio restante disponible */
     flex: 1;
 }
-
-/* Estilos visuales para listas del sidebar */
 .sidebar ul {
     list-style: none;
     margin-top: 10px;
@@ -86,43 +52,25 @@ body {
 .sidebar li {
     margin-bottom: 5px;
 }
-
-/* --- 3. CARDS (Artículos) --- */
 .cards {
-    /* ACTIVACIÓN FLEXBOX */
     display: flex;
-
-    /* Separación entre tarjetas */
     gap: 20px;
-    
     margin-top: 15px;
 }
-
 .card {
-    /* FLEXIBILIDAD DE LAS TARJETAS */
-    /* flex: 1 hace que todas crezcan por igual y tengan el mismo ancho */
     flex: 1;
-
     background-color: white;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     text-align: center;
 }
-
-/* --- 4. FOOTER --- */
 .footer {
     background-color: #222;
     color: #aaa;
     padding: 20px;
     border-top: 5px solid #444;
-
-    /* ACTIVACIÓN FLEXBOX */
     display: flex;
-
-    /* Distribución automática (Izquierda, Centro, Derecha) */
     justify-content: space-between;
-
-    /* Alineación vertical */
     align-items: center;
 }
