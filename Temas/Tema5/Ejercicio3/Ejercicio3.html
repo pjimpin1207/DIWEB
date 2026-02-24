@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3: Ráster vs Vectorial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .seccion {
+            margin-bottom: 60px;
+        }
+        .contenedor {
+            display: flex;
+            gap: 50px;
+            margin-top: 20px;
+        }
+        .contenedor-ampliado {
+            display: flex;
+            gap: 150px;
+            margin-top: 20px;
+        }
+        .caja-imagen {
+            border: 2px dashed #999;
+            padding: 20px;
+            width: 350px;
+            height: 350px;
+        }
+        /* ampliar al 300% */
+        .ampliar-300 {
+            transform: scale(3);
+            transform-origin: top left;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="seccion">
+        <h1>Imágenes en Tamaño Original (100%)</h1>
+        <div class="contenedor">
+            
+            <div class="caja-imagen">
+                <h3>JPG (Ráster) al 100%</h3>
+                <img src="Diakite.jpg" alt="Ejemplo Ráster Original" width="100" height="100">
+            </div>
+
+            <div class="caja-imagen">
+                <h3>SVG (Vectorial) al 100%</h3>
+                <img src="imagen.svg" alt="Ejemplo Ráster Original" width="100" height="100">
+                    <circle cx="50" cy="50" r="40" stroke="#333" stroke-width="4" fill="#ff6600" />
+                </svg>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="seccion">
+        <h1>Imágenes Ampliadas (300%)</h1>
+        <div class="contenedor-ampliado">
+            
+            <div class="caja-imagen">
+                <h3>JPG (Ráster) al 300%</h3>
+                <img src="Diakite.jpg" alt="Ejemplo Ráster Ampliado" width="100" height="100" class="ampliar-300">
+            </div>
+
+            <div class="caja-imagen">
+                <h3>SVG (Vectorial) al 300%</h3>
+                <img src="imagen.svg" alt="Ejemplo Ráster Ampliado" width="100" height="100" class="ampliar-300">
+                    <circle cx="50" cy="50" r="40" stroke="#333" stroke-width="4" fill="#ff6600" />
+                </svg>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
