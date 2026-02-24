@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 3 – Ráster vs Vectorial - Blog DIWEB</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* Estilo adicional para la tabla comparativa */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .comparison-table th, .comparison-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .comparison-table th {
+      background-color: rgba(52, 152, 219, 0.2);
+      color: #3498db;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+    .feature-col { font-weight: 800; color: #fff; width: 25%; }
+  </style>
+</head>
+<body>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <div class="bg-gradient"></div>
+
+  <nav class="topic-nav" style="position: sticky; top: 1rem; z-index: 100; max-width: 900px; margin: 1rem auto;">
+    <a href="../../index.html" class="nav-home">
+        <span>🏠</span> <span class="pjp-brand">PJP</span>
+    </a>
+    <div class="nav-menu">
+      <a href="../../index.html">Inicio</a>
+      <a href="../Tema1/index.html">Tema 1</a>
+      <a href="../Tema2/index.html">Tema 2</a>
+      <a href="../Tema3/index.html">Tema 3</a>
+      <a href="../Tema4/index.html">Tema 4</a>
+      <a href="../Tema5/index.html" class="active">Tema 5</a>
+    </div>
+  </nav>
+
+  <div class="post-wrapper">
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">Ejercicio 3 – Imágenes Ráster (Mapa de bits) vs Vectoriales</h1>
+        <div class="post-meta">
+          <span>📅 24 de febrero de 2026</span>
+          <span>✍️ <strong>Pablo Jiménez</strong></span>
+          <span>📚 Tema 5</span>
+        </div>
+      </header>
+
+      <div class="post-body">
+
+        <section>
+          <h2>📄 Objetivo</h2>
+          <p>
+            Comprender la diferencia técnica fundamental entre las imágenes compuestas por píxeles y las basadas en fórmulas matemáticas, analizando su comportamiento al ser escaladas en un entorno web.
+          </p>
+        </section>
+
+        <section>
+          <h2>🧪 Experimento de Escalabilidad</h2>
+          <p>
+            En la actividad práctica, insertamos un archivo <code>.jpg</code> y un <code>.svg</code>, aplicando una transformación CSS para ampliarlos al <strong>300%</strong> de su tamaño original.
+          </p>
+          
+          
+
+          <p>Al realizar esta acción, el JPG muestra una pérdida crítica de nitidez (pixelado), mientras que el SVG mantiene sus bordes perfectamente definidos.</p>
+        </section>
+
+        <section>
+          <h2>📊 Tabla Comparativa</h2>
+          <div style="overflow-x: auto;">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Característica</th>
+                  <th>Mapa de Bits (Ráster)</th>
+                  <th>Vectorial</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="feature-col">Definición</td>
+                  <td>Imagen compuesta por una cuadrícula de puntos individuales de color llamados píxeles.</td>
+                  <td>Imagen construida a partir de fórmulas matemáticas que definen puntos, líneas y curvas.</td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Escalabilidad</td>
+                  <td>Limitada. Al ampliar se estiran los píxeles causando pérdida de calidad.</td>
+                  <td>Infinita. Se puede escalar a cualquier tamaño sin perder nitidez.</td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Tamaño de archivo</td>
+                  <td>Generalmente más grande. Depende de la resolución.</td>
+                  <td>Generalmente muy pequeño. Depende de la complejidad de los nodos.</td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Formatos comunes</td>
+                  <td>.JPG, .PNG, .GIF, .BMP, .TIFF, .WebP</td>
+                  <td>.SVG, .EPS, .AI, .PDF</td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Usos principales</td>
+                  <td>Fotografías e imágenes fotorrealistas con texturas detalladas.</td>
+                  <td>Logotipos, iconos, tipografías e ilustraciones planas.</td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Edición</td>
+                  <td>Modificación de píxeles individuales (Adobe Photoshop, GIMP).</td>
+                  <td>Manipulación de nodos y curvas (Adobe Illustrator, Inkscape).</td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Compatibilidad Web</td>
+                  <td>Total. Soporte nativo en todos los navegadores.</td>
+                  <td>Excelente. El SVG es el estándar ideal para diseño responsive.</td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Rendimiento</td>
+                  <td>Puede ralentizar la web si es pesada. WebP mejora este punto.</td>
+                  <td>Excelente; carga casi instantáneamente como código plano.</td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Captura zoom</td>
+                  <td>Bordes con "escaleras" dentadas y borrosas al hacer zoom.</td>
+                  <td>Borde perfectamente nítido y suave sin importar el aumento.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="post-buttons" style="margin-top: 3rem; text-align: center;">
+          <a href="../../Temas/Tema5/Ejercicio3/Ejercicio3.html" class="btn-exercise" target="_blank">
+            🔎 Ver resultado del ejercicio
+          </a>
+        </section>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema5/index.html" class="btn-link" style="color: white; text-decoration: none;">← Volver al tema</a>
+    </div>
+  </div> 
+
+  <footer class="main-footer">
+    <div class="footer-simple-container">
+      <div class="footer-branding">
+        <h3 class="brand-name">Pablo Jiménez</h3>
+        <p class="brand-sub">Diseño de Interfaces Web (DIWEB)</p>
+        <p class="copyright">© 2026 Pablo Jiménez</p>
+      </div>
+      <div class="footer-actions">
+        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub ↗</a>
+        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog Programación ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Progress Bar Script
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
+</body>
+</html>

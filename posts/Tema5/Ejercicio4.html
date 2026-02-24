@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 4 – Propiedades: Resolución - Blog DIWEB</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <div class="bg-gradient"></div>
+
+  <nav class="topic-nav" style="position: sticky; top: 1rem; z-index: 100; max-width: 900px; margin: 1rem auto;">
+    <a href="../../index.html" class="nav-home">
+        <span>🏠</span> <span class="pjp-brand">PJP</span>
+    </a>
+    <div class="nav-menu">
+      <a href="../../index.html">Inicio</a>
+      <a href="../Tema1/index.html">Tema 1</a>
+      <a href="../Tema2/index.html">Tema 2</a>
+      <a href="../Tema3/index.html">Tema 3</a>
+      <a href="../Tema4/index.html">Tema 4</a>
+      <a href="../Tema5/index.html" class="active">Tema 5</a>
+    </div>
+  </nav>
+
+  <div class="post-wrapper">
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">Ejercicio 4 – Propiedades de la Imagen: Resolución</h1>
+        <div class="post-meta">
+          <span>📅 24 de febrero de 2026</span>
+          <span>✍️ <strong>Pablo Jiménez</strong></span>
+          <span>📚 Tema 5</span>
+        </div>
+      </header>
+
+      <div class="post-body">
+
+        <section>
+          <h2>📄 Objetivo</h2>
+          <p>
+            Explicar mediante una diapositiva técnica el concepto de <strong>Resolución</strong>, analizando cómo influye la densidad de píxeles en la calidad visual y el peso de los archivos en el diseño de interfaces.
+          </p>
+        </section>
+
+        <section>
+          <h2>💡 Concepto Clave</h2>
+          <div style="background: rgba(46, 204, 113, 0.1); border-left: 5px solid #2ecc71; padding: 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0;">
+            <p style="font-size: 1.2rem; font-style: italic; margin: 0; color: #fff;">
+              "La resolución define la cantidad de detalle que puede observar en una imagen digital, determinada por la densidad de píxeles (PPI/DPI); a mayor resolución, mayor nitidez, pero también mayor peso de archivo."
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2>🖼️ Ejemplos de Resolución</h2>
+          <p>Para la exposición, se compararon imágenes con diferentes densidades de píxeles para observar el efecto de pixelado cuando la resolución es insuficiente para el soporte de salida.</p>
+          
+          
+        </section>
+
+        <section>
+          <h2>✅ Solución: Diapositiva Presentada</h2>
+          <p>Esta es la diapositiva final que utilicé para la defensa del concepto en clase:</p>
+          
+          <div class="solution-container" style="margin-top: 2rem; border: 2px solid rgba(52, 152, 219, 0.3); border-radius: 12px; padding: 10px; background: rgba(0,0,0,0.2);">
+            <img src="../../Temas/Tema5/Ejercicio4/Ejercicio4.jpg" alt="Diapositiva sobre la resolución de imagen" style="width:100%; border-radius:8px; display: block;">
+            <p style="text-align: center; font-size: 0.8rem; color: #888; margin-top: 10px;">Captura de la diapositiva: Propiedades - Resolución</p>
+          </div>
+        </section>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema5/index.html" class="btn-link" style="color: white; text-decoration: none;">← Volver al tema</a>
+    </div>
+  </div> 
+
+  <footer class="main-footer">
+    <div class="footer-simple-container">
+      <div class="footer-branding">
+        <h3 class="brand-name">Pablo Jiménez</h3>
+        <p class="brand-sub">Diseño de Interfaces Web (DIWEB)</p>
+        <p class="copyright">© 2026 Pablo Jiménez</p>
+      </div>
+      <div class="footer-actions">
+        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub ↗</a>
+        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog Programación ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
+</body>
+</html>

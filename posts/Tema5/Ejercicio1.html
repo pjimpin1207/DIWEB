@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 1 – Análisis de Imagen y Composición - Blog DIWEB</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <div class="bg-gradient"></div>
+
+  <nav class="topic-nav" style="position: sticky; top: 1rem; z-index: 100; max-width: 900px; margin: 1rem auto;">
+    <a href="../../index.html" class="nav-home">
+        <span>🏠</span> <span class="pjp-brand">PJP</span>
+    </a>
+    <div class="nav-menu">
+      <a href="../../index.html">Inicio</a>
+      <a href="../Tema1/index.html">Tema 1</a>
+      <a href="../Tema2/index.html">Tema 2</a>
+      <a href="../Tema3/index.html">Tema 3</a>
+      <a href="../Tema4/index.html">Tema 4</a>
+      <a href="../Tema5/index.html" class="active">Tema 5</a>
+    </div>
+  </nav>
+
+  <div class="post-wrapper">
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">Ejercicio 1 – Análisis de Imagen y Composición Web</h1>
+        <div class="post-meta">
+          <span>📅 18 de febrero de 2026</span>
+          <span>✍️ <strong>Pablo Jiménez</strong></span>
+          <span>📚 Tema 5</span>
+        </div>
+      </header>
+
+      <div class="post-body">
+
+        <section>
+          <h2>📄 Objetivo</h2>
+          <p>
+            Análisis detallado de la web <strong>The North Face</strong> para identificar elementos de composición, peso visual, rendimiento y accesibilidad en el uso de imágenes.
+          </p>
+        </section>
+
+        <section>
+          <h2>1. Análisis Visual y Compositivo (Home Page)</h2>
+          <ul>
+            <li><strong>Imagen principal:</strong> Es el <em>Hero Banner</em> de gran impacto visual.</li>
+            <li><strong>Punto focal:</strong> El botón con fondo sólido que dice "Comprar ahora". El contraste del botón sobre la imagen de naturaleza guía el ojo directamente a la acción.</li>
+            <li><strong>Peso visual:</strong> Las imágenes de productos y paisajes ocupan grandes bloques, mientras que el menú superior se mantiene minimalista para no robar protagonismo.</li>
+            <li><strong>Balance compositivo:</strong> Utiliza un balance asimétrico dinámico (regla de los tercios) para dar sensación de movimiento y libertad.</li>
+          </ul>
+          <img src="../../Temas/Tema5/Ejercicio1/Imagen1.png" alt="Análisis compositivo home" style="width:100%; border-radius:10px; margin-top:10px;">
+        </section>
+
+        <section>
+          <h2>2. Función y Valor de las Imágenes</h2>
+          <p>
+            Las <strong>imágenes de producto</strong> tienen una función puramente informativa, permitiendo ver texturas y materiales. 
+            Aportan un valor esencial, ya que sin ellas la confianza del usuario en el equipo técnico disminuiría drásticamente.
+          </p>
+          <img src="../../Temas/Tema5/Ejercicio1/Imagen2.png" alt="Función de imagen de producto" style="width:100%; border-radius:10px; margin-top:10px;">
+        </section>
+
+        <section>
+          <h2>3. Rendimiento e Impacto</h2>
+          <p>
+            North Face utiliza imágenes responsivas y <em>Lazy Loading</em>. Sin embargo, al usar alta resolución, el tiempo de carga puede ser superior al de webs puramente de texto.
+          </p>
+          <ul>
+            <li><strong>Influyen negativamente:</strong> <em>Zara</em>. Muchos vídeos automáticos de alta calidad que ralentizan el renderizado inicial.</li>
+            <li><strong>Cargan más rápido:</strong> <em>Amazon</em>. Diseño plano, con menos imágenes de gran formato y más optimización de carga masiva.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. Accesibilidad y SEO</h2>
+          <p>
+            <strong>Texto alternativo (Alt Text):</strong> Un ejemplo real es <code>alt="Chaqueta térmica negra para hombre en expedición de montaña"</code>.
+          </p>
+          <p>
+            <strong>Identidad de marca:</strong> Se refleja mediante el uso de fotografía de aventura real, no de estudio, reforzando el espíritu de exploración.
+            En cuanto al <strong>SEO</strong>, utilizan nombres de archivo optimizados y datos estructurados para Google Images.
+          </p>
+        </section>
+
+        <section>
+          <h2>5. Psicología de la Memoria</h2>
+          <ul>
+            <li><strong>Memoria Semántica:</strong> Favorecida por los datos técnicos, tablas de tallas y materiales (Gore-Tex, etc).</li>
+            <li><strong>Memoria Episódica:</strong> Favorecida por las imágenes de expediciones que cuentan historias y conectan con las emociones del usuario.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>🚀 Core Web Vitals</h2>
+          <p>
+            Para aplicar estas métricas a mi propia web, debo vigilar el <strong>LCP</strong> (tiempo de carga de la imagen más grande) y el <strong>CLS</strong> (evitar que el contenido salte al cargar las imágenes) definiendo siempre dimensiones fijas.
+          </p>
+        </section>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema5/index.html" class="btn-link" style="color: white; text-decoration: none;">← Volver al tema</a>
+    </div>
+  </div> 
+
+  <footer class="main-footer">
+    <div class="footer-simple-container">
+      <div class="footer-branding">
+        <h3 class="brand-name">Pablo Jiménez</h3>
+        <p class="brand-sub">Diseño de Interfaces Web (DIWEB)</p>
+        <p class="copyright">© 2026 Pablo Jiménez</p>
+      </div>
+      <div class="footer-actions">
+        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub ↗</a>
+        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog Programación ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Progress Bar Script
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
+</body>
+</html>
