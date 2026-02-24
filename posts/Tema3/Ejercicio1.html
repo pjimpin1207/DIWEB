@@ -1,14 +1,16 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ejercicio 1 â€“ Variables SCSS - Blog DIWEB</title>
+  <title>Ejercicio 1 – Variables SCSS - Blog DIWEB</title>
   <link rel="stylesheet" href="../../css/post.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <!-- READING PROGRESS BAR -->
@@ -21,177 +23,120 @@
   <!-- TOPIC NAVIGATION -->
   <nav class="topic-nav" style="position: sticky; top: 1rem; z-index: 100; max-width: 900px; margin: 1rem auto;">
     <a href="../../index.html" class="nav-home">
-       <span>ðŸ </span> <span class="pjp-brand">PJP</span>
+      <span>🏠</span> <span class="pjp-brand">PJP</span>
     </a>
-        <div class="nav-menu">
+    <div class="nav-menu">
       <a href="../../index.html">Inicio</a>
       <a href="../Tema1/index.html">Tema 1</a>
       <a href="../Tema2/index.html">Tema 2</a>
       <a href="../Tema3/index.html" class="active">Tema 3</a>
       <a href="../Tema4/index.html">Tema 4</a>
+      <a href="../Tema5/index.html">Tema 5</a>
     </div>
   </nav>
 
   <div class="post-wrapper">
     <article class="post-article">
       <header class="post-header">
-        <h1 class="post-title">Ejercicio 1 â€“ Variables SCSS</h1>
+        <h1 class="post-title">Ejercicio 1 – Variables SCSS</h1>
         <div class="post-meta">
-          <span>ðŸ“… 27 de enero de 2026</span>
-          <span>âœï¸ <strong>Pablo JimÃ©nez</strong></span>
-          <span>ðŸ“š Tema 3</span>
+          <span>📅 27 de enero de 2026</span>
+          <span>✍️ <strong>Pablo Jiménez</strong></span>
+          <span>📚 Tema 3</span>
         </div>
       </header>
 
       <div class="post-body">
 
         <section>
-          <h2>ðŸ“„ Enunciado</h2>
+          <h2>📄 Enunciado</h2>
           <p>
-            En este ejercicio se crea una pequeÃ±a hoja de estilos utilizando
-            <strong>variables SCSS</strong> para definir colores, tipografÃ­a y espaciados
-            de una web sencilla.
+            En este primer ejercicio de SCSS, el objetivo es aprender a declarar y
+            utilizar <strong>variables</strong> para centralizar los valores de
+            colores, tipografías y otros parámetros de diseño.
+          </p>
+          <p>
+            No se permite escribir valores “a mano”; todo debe venir de variables.
+          </p>
+
+          <h3>4️⃣ Pregunta teórica</h3>
+          <p>
+            ¿Qué cambiarías si el color principal de la web pasara a ser rojo?
           </p>
         </section>
 
         <section>
-          <h2>ðŸŽ¯ Requisitos</h2>
-
-          <h3>1ï¸âƒ£ Definir variables en <code>estilos.scss</code></h3>
-          <ul>
-            <li>Color principal â†’ <code>#3498db</code></li>
-            <li>Color secundario â†’ <code>#2ecc71</code></li>
-            <li>Color de texto â†’ <code>#333</code></li>
-            <li>Fuente principal â†’ <code>Arial, sans-serif</code></li>
-            <li>Padding base â†’ <code>10px</code></li>
+          <h2>🎯 Requisitos</h2>
+          <ul class="requisitos-list">
+            <li>Definir variables para los colores: <code>$primary</code> (azul), <code>$secondary</code> (gris oscuro),
+              <code>$text-color</code> (negro/gris).
+            </li>
+            <li>Definir una variable para la fuente principal: <code>$font-stack</code>.</li>
+            <li>Aplicar estas variables a todo el documento (cuerpo, títulos, enlaces).</li>
           </ul>
-          <p>Todas las variables deben definirse al inicio del archivo.</p>
+        </section>
 
-          <h3>2ï¸âƒ£ Aplicar las variables a los estilos</h3>
-          <ul>
-            <li><strong>body</strong>: fuente, color del texto y margen</li>
-            <li><strong>.header</strong>: fondo, color del texto y padding</li>
-            <li><strong>.card</strong>: borde, padding, margen inferior y fondo</li>
-            <li><strong>.button</strong>: fondo, color del texto, padding y sin borde</li>
-          </ul>
+        <section>
+          <h2>📌 Estructura del proyecto</h2>
+          <pre class="code-block"><code>
+/ejercicio1
+  ├── index.html
+  └── scss
+      └── styles.scss
+          </code></pre>
+        </section>
 
-          <h3>3ï¸âƒ£ Compilar el SCSS</h3>
+        <section>
+          <h2>💻 HTML de apoyo</h2>
+          <pre class="code-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;link rel="stylesheet" href="css/styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Bienvenido a mi sitio&lt;/h1&gt;
+  &lt;/header&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </section>
+
+        <section>
+          <h2>✅ Solución (SCSS)</h2>
+          <pre class="code-block"><code>// 1. Declaración de variables
+$color-principal: #3498db;
+$color-secundario: #2c3e50;
+$fuente-base: "Outfit", sans-serif;
+
+// 2. Uso de variables
+body {
+  font-family: $fuente-base;
+  color: $color-secundario;
+}
+
+header {
+  background-color: $color-principal;
+  color: white;
+}</code></pre>
+        </section>
+
+        <section>
+          <h2>❓ ¿Qué cambiarías si el color principal fuera rojo?</h2>
           <p>
-            Se utiliza <strong>Live Sass Compiler</strong> para generar el archivo CSS final.
-            No se permite escribir valores â€œa manoâ€; todo debe venir de variables.
-          </p>
-
-          <h3>4ï¸âƒ£ Pregunta teÃ³rica</h3>
-          <p>
-            Â¿QuÃ© cambiarÃ­as si el color principal de la web pasara a ser rojo?
-          </p>
-        </section>
-
-        <section>
-          <h2>ðŸ“ Estructura del proyecto</h2>
-
-      <pre><code>
-      proyecto-variables/
-      â”‚
-      â”œâ”€ scss/
-      â”‚   â””â”€ estilos.scss
-      â”‚
-      â”œâ”€ css/
-      â”‚   â””â”€ estilos.css
-      â”‚
-      â””â”€ index.html
-      </code></pre>
-        </section>
-
-        <section>
-          <h2>ðŸ’» HTML de apoyo</h2>
-
-      <pre><code class="language-html">
-      &lt;!DOCTYPE html&gt;
-      &lt;html lang="es"&gt;
-      &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;title&gt;Ejercicio SCSS&lt;/title&gt;
-        &lt;link rel="stylesheet" href="css/estilos.css"&gt;
-      &lt;/head&gt;
-      &lt;body&gt;
-
-        &lt;div class="header"&gt;
-          &lt;h1&gt;Ejercicio de Variables SCSS&lt;/h1&gt;
-        &lt;/div&gt;
-
-        &lt;div class="card"&gt;
-          &lt;p&gt;Este es un ejemplo de tarjeta.&lt;/p&gt;
-          &lt;button class="button"&gt;Aceptar&lt;/button&gt;
-        &lt;/div&gt;
-
-      &lt;/body&gt;
-      &lt;/html&gt;
-      </code></pre>
-        </section>
-
-        <section>
-          <h2>âœ… SoluciÃ³n (SCSS)</h2>
-
-      <pre><code class="language-scss">
-      $color-principal: #3498db;
-      $color-secundario: #2ecc71;
-      $color-texto: #333;
-      $fuente-principal: Arial, sans-serif;
-      $padding-base: 10px;
-
-      body {
-        font-family: $fuente-principal;
-        color: $color-texto;
-        margin: 0;
-      }
-
-      .header {
-        background-color: $color-principal;
-        color: white;
-        padding: $padding-base;
-      }
-
-      .card {
-        border: 2px solid $color-principal;
-        padding: $padding-base;
-        margin-bottom: $padding-base;
-        background-color: white;
-      }
-
-      .button {
-        background-color: $color-secundario;
-        color: white;
-        padding: $padding-base;
-        border: none;
-      }
-      </code></pre>
-        </section>
-
-        <section>
-          <h2>â“ Â¿QuÃ© cambiarÃ­as si el color principal fuera rojo?</h2>
-          <p>
-            Ãšnicamente serÃ­a necesario modificar el valor de la variable
+            Únicamente sería necesario modificar el valor de la variable
             <code>$color-principal</code>:
           </p>
-
-      <pre><code class="language-scss">
-      $color-principal: red;
-      </code></pre>
-
-          <p>
-            Gracias al uso de variables, el cambio se aplicarÃ­a automÃ¡ticamente
-            en toda la web sin modificar el resto del cÃ³digo.
-          </p>
+          <pre class="code-block"><code>$color-principal: #e74c3c; // Ahora es rojo</code></pre>
         </section>
 
         <section class="post-buttons" style="margin-top: 3rem; text-align: center;">
-          <a href="/Temas/Tema3/Actividades/Ejercicio1/index.html" class="btn-exercise" target="_blank">
-            ðŸ” Ver resultado
+          <a href="../../Temas/Tema3/Actividades/Ejercicio1/index.html" class="btn-exercise" target="_blank">
+            🔍 Ver resultado
           </a>
 
-          <a href="https://github.com/pjimpin1207/DIWEB/tree/master/Temas/Tema3/Actividades/Ejercicio1" class="btn-exercise" style="background: #333; margin-left: 1rem;" target="_blank">
-            ðŸ“¦ Ver repositorio
+          <a href="https://github.com/pjimpin1207/DIWEB/tree/master/Temas/Tema3/Actividades/Ejercicio1"
+            class="btn-exercise" style="background: #333; margin-left: 1rem;" target="_blank">
+            📦 Ver repositorio
           </a>
         </section>
 
@@ -199,7 +144,7 @@
     </article>
 
     <div class="back-link">
-      <a href="../Tema3/index.html" class="btn-link" style="color: white; text-decoration: none;">â† Volver al tema</a>
+      <a href="../Tema3/index.html" class="btn-link" style="color: white; text-decoration: none;">← Volver al tema</a>
     </div>
   </div> 
 
@@ -207,26 +152,13 @@
   <footer class="main-footer">
     <div class="footer-simple-container">
       <div class="footer-branding">
-        <h3 class="brand-name">Pablo JimÃ©nez</h3>
-        <p class="brand-sub">DiseÃ±o de Interfaces Web (DIWEB)</p>
-        <p class="copyright">Â© 2026 Pablo JimÃ©nez</p>
+        <h3 class="brand-name">Pablo Jiménez</h3>
+        <p class="brand-sub">Diseño de Interfaces Web (DIWEB)</p>
+        <p class="copyright">© 2026 Pablo Jiménez</p>
       </div>
       <div class="footer-actions">
-        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub â†—</a>
-        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog ProgramaciÃ³n â†—</a>
+        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub ↗</a>
+        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog Programación ↗</a>
       </div>
     </div>
   </footer>
-
-  <script>
-    // Progress Bar Script
-    window.onscroll = function() {myFunction()};
-    function myFunction() {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-      document.getElementById("myBar").style.width = scrolled + "%";
-    }
-  </script>
-</body>
-</html>

@@ -1,14 +1,16 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ejercicio 2 â€“ Anidamiento en SCSS - Blog DIWEB</title>
+  <title>Ejercicio 2 – Anidamiento en SCSS - Blog DIWEB</title>
   <link rel="stylesheet" href="../../css/post.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <!-- READING PROGRESS BAR -->
@@ -21,280 +23,135 @@
   <!-- TOPIC NAVIGATION -->
   <nav class="topic-nav" style="position: sticky; top: 1rem; z-index: 100; max-width: 900px; margin: 1rem auto;">
     <a href="../../index.html" class="nav-home">
-       <span>ðŸ </span> <span class="pjp-brand">PJP</span>
+      <span>🏠</span> <span class="pjp-brand">PJP</span>
     </a>
-        <div class="nav-menu">
+    <div class="nav-menu">
       <a href="../../index.html">Inicio</a>
       <a href="../Tema1/index.html">Tema 1</a>
       <a href="../Tema2/index.html">Tema 2</a>
       <a href="../Tema3/index.html" class="active">Tema 3</a>
       <a href="../Tema4/index.html">Tema 4</a>
+      <a href="../Tema5/index.html">Tema 5</a>
     </div>
   </nav>
 
   <div class="post-wrapper">
     <article class="post-article">
       <header class="post-header">
-        <h1 class="post-title">Ejercicio 2 â€“ Anidamiento en SCSS</h1>
+        <h1 class="post-title">Ejercicio 2 – Anidamiento en SCSS</h1>
         <div class="post-meta">
-          <span>ðŸ“… 27 de enero de 2026</span>
-          <span>âœï¸ <strong>Pablo JimÃ©nez</strong></span>
-          <span>ðŸ“š Tema 3</span>
+          <span>📅 27 de enero de 2026</span>
+          <span>✍️ <strong>Pablo Jiménez</strong></span>
+          <span>📚 Tema 3</span>
         </div>
       </header>
 
       <div class="post-body">
 
         <section>
-          <h2>ðŸ“„ Enunciado</h2>
+          <h2>📄 Enunciado</h2>
           <p>
-            En este ejercicio se aplican estilos a una pÃ¡gina web sencilla utilizando
-            <strong>anidamiento en SCSS</strong>, evitando repetir selectores completos
-            y reflejando la estructura del HTML.
+            El <strong>anidamiento (nesting)</strong> es una de las funcionalidades más potentes y utilizadas de SCSS.
+            Nos permite escribir selectores CSS siguiendo la misma jerarquía visual que nuestro HTML, lo que hace el
+            código mucho más legible y fácil de mantener.
+          </p>
+          <p>
+            En este ejercicio, transformaremos un CSS plano y repetitivo en una estructura anidada y limpia.
           </p>
         </section>
 
         <section>
-          <h2>ðŸŽ¯ Requisitos generales</h2>
-          <ul>
-            <li>Usar anidamiento siempre que sea posible.</li>
-            <li>El archivo SCSS debe reflejar la estructura del HTML.</li>
-            <li>No escribir CSS plano si se puede anidar.</li>
-            <li>No repetir selectores completos como <code>.menu ul li a</code>.</li>
+          <h2>🎯 Requisitos</h2>
+          <ul class="requisitos-list">
+            <li>Utilizar el selector de padre (<code>&</code>) para pseudo-clases como <code>:hover</code> o
+              <code>:active</code>.
+            </li>
+            <li>Anidar elementos dentro de su contenedor principal (ej: <code>li</code> dentro de <code>ul</code>).</li>
+            <li>Evitar un anidamiento excesivo (máximo 3 niveles recomendado por buenas prácticas).</li>
           </ul>
         </section>
 
         <section>
-          <h2>ðŸŽ¨ Estilos a realizar</h2>
-
-          <h3>.menu</h3>
-          <ul>
-            <li>Fondo: <code>#333</code></li>
-            <li>Padding: <code>10px</code></li>
-          </ul>
-
-          <p>Dentro de <strong>.menu</strong>:</p>
-          <ul>
-            <li><strong>ul</strong>: sin estilos de lista, margen y padding a 0</li>
-            <li><strong>li</strong>: en lÃ­nea y margen derecho de 15px</li>
-            <li><strong>a</strong>: texto blanco, sin subrayado y color <code>#2ecc71</code> al pasar el ratÃ³n</li>
-          </ul>
-
-          <h3>.content</h3>
-          <ul>
-            <li>Padding: <code>20px</code></li>
-          </ul>
-
-          <p>Dentro de <strong>.content</strong>:</p>
-          <ul>
-            <li><strong>h2</strong>: color <code>#3498db</code></li>
-            <li><strong>p</strong>: color <code>#555</code></li>
-          </ul>
+          <h2>📌 Estructura del proyecto</h2>
+          <pre class="code-block"><code>
+/ejercicio2
+  ├── index.html
+  └── scss
+      └── layout.scss
+          </code></pre>
         </section>
 
         <section>
-          <h2>ðŸ’» HTML de apoyo</h2>
-
-      <pre><code class="language-html">
-      &lt;!DOCTYPE html&gt;
-      &lt;html lang="es"&gt;
-      &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;title&gt;Ejercicio Anidamiento SCSS&lt;/title&gt;
-        &lt;link rel="stylesheet" href="css/estilos.css"&gt;
-      &lt;/head&gt;
-      &lt;body&gt;
-
-        &lt;nav class="menu"&gt;
-          &lt;ul&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Servicios&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/nav&gt;
-
-        &lt;section class="content"&gt;
-          &lt;h2&gt;Bienvenido&lt;/h2&gt;
-          &lt;p&gt;Este es un texto de ejemplo.&lt;/p&gt;
-        &lt;/section&gt;
-
-      &lt;/body&gt;
-      &lt;/html&gt;
-      </code></pre>
+          <h2>💻 HTML de apoyo</h2>
+          <pre class="code-block"><code>&lt;nav class="main-nav"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Servicios&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
         </section>
 
         <section>
-          <h2>âœ… SoluciÃ³n â€“ Parte 1 (Anidamiento de selectores)</h2>
+          <h2>✅ Solución (SCSS)</h2>
+          <pre class="code-block"><code>.main-nav {
+  background: #333;
+  padding: 1rem;
 
-      <pre><code class="language-scss">
-      .menu {
-        background: #333;
-        padding: 10px;
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 
-        ul {
-          list-style: none;
-          margin: 0;
-          padding: 0;
+    li {
+      a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
 
-          li {
-            display: inline;
-            margin-right: 15px;
-
-            a {
-              color: white;
-              text-decoration: none;
-
-              &:hover {
-                color: #2ecc71;
-              }
-            }
-          }
+        &:hover {
+          color: #ffcc00;
         }
       }
-
-      .content {
-        padding: 20px;
-
-        h2 {
-          color: #3498db;
-        }
-
-        p {
-          color: #555;
-        }
-      }
-      </code></pre>
+    }
+  }
+}</code></pre>
         </section>
 
         <section>
-          <h2>ðŸ”§ Parte 2 â€“ Anidamiento de propiedades</h2>
+          <h2>❓ ¿Por qué es útil el anidamiento?</h2>
           <p>
-            En esta segunda parte se mejora el archivo <code>estilos.scss</code>
-            agrupando propiedades relacionadas como <strong>padding</strong>,
-            <strong>margin</strong>, <strong>text</strong> y <strong>font</strong>.
-          </p>
-
-      <pre><code class="language-scss">
-      .menu {
-        background: #333;
-
-        padding: {
-          top: 10px;
-          bottom: 10px;
-          left: 10px;
-          right: 10px;
-        }
-
-        text: {
-          align: center;
-          color: white;
-        }
-
-        ul {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-
-          li {
-            display: inline;
-            margin-right: 15px;
-
-            a {
-              text: {
-                decoration: none;
-                transform: uppercase;
-              }
-
-              font-size: 14px;
-              color: white;
-
-              &:hover {
-                color: #2ecc71;
-              }
-            }
-          }
-        }
-      }
-
-      .content {
-        padding: 20px;
-
-        margin: {
-          top: 20px;
-          bottom: 20px;
-        }
-
-        text: {
-          align: left;
-        }
-
-        h2 {
-          color: #3498db;
-
-          font: {
-            size: 24px;
-            weight: bold;
-          }
-        }
-
-        p {
-          color: #555;
-        }
-      }
-      </code></pre>
-        </section>
-
-        <section>
-          <h2>â“ Pregunta de reflexiÃ³n final</h2>
-          <p>
-            El anidamiento permite escribir cÃ³digo mÃ¡s claro y ordenado, reflejando la
-            estructura del HTML, evitando repeticiones y facilitando el mantenimiento
-            y la escalabilidad del proyecto.
+            Reduce drásticamente la repetición de selectores y ayuda a agrupar estilos relacionados, facilitando la
+            comprensión de la estructura de la página directamente desde la hoja de estilos.
           </p>
         </section>
 
         <section class="post-buttons" style="margin-top: 3rem; text-align: center;">
-          <a href="/Temas/Tema3/Actividades/Ejercicio2/index.html" class="btn-exercise" target="_blank">
-            ðŸ” Ver resultado
+          <a href="../../Temas/Tema3/Actividades/Ejercicio2/index.html" class="btn-exercise" target="_blank">
+            🔍 Ver resultado
           </a>
 
-          <a href="https://github.com/pjimpin1207/DIWEB/tree/master/Temas/Tema3/Actividades/Ejercicio2" class="btn-exercise" style="background: #333; margin-left: 1rem;" target="_blank">
-            ðŸ“¦ Ver repositorio
+          <a href="https://github.com/pjimpin1207/DIWEB/tree/master/Temas/Tema3/Actividades/Ejercicio2"
+            class="btn-exercise" style="background: #333; margin-left: 1rem;" target="_blank">
+            📦 Ver repositorio
           </a>
         </section>
 
       </div>
     </article>
-
-    <div class="back-link">
-      <a href="../Tema3/index.html" class="btn-link" style="color: white; text-decoration: none;">â† Volver al tema</a>
-    </div>
   </div> 
 
   <!-- FOOTER -->
   <footer class="main-footer">
     <div class="footer-simple-container">
       <div class="footer-branding">
-        <h3 class="brand-name">Pablo JimÃ©nez</h3>
-        <p class="brand-sub">DiseÃ±o de Interfaces Web (DIWEB)</p>
-        <p class="copyright">Â© 2026 Pablo JimÃ©nez</p>
+        <h3 class="brand-name">Pablo Jiménez</h3>
+        <p class="brand-sub">Diseño de Interfaces Web (DIWEB)</p>
+        <p class="copyright">© 2026 Pablo Jiménez</p>
       </div>
       <div class="footer-actions">
-        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub â†—</a>
-        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog ProgramaciÃ³n â†—</a>
+        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub ↗</a>
+        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog Programación ↗</a>
       </div>
     </div>
   </footer>
-
-  <script>
-    // Progress Bar Script
-    window.onscroll = function() {myFunction()};
-    function myFunction() {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-      document.getElementById("myBar").style.width = scrolled + "%";
-    }
-  </script>
-</body>
-</html>
