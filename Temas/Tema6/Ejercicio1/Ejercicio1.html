@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reproductor de Audio Accesible</title>
+    <style>
+        .audio-container {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid #007bff;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        audio {
+            width: 300px;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="audio-container">
+        <h2 id="audio-title">Música</h2>
+        
+        <audio controls 
+               loop 
+               preload="metadata" 
+               aria-labelledby="audio-title">
+            <source src="../../Tema6/Ejercicio1/Tunoestassola.flac" type="audio/flac">
+            <source src="../../Tema6/Ejercicio1/Tunoestassola.mp3" type="audio/mpeg">
+            <source src="../../Tema6/Ejercicio1/Tunoestassola.wav" type="audio/wav">
+            Tu navegador no admite la reproducción de este archivo de audio.
+            <a href="../../Tema6/Ejercicio1/Tunoestassola.mp3">Descarga el archivo aquí</a>.
+        </audio>
+    </div>
+
+</body>
+</html>
