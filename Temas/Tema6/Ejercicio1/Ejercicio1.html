@@ -2,38 +2,88 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Reproductor de Audio Accesible</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Audio Web Accesible</title>
     <style>
-        .audio-container {
-            background: #f4f4f4;
-            padding: 20px;
-            border-radius: 12px;
-            border: 2px solid #007bff;
-            display: inline-block;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        /* Estructura general */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
         }
+
+        /* Contenedor principal estilo terminal */
+        .audio-player-container {
+            background-color: #1e1e1e;
+            border-left: 5px solid #00ffcc;
+            padding: 30px;
+            width: 90%;
+            max-width: 480px;
+            box-shadow: 15px 15px 0px rgba(0, 255, 204, 0.05);
+        }
+
+        .audio-title {
+            color: #00ffcc;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 0;
+            margin-bottom: 25px;
+            border-bottom: 1px dashed #333;
+            padding-bottom: 10px;
+        }
+
+        /* Estilizado del reproductor nativo para integrarlo al modo oscuro */
         audio {
-            width: 300px;
-            outline: none;
+            width: 100%;
+            margin-bottom: 15px;
+            filter: invert(1) hue-rotate(180deg);
+            opacity: 0.9;
+            border-radius: 4px;
+        }
+
+        /* Clase para ocultar texto visualmente pero mantenerlo en el DOM para lectores de pantalla */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
     </style>
 </head>
 <body>
 
-    <div class="audio-container">
-        <h2 id="audio-title">Música</h2>
-        
-        <audio controls 
-               loop 
-               preload="metadata" 
-               aria-labelledby="audio-title">
-            <source src="../../Tema6/Ejercicio1/Tunoestassola.flac" type="audio/flac">
-            <source src="../../Tema6/Ejercicio1/Tunoestassola.mp3" type="audio/mpeg">
-            <source src="../../Tema6/Ejercicio1/Tunoestassola.wav" type="audio/wav">
-            Tu navegador no admite la reproducción de este archivo de audio.
-            <a href="../../Tema6/Ejercicio1/Tunoestassola.mp3">Descarga el archivo aquí</a>.
-        </audio>
-    </div>
+    <main>
+        <div class="audio-player-container">
+            <h2 class="audio-title">Efecto de sonido</h2>
+            
+            <audio 
+                controls 
+                loop 
+                preload="metadata"
+                aria-label="Reproductor de efecto de sonido"
+                aria-describedby="audio-desc">
+                
+                <source src="../../Tema6/Ejercicio1/Ejercicio1.ogg" type="audio/ogg">
+                <source src="../../Tema6/Ejercicio1/Ejercicio1.mp3" type="audio/mp3">
+                <source src="../../Tema6/Ejercicio1/Ejercicio1.wav" type="audio/wav">
+                
+                <p>Tu navegador no admite la etiqueta de audio. <a href="../../Tema6/Ejercicio1/Ejercicio1.mp3" style="color:#00ffcc;">Descarga el archivo aquí</a>.</p>
+            </audio>
+            
+            <p id="audio-desc" class="sr-only">Controles para reproducir, pausar y ajustar el volumen de la música.</p>
+        </div>
+    </main>
 
 </body>
 </html>

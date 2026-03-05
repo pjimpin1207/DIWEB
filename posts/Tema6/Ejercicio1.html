@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 1 – Sonido y Formatos de Audio - Blog DIWEB</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    .audio-table-container {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    th {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+    .cta-container {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0;
+    }
+    .btn-resolve {
+      background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+    }
+    .btn-resolve:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(124, 58, 237, 0.5);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <div class="bg-gradient"></div>
+
+  <nav class="topic-nav" style="position: sticky; top: 1rem; z-index: 100; max-width: 900px; margin: 1rem auto;">
+    <a href="../../index.html" class="nav-home">
+        <span>🏠</span> <span class="pjp-brand">PJP</span>
+    </a>
+    <div class="nav-menu">
+      <a href="../../index.html">Inicio</a>
+      <a href="../Tema1/index.html">Tema 1</a>
+      <a href="../Tema2/index.html">Tema 2</a>
+      <a href="../Tema3/index.html">Tema 3</a>
+      <a href="../Tema4/index.html">Tema 4</a>
+      <a href="../Tema5/index.html">Tema 5</a>
+      <a href="../Tema6/index.html" class="active">Tema 6</a>
+    </div>
+  </nav>
+
+  <div class="post-wrapper">
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">Ejercicio 1 – Sonido y Formatos de Audio</h1>
+        <div class="post-meta">
+          <span>📅 3 de marzo de 2026</span>
+          <span>✍️ <strong>Pablo Jiménez</strong></span>
+          <span>📚 Tema 6</span>
+        </div>
+      </header>
+
+      <div class="post-body">
+
+        <section>
+          <h2>1. Tabla Comparativa de Formatos</h2>
+          <div class="audio-table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Formato</th>
+                  <th>Siglas / Significado</th>
+                  <th>Desarrollador</th>
+                  <th>Compresión</th>
+                  <th>Peculiaridades</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>WAV</strong></td>
+                  <td>Waveform Audio File Format [cite: 1]</td>
+                  <td>Microsoft & IBM [cite: 1]</td>
+                  <td>Sin compresión (PCM) [cite: 1]</td>
+                  <td>Estándar industrial para edición profesional. Archivos muy pesados. [cite: 1]</td>
+                </tr>
+                <tr>
+                  <td><strong>MP3</strong></td>
+                  <td>MPEG-1 Audio Layer III [cite: 1]</td>
+                  <td>Fraunhofer IIS [cite: 1]</td>
+                  <td>Con pérdida [cite: 1]</td>
+                  <td>El más universal. Elimina frecuencias imperceptibles para el oído humano. [cite: 1]</td>
+                </tr>
+                <tr>
+                  <td><strong>AIFF</strong></td>
+                  <td>Audio Interchange File Format [cite: 1]</td>
+                  <td>Apple [cite: 1]</td>
+                  <td>Sin compresión [cite: 1]</td>
+                  <td>El equivalente al WAV para entornos macOS. [cite: 1]</td>
+                </tr>
+                <tr>
+                  <td><strong>AAC</strong></td>
+                  <td>Advanced Audio Coding [cite: 1]</td>
+                  <td>CodingBell, Fraunhofer, Sony [cite: 1]</td>
+                  <td>Con pérdida [cite: 1]</td>
+                  <td>Sucesor del MP3. Mejor calidad que MP3 a igual tasa de bits. [cite: 1]</td>
+                </tr>
+                <tr>
+                  <td><strong>ALAC</strong></td>
+                  <td>Apple Lossless Audio Codec [cite: 1]</td>
+                  <td>Apple [cite: 1]</td>
+                  <td>Sin pérdida [cite: 1]</td>
+                  <td>Optimizado para dispositivos iOS y iTunes. Alternativa de Apple al FLAC. [cite: 1]</td>
+                </tr>
+                <tr>
+                  <td><strong>FLAC</strong></td>
+                  <td>Free Lossless Audio Codec [cite: 1]</td>
+                  <td>Xiph.Org [cite: 1]</td>
+                  <td>Sin pérdida [cite: 1]</td>
+                  <td>Reduce el tamaño del WAV a la mitad sin perder ni un bit de información original. [cite: 1]</td>
+                </tr>
+                <tr>
+                  <td><strong>Opus</strong></td>
+                  <td>Opus Interactive Audio Codec</td>
+                  <td>Xiph.Org & IETF</td>
+                  <td>Con pérdida [cite: 3]</td>
+                  <td>Especialmente eficiente a bitrates bajos. [cite: 3]</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2>2. Preguntas de Análisis</h2>
+          <ul>
+            <li><strong>¿Mejor relación calidad/peso?</strong> Actualmente se recomienda el uso de AAC u Opus por su alta eficiencia. [cite: 2, 3]</li>
+            <li><strong>¿Para una emisora de radio online?</strong> El estándar recomendado es AAC+ (HE-AAC), ya que mantiene calidad incluso con conexiones inestables. [cite: 4, 5]</li>
+            <li><strong>¿Y para una web de venta de música?</strong> Se deben ofrecer ambos formatos: MP3 (320kbps) por compatibilidad y FLAC para audiófilos que buscan máxima fidelidad. [cite: 6, 7]</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>3. Resolución del Ejercicio</h2>
+          <div class="cta-container">
+            <a href="../../Temas/Tema6/Ejercicio1/Ejercicio1.html" class="btn-resolve" target="_blank" aria-label="Abrir archivo PDF con la resolución del ejercicio 1">
+              <span>📄</span> Ver Ejercicio Resuelto
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema5/index.html" class="btn-link" style="color: white; text-decoration: none;">← Volver al tema</a>
+    </div>
+  </div> 
+
+  <footer class="main-footer">
+    <div class="footer-simple-container">
+      <div class="footer-branding">
+        <h3 class="brand-name">Pablo Jiménez</h3>
+        <p class="brand-sub">Diseño de Interfaces Web (DIWEB)</p>
+        <p class="copyright">© 2026 Pablo Jiménez</p>
+      </div>
+      <div class="footer-actions">
+        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub ↗</a>
+        <a href="https://pjimpin1207.github.io/Programacion2526/" class="footer-btn">Blog Programación ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
+</body>
+</html>
