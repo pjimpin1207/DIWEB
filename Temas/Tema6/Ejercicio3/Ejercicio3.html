@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        section {
+            margin-bottom: 80px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 40px;
+        }
+
+        /*Animation*/
+        .animada {
+            display: inline-block;
+            animation: moverYCrecer 4s linear 1s 2 alternate forwards;
+        }
+
+        @keyframes moverYCrecer {
+            0% { 
+                transform: translateX(0) scale(1); 
+                color: black; 
+            }
+            50% { 
+                color: #3498db; 
+            }
+            100% { 
+                transform: translateX(calc(100vw - 100px)) scale(4); 
+                color: #e74c3c; 
+            }
+        }
+
+        /*Transition*/
+        .link-loco {
+            display: inline-block;
+            font-size: 24px;
+            color: #2ecc71;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.6s linear;
+        }
+
+        .link-loco:hover {
+            color: #9b59b6;
+            transform: scale(2) rotate(180deg);
+        }
+
+        /*Steps*/
+        .contenedor-circulo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .circulo {
+            width: 100px;
+            height: 100px;
+            background-color: #34495e;
+            border-radius: 50%;
+            transition: background-color 1s steps(4);
+            cursor: pointer;
+        }
+
+        .circulo:hover {
+            background-color: #f1c40f;
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <h2>Animation</h2>
+        <h1><span class="animada">p</span></h1>
+        <p><small>Para volver a ver recarga la pagina</small></p>
+    </section>
+
+    <section>
+        <h2>Transition</h2>
+        <a href="#" class="link-loco">Pon el ratón encima</a>
+    </section>
+
+    <section>
+        <h2>Steps</h2>
+        <div class="contenedor-circulo">
+            <div class="circulo"></div>
+            <p>Haz hover en el círculo para ver el cambio de color en 4 pasos.</p>
+        </div>
+    </section>
+
+</body>
+</html>
