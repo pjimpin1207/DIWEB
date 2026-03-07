@@ -2,37 +2,48 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Publicación de Vídeo con IA</title>
+    <title>Ejercicio 2</title>
     <style>
-        video {
-            border: 2px solid black;
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .marco-video {
             width: 640px;
             height: 480px;
-            display: block;
-            margin-bottom: 15px;
+            border: 2px solid black;
             background-color: #000;
         }
-        .enlaces {
-            margin-top: 10px;
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .botones {
+            margin-top: 15px;
         }
     </style>
 </head>
 <body>
 
-    <h1>Presentación IA: Optimización Web</h1>
+    <div class="marco-video">
+        <video controls poster="miniatura.jpg" preload="metadata">
+            <source src="../../../Temas/Tema6/Ejercicio2/video.mp4" type="video/mp4">
+            <source src="../../../Temas/Tema6/Ejercicio2/video.webm" type="video/webm">
+            <source src="../../../Temas/Tema6/Ejercicio2/video.ogv" type="video/ogg">
+            Tu navegador no soporta este formato de video.
+        </video>
+    </div>
 
-    <video controls poster="caratula.jpg">
-        <source src="video.webm" type="video/webm">
-        <source src="video.mp4" type="video/mp4">
-        <source src="video.ogv" type="video/ogg">
-        
-        <p>Tu navegador no es compatible con los formatos de vídeo modernos (WebM/MP4).</p>
-    </video>
-
-    <div class="enlaces">
-        <a href="video.mp4" download="video_ia_optimizado.mp4">Descargar vídeo (MP4)</a> | 
-        
-        <a href="video.mp4" target="_blank">Abrir vídeo en una pestaña nueva</a>
+    <div class="botones">
+        <a href="../../../Temas/Tema6/Ejercicio2/video.webm" download>Descargar video</a> | 
+        <a href="../../../Temas/Tema6/Ejercicio2/video.webm" target="_blank">Abrir en pestaña nueva</a>
     </div>
 
 </body>
