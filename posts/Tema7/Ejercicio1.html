@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 1 – Licencias de Software y Contenido - Blog DIWEB</title>
+  <link rel="stylesheet" href="../../css/post.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* Estilos específicos para la tabla de licencias */
+    .table-responsive {
+      overflow-x: auto;
+      margin: 25px 0;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(5px);
+    }
+    th, td {
+      padding: 16px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.95rem;
+    }
+    th {
+      background-color: rgba(99, 102, 241, 0.2);
+      color: #a855f7;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 800;
+    }
+    tr:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+    .badge-copyleft { color: #f87171; font-weight: bold; }
+    .badge-permissive { color: #4ade80; font-weight: bold; }
+
+    /* Botón de acción */
+    .cta-wrapper {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .btn-download {
+      background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+    }
+    .btn-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <div class="bg-gradient"></div>
+
+  <nav class="topic-nav" style="position: sticky; top: 1rem; z-index: 100; max-width: 900px; margin: 1rem auto;">
+    <a href="../../index.html" class="nav-home">
+        <span>🏠</span> <span class="pjp-brand">PJP</span>
+    </a>
+    <div class="nav-menu">
+      <a href="../../index.html">Inicio</a>
+      <a href="../Tema1/index.html">Tema 1</a>
+      <a href="../Tema2/index.html">Tema 2</a>
+      <a href="../Tema3/index.html">Tema 3</a>
+      <a href="../Tema4/index.html">Tema 4</a>
+      <a href="../Tema5/index.html">Tema 5</a>
+      <a href="../Tema6/index.html">Tema 6</a>
+      <a href="../Tema7/index.html" class="active">Tema 7</a>
+    </div>
+  </nav>
+
+  <div class="post-wrapper">
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">Ejercicio 1 – Licencias</h1>
+        <div class="post-meta">
+          <span>📅 4 de marzo de 2026</span>
+          <span>✍️ <strong>Pablo Jiménez</strong></span>
+          <span>📚 Tema 7</span>
+        </div>
+      </header>
+
+      <div class="post-body">
+
+        <section>
+          <h2>📄 Introducción</h2>
+          <p>
+            En el desarrollo de interfaces web, no solo es importante el código o el diseño, sino también entender el marco legal bajo el cual distribuimos nuestras herramientas o utilizamos recursos de terceros. A continuación, presento una comparativa de las licencias más utilizadas en la actualidad.
+          </p>
+        </section>
+
+        <section>
+          <h2>Tabla Comparativa</h2>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Licencia</th>
+                  <th>Descripción</th>
+                  <th>Ejemplos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>GNU (GPL)</strong></td>
+                  <td>Software libre y abierto con <span class="badge-copyleft">copyleft</span>. Obliga a que cualquier obra derivada mantenga la misma licencia libre.</td>
+                  <td>Linux, GIMP, WordPress, VLC Player</td>
+                </tr>
+                <tr>
+                  <td><strong>MIT</strong></td>
+                  <td><span class="badge-permissive">Permisiva</span>, breve y simple. Permite uso comercial, modificación y cierre del código.</td>
+                  <td>Node.js, React, jQuery, Ruby on Rails</td>
+                </tr>
+                <tr>
+                  <td><strong>Apache 2.0</strong></td>
+                  <td><span class="badge-permissive">Permisiva</span>. Incluye una concesión expresa de patentes y protección de marcas.</td>
+                  <td>Android, TensorFlow, Kubernetes, Swift</td>
+                </tr>
+                <tr>
+                  <td><strong>BSD</strong></td>
+                  <td>Minimalista. Enfocada en la atribución del autor original sin restricciones de uso.</td>
+                  <td>FreeBSD, Go (lenguaje), Chromium, Redis</td>
+                </tr>
+                <tr>
+                  <td><strong>Creative Commons</strong></td>
+                  <td>Diseñada para contenido creativo (texto, fotos, música). Tiene varios niveles de restricción.</td>
+                  <td>Wikipedia, Flickr, Proyectos Arduino</td>
+                </tr>
+                <tr>
+                  <td><strong>Propietaria</strong></td>
+                  <td>El autor mantiene todos los derechos. No se permite copia ni redistribución legal.</td>
+                  <td>Windows, Adobe Photoshop, macOS</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2>📌 Conclusión</h2>
+          <p>
+            Elegir la licencia adecuada depende de los objetivos del proyecto. Si buscas la máxima libertad para el usuario, <strong>MIT</strong> es ideal; si quieres proteger la libertad del software a largo plazo, <strong>GPL</strong> es la opción estándar.
+          </p>
+        </section>
+
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../Tema7/index.html" class="btn-link" style="color: white; text-decoration: none;">← Volver al tema</a>
+    </div>
+  </div> 
+
+  <footer class="main-footer">
+    <div class="footer-simple-container">
+      <div class="footer-branding">
+        <h3 class="brand-name">Pablo Jiménez</h3>
+        <p class="brand-sub">Diseño de Interfaces Web (DIWEB)</p>
+        <p class="copyright">© 2026 Pablo Jiménez</p>
+      </div>
+      <div class="footer-actions">
+        <a href="https://github.com/pjimpin1207" target="_blank" class="footer-btn">GitHub ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.onscroll = function() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    };
+  </script>
+</body>
+</html>
